@@ -1,5 +1,5 @@
 // Exercise 2-1. Convert inches to feet and inches
-// The number of inches per foot constant, 
+// The number of inches per foot is constant, 
 // and should not be changed within the program,
 // so we recognize this by declaring it as a const.
 //
@@ -8,7 +8,7 @@
 //
 // Note: we always output "feet" and "inches", 
 // even if it concerns only 1 foot or 1 inch.
-// In later chapter you will learn about the conditional 
+// In a later chapter you will learn about the conditional 
 // statements and expressions that allow you to refine this.
 
 #include <iostream>
