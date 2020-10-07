@@ -13,7 +13,7 @@ int main()
   std::cout << "Please enter the radius of the circle: ";
   std::cin >> radius;
   
-  const auto area = std::numbers::pi * radius * radius;
+  const auto area{ std::numbers::pi * radius * radius };
 
   std::cout << "The area of the circle is " << area << " square units." << std::endl;
 }
