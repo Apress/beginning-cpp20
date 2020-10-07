@@ -1,4 +1,4 @@
-// The width, alignment, fill, and 0 formatting options of std::format() 
+// Formatting numeric values with std::format() 
 #include <iostream>
 #include <format>
 #include <numbers>
