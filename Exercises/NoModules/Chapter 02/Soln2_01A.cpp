@@ -23,8 +23,8 @@ int main()
   std::cout << "Please enter a number of inches: ";
   std::cin >> inches;
 
-  const int feet = inches / inches_per_foot;
-  const int remaining_inches = inches % inches_per_foot;
+  const int feet{ inches / inches_per_foot };
+  const int remaining_inches{ inches % inches_per_foot };
 
   std::cout << inches << " inches equals "
     << feet << " feet and " << remaining_inches << " inches."
