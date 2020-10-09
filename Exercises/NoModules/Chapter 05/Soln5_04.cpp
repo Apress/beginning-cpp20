@@ -17,30 +17,29 @@ int main()
   Take care: never write the following:
     for (size_t i = count - 1; i >= 0; --i)
       ...
-  Because size_t is unsigned, the loop continuation condition i >= 0 
-  shall always and forever be true. That is: every size_t value is always greater or equal to zero, 
-  by definition. Subtracting one from zero wraps around to std::numeric_limits<size_t>::max(), 
-  a huge number.
+  Because size_t is unsigned, the loop continuation condition i >= 0 shall always and forever be true. 
+  That is: every size_t value is always greater or equal to zero, by definition. 
+  Subtracting one from zero wraps around to std::numeric_limits<size_t>::max(), a huge number.
   
   Other solutions besides the one we use below include:
     // Cast to a signed integer (works even for count == 0!)
-	for (size_t i = count - 1; static_cast<signed>(i) != -1; --i)
-	  ...
+    for (int i{ static_cast<int>(i) - 1 }; i != -1; --i)
+      ...
     
-	// Subtract in second for expression (less readable, fails if count == 0)
-    for (size_t i = count; i-- > 0; )
-	  ...
+    // Subtract in second for expression (less readable, fails if count == 0)
+    for (size_t i{ count }; i-- > 0; )
+      ...
   
     // Use a break statement to end the loop (fails if count == 0)
-	for (size_t i = count; ; i--)
-	{
-	  ...
+    for (size_t i{ count }; ; i--)
+    {
+      ...
       if (i == 0) break;
-	}
+    }
 */
 
   // Print out the characters in reverse order
-  for (size_t i = 1; i <= count; ++i)
+  for (size_t i{ 1 }; i <= count; ++i)
   {
     std::cout << string[count - i];
   }
