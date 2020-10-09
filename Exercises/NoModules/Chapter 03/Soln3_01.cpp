@@ -17,7 +17,7 @@ int main()
   std::cout << "Enter any integer: ";
   std::cin >> value;
   
-  const auto inverted = static_cast<unsigned>(~value);
+  const auto inverted{ static_cast<unsigned>(~value) };
 
   // Output column headings (0b and 32 bits make for a width of 34)
   std::cout << std::format(" {:^34} {:^34} {:^34}\n", "value", "~value", "~value + 1");

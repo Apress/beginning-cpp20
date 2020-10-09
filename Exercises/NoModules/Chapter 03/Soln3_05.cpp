@@ -19,8 +19,8 @@ int main()
     White  = 0xFFFFFFu
   };
 
-  const auto format_string = 
-    "The components of {:^6} are: red: {:3}, green: {:3}, blue: {:3}\n";
+  const auto format_string 
+       { "The components of {:^6} are: red: {:3}, green: {:3}, blue: {:3}\n" };
   
   std::cout << std::format(format_string,
     "yellow",
