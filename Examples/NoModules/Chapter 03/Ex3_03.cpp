@@ -1,6 +1,6 @@
 // Operations with enumerations
 #include <iostream>
-#include "format"    // Can be <format> if you compiler supports this Standard Library module
+#include <format>
 
 int main()
 {
