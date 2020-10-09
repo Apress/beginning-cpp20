@@ -1,4 +1,4 @@
-// Exercise 4-3 Outputting the binary code for a letter.
+// Exercise 4-7 Outputting the binary code for a letter.
 /*
  * Most of the program is fairly simple. 
  * The cctype functions make determining upper or lower case easy. 

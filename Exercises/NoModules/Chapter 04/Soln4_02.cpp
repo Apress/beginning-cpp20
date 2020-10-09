@@ -1,4 +1,4 @@
-// Exercise 4-1 Testing for exact division of one integer by another.
+// Exercise 4-2 Testing for exact division of one integer by another.
 //              We can use an if statement to check that the input is valid 
 //              and we can use another to arrange the input as we need. 
 //              Then we use an if-else to generate the appropriate output.
@@ -23,7 +23,7 @@ int main()
   // Ensure that value1 is not smaller than value2
   if (value1 < value2)
   {         
-    const auto temp = value1;    // swap if necessary
+    const auto temp{ value1 };    // swap if necessary
     value1 = value2;
     value2 = temp;
   }
