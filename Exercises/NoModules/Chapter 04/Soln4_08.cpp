@@ -16,7 +16,7 @@ int main()
   
   if (amountInDollars >= 0.0 && amountInDollars <= 10.0)
   {
-    // Multiply dollar amount by 100 ($1 {100 cents)
+    // Multiply dollar amount by 100 ($1 = 100 cents)
     // We add 0.5 to compensate for errors in binary floating-point representation
     auto amountInCents {static_cast<unsigned>(amountInDollars * 100.0 + 0.5)};
 

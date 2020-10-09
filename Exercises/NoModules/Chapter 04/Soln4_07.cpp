@@ -3,7 +3,7 @@
  * Most of the program is fairly simple. 
  * The cctype functions make determining upper or lower case easy. 
  * Finding out if it's a vowel is also easy with a switch.
- * Only getting the binary code needs a little thought, though.                                                           * 
+ * Only getting the binary code needs a little thought, though. 
  * Each of the masks selects a different bit of the ch variable.
  * If the bit is '1', the expression will be non-zero, which is converted to Boolean true.
  * If it's '0', the whole expression will be zero, or Boolean false.
