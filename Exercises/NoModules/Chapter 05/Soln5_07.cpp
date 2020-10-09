@@ -38,7 +38,7 @@ int main()
   double total_cost {};
   for (size_t i {}; i < product_id.size(); ++i)
   {
-    auto cost = quantity[i] * unit_cost[i];
+    const auto cost{ quantity[i] * unit_cost[i] };
     
     std::cout <<
       std::format("{:<10} {:<10} ${:<9.2f} ${:<9.2f}\n",

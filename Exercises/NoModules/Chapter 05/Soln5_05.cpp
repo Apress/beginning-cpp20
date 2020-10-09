@@ -15,15 +15,15 @@ int main()
 	  ++count;
   
   // Reverse the characters of the string entered by the user
-  for (size_t i = 0; i < count / 2; ++i)
+  for (size_t i{ 0 }; i < count / 2; ++i)
   {
-    char temp = string[i];
+    char temp{ string[i] };
     string[i] = string[count - i - 1];
     string[count - i - 1] = temp;
   }
   
   // Print out all characters, one by one
-  for (size_t i = 0; i < count; ++i)
+  for (size_t i{ 0 }; i < count; ++i)
   {
     std::cout << string[i];
   }
