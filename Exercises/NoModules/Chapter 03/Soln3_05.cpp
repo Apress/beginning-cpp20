@@ -1,5 +1,5 @@
-// Exercise 3-6. Using an enumeration type for colors.
-// Of course, you have to research the RBG components for the colors.
+// Exercise 3-5. Using an enumeration type for colors.
+// Of course, you have to research the RGB components for the colors.
 // Biggest complication is that you cannot apply any binary or other arithmetic operations
 // on values of a scoped enumaration type. For this, you have to first cast them to an integer.
 

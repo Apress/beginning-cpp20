@@ -1,4 +1,4 @@
-// Exercise 3-5. Swapping integers.
+// Exercise 3-6. Swapping integers.
 
 #include <iostream>
 
