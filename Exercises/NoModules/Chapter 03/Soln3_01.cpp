@@ -1,8 +1,8 @@
-// Exercise 3-1. Output integer and its 1's complement in decimal and hexadecimal.
+// Exercise 3-1. Output an integer and its complements in binary and decimal.
 
 // This tests how well you remember string formatting using std::format()
 // (see Chapter 2 if you forgot some of the formatting options), 
-// as well as two’s complement binary encoding and bitwise ~.
+// as well as two's complement binary encoding and bitwise ~.
 
 #include <iostream>
 #include <format>

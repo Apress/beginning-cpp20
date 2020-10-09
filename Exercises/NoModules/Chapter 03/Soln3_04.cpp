@@ -1,7 +1,7 @@
 // Exercise 3-4. Packing and unpacking characters.
 
 // Strictly speaking, whether or not this program works is compiler-dependent.
-// Although it's extremely unlike that you'll notice a problem.
+// Although it's extremely unlikely that you'll notice a problem.
 // Concretely: it'll only work if a single byte is 8 bit (virtually always the case),
 // and the fundamental type int counts at least 4 bytes (true for most modern systems).
 
