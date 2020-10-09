@@ -10,8 +10,9 @@ enum class AcademicDegree
   none, associate, bachelor, professional, master, doctor
 };
 
-int main() {
-  int age {};                 // Initialized to 0
+int main()
+{
+  unsigned int age {};        // Initialized to 0
   char gender {};             // Initialized to '\0' (see Chapter 5)
   AcademicDegree degree {};   // Initialized to AcademicDegree::none
   bool married {};            // Initialized to false
@@ -21,19 +22,20 @@ int main() {
   std::cout << "What is your age, if I may ask? ";
   std::cin >> age;
   
-  if (age < 0 || age > 130)
+  if (age > 120)
   {
     std::cout << "Sure it is, joker. Sadly, commedians don't qualify..." << std::endl;
     return 1;
   }
   
-  std::cout << "What is your gender (m or f)? ";
+  std::cout << "What is your gender ([m]ale, [f]emale, or [o]ther)? ";
   std::cin >> gender;
   
   gender = std::tolower(gender);
-  if (gender != 'm' && gender != 'f')
+  if (gender != 'm' && gender != 'f' && gender != 'o')
   {
-    std::cout << "We do not mean to discriminate, but our current software only accepts male or female. Sorry...";
+    std::cout << "That was not one of the options... "
+                 "The square brackets were not clear, perhaps? We were worried about that...";
     return 1;
   }
   
@@ -76,7 +78,7 @@ int main() {
     married = false;
   else
   {
-    std::cout << "Incapable of entering your marital status. Surely still single then I suppose...?" << std::endl;
+    std::cout << "Incapable of entering your marital status. Surely still single then...?" << std::endl;
     return 1;
   }
   
