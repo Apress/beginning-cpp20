@@ -12,7 +12,7 @@ int main()
   std::cin >> limit;
 
   // The format string for all rows of the table
-  const auto table_format = "{:>8} {:>8} {:>20}\n";
+  const auto table_format{ "{:>8} {:>8} {:>20}\n" };
   
   // Output column headings
   std::cout << std::format(table_format, "integer", "sum", "factorial"); 

@@ -40,7 +40,7 @@ int main()
     {
       if (x[i] > x[i + 1])    // Out of order so swap them
       {
-        const auto temp = x[i];
+        const auto temp{ x[i] };
         x[i] = x[i+1];
         x[i + 1] = temp;
         swapped = true;

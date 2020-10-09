@@ -9,7 +9,7 @@ int main()
   std::cout << "There are " << std::size(values) << " elements in the array.\n";
 
   int sum {};
-  const size_t old_school_size = sizeof(values) / sizeof(values[0]);
+  const size_t old_school_size{ sizeof(values) / sizeof(values[0]) };
   for (size_t i {}; i < old_school_size; ++i)
   {
     sum += values[i];

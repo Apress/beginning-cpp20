@@ -47,11 +47,11 @@ int main()
   const unsigned int inches_per_foot {12U};
   for (auto h : height_ins)
   {
-    const unsigned feet = h / inches_per_foot;
-    const unsigned inches = h % inches_per_foot;
+    const unsigned feet{ h / inches_per_foot };
+    const unsigned inches{ h % inches_per_foot };
     std::cout << std::format("{:2}'{:2}\" |", feet, inches);
 
-    const double h_m = h / ins_per_m;     // Height in meter
+    const double h_m{ h / ins_per_m };     // Height in meter
     for (auto w : weight_lbs)
     {
       const double w_kg = w / lbs_per_kg; // Weight in kilogram
