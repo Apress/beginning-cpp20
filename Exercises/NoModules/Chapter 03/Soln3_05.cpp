@@ -22,24 +22,28 @@ int main()
   const auto format_string 
        { "The components of {:^6} are: red: {:3}, green: {:3}, blue: {:3}\n" };
   
+  const Color yellow{ Color::Yellow };
+  const Color purple{ Color::Purple };
+  const Color green { Color::Green };
+
   std::cout << std::format(format_string,
     "yellow",
-    (static_cast<unsigned>(Color::Yellow) & static_cast<unsigned>(Color::Red)) >> 16,
-    (static_cast<unsigned>(Color::Yellow) & static_cast<unsigned>(Color::Green)) >> 8,
-    (static_cast<unsigned>(Color::Yellow) & static_cast<unsigned>(Color::Blue))
+    (static_cast<unsigned>(yellow) & static_cast<unsigned>(Color::Red)) >> 16,
+    (static_cast<unsigned>(yellow) & static_cast<unsigned>(Color::Green)) >> 8,
+    (static_cast<unsigned>(yellow) & static_cast<unsigned>(Color::Blue))
   );
 
   std::cout << std::format(format_string,
     "purple",
-    (static_cast<unsigned>(Color::Purple) & static_cast<unsigned>(Color::Red)) >> 16,
-    (static_cast<unsigned>(Color::Purple) & static_cast<unsigned>(Color::Green)) >> 8,
-    (static_cast<unsigned>(Color::Purple) & static_cast<unsigned>(Color::Blue))
+    (static_cast<unsigned>(purple) & static_cast<unsigned>(Color::Red)) >> 16,
+    (static_cast<unsigned>(purple) & static_cast<unsigned>(Color::Green)) >> 8,
+    (static_cast<unsigned>(purple) & static_cast<unsigned>(Color::Blue))
   );
 
   std::cout << std::format(format_string,
     "green",
-    (static_cast<unsigned>(Color::Green) & static_cast<unsigned>(Color::Red)) >> 16,
-    (static_cast<unsigned>(Color::Green) & static_cast<unsigned>(Color::Green)) >> 8,
-    (static_cast<unsigned>(Color::Green) & static_cast<unsigned>(Color::Blue))
+    (static_cast<unsigned>(green) & static_cast<unsigned>(Color::Red)) >> 16,
+    (static_cast<unsigned>(green) & static_cast<unsigned>(Color::Green)) >> 8,
+    (static_cast<unsigned>(green) & static_cast<unsigned>(Color::Blue))
   );
 }
