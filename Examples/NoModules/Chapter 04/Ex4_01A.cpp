@@ -16,5 +16,5 @@ int main()
   std::cout << std::format("The value of the expression {} < {} is {}\n",
                            first, second, first < second);
   std::cout << std::format("The value of the expression {} == {} is {}\n",
-                           first, second, first < second);
+                           first, second, first == second);
 }
