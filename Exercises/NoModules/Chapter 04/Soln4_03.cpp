@@ -1,4 +1,4 @@
-// Exercise 4-2 Using nested ifs and a logical && to check the value of a number.
+// Exercise 4-3 Using nested ifs and a logical && to check the value of a number.
 
 #include <iostream>
 

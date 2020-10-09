@@ -1,4 +1,4 @@
-// Exercise 4-4 Finding the range for an integer. 
+// Exercise 4-6 Finding the range for an integer. 
 // This is just a question of bolting sufficient conditional operators together
 // in an expression. 
 
