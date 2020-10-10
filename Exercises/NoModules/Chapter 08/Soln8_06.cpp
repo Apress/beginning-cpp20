@@ -92,21 +92,21 @@ void sort(std::vector<unsigned>& numbers, size_t start, size_t end)
   if (!(start < end))
     return;
 
-  // Choose middle address to partition set
-  swap(numbers, start, (start + end) / 2);                            // Swap middle address with start
+  // Choose middle of the [start, end] range to partition
+  swap(numbers, start, (start + end) / 2); // Swap middle number with start
 
-                                    // Check words against chosen word
+  // Check values against chosen word
   size_t current{ start };
   for (size_t i{ start + 1 }; i <= end; i++)
   {
-    if (numbers[i] < numbers[start])                                 // Is word less than chosen word?
-      swap(numbers, ++current, i);                                    // Yes, so swap to the left
+    if (numbers[i] < numbers[start])   // Is word less than chosen value?
+      swap(numbers, ++current, i);     // Yes, so swap to the left
   }
 
-  swap(numbers, start, current);                                      // Swap the chosen word with last in
+  swap(numbers, start, current);       // Swap the chosen value with the last swapped number
 
-  if (current > start) sort(numbers, start, current - 1);             // Sort left subset if exists
-  if (end > current + 1) sort(numbers, current + 1, end);             // Sort right subset if exists
+  if (current > start) sort(numbers, start, current - 1);  // Sort left subset if exists
+  if (end > current + 1) sort(numbers, current + 1, end);  // Sort right subset if exists
 }
 
 // Sort numbers in ascending sequence
@@ -118,12 +118,11 @@ void sort(std::vector<unsigned>& numbers)
 
 void computeHighest(const std::vector<unsigned>& numbers, std::optional<unsigned>(&highest)[5])
 {
-  const auto numHighest = static_cast<int>(std::size(highest));
+  const auto numHighest{ static_cast<int>(std::size(highest)) };
 
-  for (int i = 0; i < numHighest; ++i)
+  for (int i{}; i < numHighest; ++i)
   {
-    const int numberIndex =
-      static_cast<int>(numbers.size()) - numHighest + i;
+    const int numberIndex{ static_cast<int>(numbers.size()) - numHighest + i };
     if (numberIndex >= 0)
       highest[i] = numbers[numberIndex];
     else
@@ -133,7 +132,7 @@ void computeHighest(const std::vector<unsigned>& numbers, std::optional<unsigned
 
 void computeLowest(const std::vector<unsigned>& numbers, std::optional<unsigned>(&lowest)[5])
 {
-  for (size_t i = 0; i < std::size(lowest); ++i)
+  for (size_t i{}; i < std::size(lowest); ++i)
   {
     if (i < numbers.size())
       lowest[i] = numbers[i];
@@ -158,15 +157,15 @@ std::optional<double> computeMedian(const std::vector<unsigned>& numbers)
   if (numbers.empty())
     return std::nullopt;
 
-  const auto numNumbers = numbers.size();
-  const auto middleIndex = numNumbers / 2;
+  const auto numNumbers{ numbers.size() };
+  const auto middleIndex{ numNumbers / 2 };
   if (numNumbers % 2)
   {
     return numbers[middleIndex];
   }
   else
   {
-    return static_cast<double>(numbers[middleIndex] + numbers[middleIndex - 1]) / 2;
+    return (numbers[middleIndex] + numbers[middleIndex - 1]) / 2.0;
   }
 }
 
@@ -175,7 +174,7 @@ std::optional<double> computeStandardDeviation(const std::vector<unsigned>& numb
   if (numbers.empty())
     return std::nullopt;
 
-  const double average = *computeAverage(numbers);
+  const double average{ *computeAverage(numbers) };
   double sum{};
   for (auto& number : numbers)
     sum += (number - average) * (number - average);
@@ -187,7 +186,7 @@ std::optional<double> computeVariance(const std::vector<unsigned>& numbers)
   if (numbers.empty())
     return std::nullopt;
 
-  const double standardDeviation = *computeStandardDeviation(numbers);
+  const double standardDeviation{ *computeStandardDeviation(numbers) };
   return standardDeviation * standardDeviation;
 }
 
