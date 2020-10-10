@@ -7,4 +7,5 @@ in [*Beginning C++20*](https://www.apress.com/9781484258835) by Ivor Horton and 
 
 Because at the time of writing compilers did not support C++20 modules yet,
 we made all examples that are not explicitly about modules
-available both with modules (the [Modules](Modules) directory) and without (the [NoModules](NoModules) directory).
+available both with the use of modules and imports (the [Modules](Modules) directory),
+and without the use of modules and imports (the [NoModules](NoModules) directory).
