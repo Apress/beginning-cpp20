@@ -39,7 +39,7 @@ void extract_words(Words& words, const std::string& text, const std::string& sep
 
   while (start != std::string::npos)
   {
-    size_t end = text.find_first_of(separators, start + 1); // Find end of a word
+    size_t end{ text.find_first_of(separators, start + 1) }; // Find end of a word
     if (end == std::string::npos)                    // Found a separator?
       end = text.length();                           // Yes, so set to end of text
     words.push_back(std::make_shared<std::string>(text.substr(start, end - start)));

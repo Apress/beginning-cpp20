@@ -29,7 +29,7 @@ void find_words(vector<string>& words, const string& text, const string& separat
 
   while (start != string::npos)                          // Find the words
   {
-    size_t end = text.find_first_of(separators, start + 1);  // Find end of word
+    size_t end{ text.find_first_of(separators, start + 1); } // Find end of word
     if (end == string::npos)                             // Found a separator?
       end = text.length();                               // No, so set to end of text
 

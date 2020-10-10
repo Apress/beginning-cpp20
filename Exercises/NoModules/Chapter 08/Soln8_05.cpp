@@ -26,8 +26,8 @@ int main()
   std::cout << "Would you be so kind as to enter a number? " << std::endl;
   std::cin >> user_number;
   
-  auto numbers = generateNumbers(user_number);
-  auto primes = filterPrimeNumbers(numbers);
+  const auto numbers{ generateNumbers(user_number) };
+  const auto primes{ filterPrimeNumbers(numbers) };
   
   unsigned count{};
   for (auto& prime : primes)
@@ -58,7 +58,7 @@ bool isPrime(unsigned number)
   if (number <= 1) return false;
   
   // ...and with no positive divisors other than 1 and itself
-  for (unsigned i = 2; i < std::sqrt(number); ++i)
+  for (unsigned i{ 2 }; i < std::sqrt(number); ++i)
   {
     if (number % i == 0)
     {
@@ -73,7 +73,7 @@ std::vector<unsigned> generateNumbers(unsigned to, unsigned from)
 {
   std::vector<unsigned> result;
   result.reserve(to - from + 1);
-  for (unsigned i = from; i <= to; ++i)
+  for (unsigned i{ from }; i <= to; ++i)
     result.push_back(i);
   return result;
 }

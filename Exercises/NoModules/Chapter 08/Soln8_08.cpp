@@ -18,9 +18,9 @@ long double power(double x, int n)
 {
   if (n == 0)     return 1.0;
   else if (n < 0) return 1.0 / power(x, -n);
-  else if (n % 2) return x * power(x, n-1);     // x is odd
+  else if (n % 2) return x * power(x, n - 1);     // x is odd
   
   // If we make it this far, x > 0 and even
-  const auto y = power(x, n/2); 
+  const auto y{ power(x, n / 2) };
   return y * y;
 }
