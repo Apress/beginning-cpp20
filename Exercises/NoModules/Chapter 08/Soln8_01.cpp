@@ -33,7 +33,7 @@ int main()
 int validate_input(int lower, int upper, const std::string& description)
 {
   int data {};
-  std::cout << "Please enter " << description << " from " << lower << " to " << upper << ": ";
+  std::cout << std::format("Please enter {} from {} to {}: ", description, lower, upper);
   std::cin >> data;
   while (data < lower || data > upper)
   {
