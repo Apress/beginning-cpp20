@@ -6,4 +6,5 @@ This directory contains all source code for the examples given
 in [*Beginning C++20*](https://www.apress.com/9781484258835) by Ivor Horton and Peter Van Weert (Apress, 2020).
 
 Because at the time of writing compilers did not support C++20 modules yet,
-we made all examples available both with modules (the Modules directory) and without (the NoModules directory).
+we made all examples that are not explicitly about modules
+available both with modules (the [Modules](Modules) directory) and without (the [NoModules](NoModules) directory).
