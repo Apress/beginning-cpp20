@@ -18,12 +18,12 @@ int main()
 unsigned long long fib(size_t n)
 {
 	// Initialise fib(i) and fib(i+1) for the first iteration of the loop where i == 0
-	unsigned long long fib_i{0};          // fib(i)   = fib(0) = 0
-	unsigned long long fib_i_1{1};        // fib(i+1) = fib(1) = 1
+	unsigned long long fib_i{0};         // fib(i)   = fib(0) = 0
+	unsigned long long fib_i_1{1};       // fib(i+1) = fib(1) = 1
 	
-	for (size_t i = 0; i < n; ++i)
+	for (size_t i{}; i < n; ++i)
 	{
-		auto fib_i_2 = fib_i + fib_i_1;   // fib(i+2) = fib(i) + fib(i+1)
+		auto fib_i_2{ fib_i + fib_i_1 };   // fib(i+2) = fib(i) + fib(i+1)
 		
 		// Get ready for the next iteration (mind the order!):
 		fib_i   = fib_i_1;
