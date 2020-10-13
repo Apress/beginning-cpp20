@@ -10,7 +10,7 @@ int main()
   size_t n {};
   std::cout << "Enter the number of array elements: ";
   std::cin >> n;
-  auto* values = new double[n];
+  auto* values{ new double[n] };
   for (size_t i {}; i < n; ++i)
     *(values+i) = 1.0 / ((i + 1)*(i + 1));
 

@@ -25,7 +25,7 @@ int main()
   size_t n {};
   std::cout << "Enter the number of vector elements: ";
   std::cin >> n;
-  auto* values = new std::vector<double>(n);
+  auto* values{ new std::vector<double>(n) };
 
   for (size_t i {}; i < n; ++i)
     (*values)[i] = 1.0 / ((i + 1)*(i + 1));
