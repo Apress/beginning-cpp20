@@ -12,10 +12,10 @@ int main()
   const size_t n {50};
   size_t odds[n];
   for (size_t i {}; i < n; ++i)
-    odds[i] = i + 1;
+    odds[i] = i * 2 + 1;
 
   const size_t perline {10};
-  std::cout << "The numbers are:\n";
+  std::cout << "The " << n << " first odd numbers are:\n";
   for (size_t i {}; i < n; ++i)
   {
     std::cout << std::format("{:5}", *(odds + i));
@@ -23,7 +23,7 @@ int main()
       std::cout << std::endl;
   }
 
-  std::cout << "\nIn reverse order the numbers are:\n";
+  std::cout << "\nIn reverse order these numbers are:\n";
   for (int i {n - 1}; i >= 0; --i)                     // This won't work with size_t for the loop counter
   {                                                    // because size_t cannot be negative
     std::cout << std::format("{:5}", *(odds + i));
