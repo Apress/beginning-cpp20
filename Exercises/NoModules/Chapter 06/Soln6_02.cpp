@@ -15,7 +15,7 @@ int main()
   const size_t perline {10};
   std::cout << "The numbers are:\n";
   
-  size_t* traversal_pointer = odds;
+  size_t* traversal_pointer{ odds };
   for (size_t i {}; i < n; ++i)
   {
     std::cout << std::format("{:5}", *traversal_pointer++);
