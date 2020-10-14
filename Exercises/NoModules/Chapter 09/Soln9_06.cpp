@@ -1,4 +1,4 @@
-// Exercise 9-5. Passing a vector to a fixed-size std::span<>
+// Exercise 9-6. Passing a vector to a fixed-size std::span<>
 #include <iostream>
 #include <vector>
 #include <span>
