@@ -9,7 +9,7 @@ std::optional<size_t> find_last(
 
 int main()
 {
-  const auto string = "Growing old is mandatory; growing up is optional.";
+  const auto string{ "Growing old is mandatory; growing up is optional." };
 
   const std::optional<size_t> found_a{ find_last(string, 'a') };
   if (found_a)
@@ -35,7 +35,7 @@ std::optional<size_t> find_last(const std::string& string, char to_find,
     return std::nullopt;         // or: 'return std::optional<size_t>{};'
                                  // or: 'return {};'
   // determine the starting index for the loop that follows:
-  size_t index = start_index.value_or(string.size() - 1);
+  size_t index{ start_index.value_or(string.size() - 1) };
 
   while (true)  // never use while (index >= 0) here, as size_t is always >= 0!
   {
