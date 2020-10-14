@@ -14,34 +14,35 @@
       and without having to think about the empty input case. 
       This is common with recursive algorithms: the interface that users use 
       will often not contain the actual recursive function.
-    - we have used std::optional<> to deal with cases where, respectively, 
-      there are less than 5 inputs, or no inputs at all.
-      Without std::optional<> we'd have to encode the 'nullopt' somehow.
-      Because we're dealing with unsigned values, 
-      we could in this case still use negatives (-1, for instance).
-      But what if we were instead computing the average of signed integers?
-      Then -1 would be a perfectly valid average... 
-      Doubles have special non-a-number (NaN) values, 
-      but this would certainly be much less obvious to the caller than std::optional<>.
+    - we defined NOT_AVAILABLE equal to std::numeric_limits<unsigned>::max() 
+      (equivalent to static_cast<unsigned>(-1))
+      to encode missing values in case there are less than 5 inputs,
+      and used NaN values elsewhere in case the user enters no value at all.
+      Other solutions for the former could've been signed values,
+      or in fact any number larger than 100.
+      In Chapter 9 you will learn about std::optional<>
+      which allows you to handle such "not available" or "undefined" cases more elegantly, though.
 */
 #include <iostream>
 #include <vector>
-#include <cmath>    // for std::sqrt()
-#include <optional>
 #include <string>
+#include <cmath>    // for std::sqrt() and std::isnan()
+#include <climits>  // for std::numeric_limits's max() and quiet_nan()
 
 void sort(std::vector<unsigned>& numbers);
 
-void computeHighest(const std::vector<unsigned>& numbers, std::optional<unsigned>(&highest)[5]);
-void computeLowest(const std::vector<unsigned>& numbers, std::optional<unsigned>(&lowest)[5]);
+void getHighest(const std::vector<unsigned>& sortedNumbers, unsigned(&highest)[5]);
+void getLowest(const std::vector<unsigned>& sortedNumbers, unsigned(&lowest)[5]);
 
-std::optional<double> computeAverage(const std::vector<unsigned>& numbers);
-std::optional<double> computeMedian(const std::vector<unsigned>& numbers);
-std::optional<double> computeStandardDeviation(const std::vector<unsigned>& numbers);
-std::optional<double> computeVariance(const std::vector<unsigned>& numbers);
+double computeAverage(const std::vector<unsigned>& numbers);
+double computeMedian(const std::vector<unsigned>& numbers);
+double computeStandardDeviation(const std::vector<unsigned>& numbers);
+double computeVariance(const std::vector<unsigned>& numbers);
 
-void printNumber(const std::string& label, const std::optional<double>& number);
-void printNumbers(const std::string& label, const std::optional<unsigned>(&numbers)[5]);
+void printNumber(const std::string& label, double number);
+void printNumbers(const std::string& label, const unsigned(&numbers)[5]);
+
+const unsigned NOT_AVAILABLE = std::numeric_limits<unsigned>::max();
 
 int main()
 {
@@ -62,11 +63,11 @@ int main()
 
   sort(grades);
 
-  std::optional<unsigned> highest[5]{};
-  std::optional<unsigned> lowest[5]{};
+  unsigned highest[5]{};
+  unsigned lowest[5]{};
 
-  computeHighest(grades, highest);
-  computeLowest(grades, lowest);
+  getHighest(grades, highest);
+  getLowest(grades, lowest);
 
   printNumbers("Five highest grades", highest);
   printNumbers("Five lowest grades", lowest);
@@ -116,35 +117,35 @@ void sort(std::vector<unsigned>& numbers)
     sort(numbers, 0, numbers.size() - 1);
 }
 
-void computeHighest(const std::vector<unsigned>& numbers, std::optional<unsigned>(&highest)[5])
+void getHighest(const std::vector<unsigned>& sortedNumbers, unsigned(&highest)[5])
 {
   const auto numHighest{ static_cast<int>(std::size(highest)) };
 
   for (int i{}; i < numHighest; ++i)
   {
-    const int numberIndex{ static_cast<int>(numbers.size()) - numHighest + i };
+    const int numberIndex{ static_cast<int>(sortedNumbers.size()) - numHighest + i };
     if (numberIndex >= 0)
-      highest[i] = numbers[numberIndex];
+      highest[i] = sortedNumbers[numberIndex];
     else
-      highest[i] = std::nullopt;
+      highest[i] = NOT_AVAILABLE;
   }
 }
 
-void computeLowest(const std::vector<unsigned>& numbers, std::optional<unsigned>(&lowest)[5])
+void getLowest(const std::vector<unsigned>& sortedNumbers, unsigned(&lowest)[5])
 {
   for (size_t i{}; i < std::size(lowest); ++i)
   {
-    if (i < numbers.size())
-      lowest[i] = numbers[i];
+    if (i < sortedNumbers.size())
+      lowest[i] = sortedNumbers[i];
     else
-      lowest[i] = std::nullopt;
+      lowest[i] = NOT_AVAILABLE;
   }
 }
 
-std::optional<double> computeAverage(const std::vector<unsigned>& numbers)
+double computeAverage(const std::vector<unsigned>& numbers)
 {
   if (numbers.empty())
-    return std::nullopt;
+    return std::numeric_limits<double>::quiet_NaN();
 
   double average{};
   for (auto& number : numbers)
@@ -152,10 +153,10 @@ std::optional<double> computeAverage(const std::vector<unsigned>& numbers)
   return average / numbers.size();
 }
 
-std::optional<double> computeMedian(const std::vector<unsigned>& numbers)
+double computeMedian(const std::vector<unsigned>& numbers)
 {
   if (numbers.empty())
-    return std::nullopt;
+    return std::numeric_limits<double>::quiet_NaN();
 
   const auto numNumbers{ numbers.size() };
   const auto middleIndex{ numNumbers / 2 };
@@ -169,47 +170,47 @@ std::optional<double> computeMedian(const std::vector<unsigned>& numbers)
   }
 }
 
-std::optional<double> computeStandardDeviation(const std::vector<unsigned>& numbers)
+double computeStandardDeviation(const std::vector<unsigned>& numbers)
 {
   if (numbers.empty())
-    return std::nullopt;
+    return std::numeric_limits<double>::quiet_NaN();
 
-  const double average{ *computeAverage(numbers) };
+  const double average{ computeAverage(numbers) };
   double sum{};
   for (auto& number : numbers)
     sum += (number - average) * (number - average);
   return std::sqrt(sum / numbers.size());
 }
 
-std::optional<double> computeVariance(const std::vector<unsigned>& numbers)
+double computeVariance(const std::vector<unsigned>& numbers)
 {
   if (numbers.empty())
-    return std::nullopt;
+    return std::numeric_limits<double>::quiet_NaN();
 
-  const double standardDeviation{ *computeStandardDeviation(numbers) };
+  const double standardDeviation{ computeStandardDeviation(numbers) };
   return standardDeviation * standardDeviation;
 }
 
-void printNumber(const std::string& label, const std::optional<double>& number)
+void printNumber(const std::string& label, double number)
 {
   std::cout << label << ": ";
 
-  if (number)
-    std::cout << *number;
-  else
+  if (std::isnan(number))
     std::cout << "n/a";
+  else
+    std::cout << number;
 
   std::cout << std::endl;
 }
 
-void printNumbers(const std::string& label, const std::optional<unsigned>(&numbers)[5])
+void printNumbers(const std::string& label, const unsigned(&numbers)[5])
 {
   std::cout << label << ": ";
 
-  for (auto& number : numbers)
+  for (const auto number : numbers)
   {
-    if (number)
-      std::cout << *number << ' ';
+    if (number != NOT_AVAILABLE)
+      std::cout << number << ' ';
   }
 
   std::cout << std::endl;
