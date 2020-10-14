@@ -63,6 +63,11 @@ int main()
 
   sort(grades);
 
+  // Note: thruth be told, this is based on an old solution.
+  // It would be better and/or easier 
+  //    a) to use std::array<> instead of C-style arrays; and
+  //    b) to return the values requested rather than using output parameters
+  // Perhaps you can improve our solution accordingly?
   unsigned highest[5]{};
   unsigned lowest[5]{};
 
