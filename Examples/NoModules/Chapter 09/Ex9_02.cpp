@@ -27,15 +27,15 @@ int main()
 
 void find_words(vector<string>& words, string_view text, string_view separators)
 {
-  size_t start{ text.find_first_not_of(separators) };     // First word start index
+  size_t start{ text.find_first_not_of(separators) }; // First word start index
 
   while (start != string_view::npos)                          // Find the words
   {
-    size_t end = text.find_first_of(separators, start + 1);  // Find end of word
+    size_t end{ text.find_first_of(separators, start + 1) };  // Find end of word
     if (end == string_view::npos)                             // Found a separator?
-      end = text.length();                               // No, so set to end of text
+      end = text.length();                              // No, so set to end of text
 
-    words.push_back(std::string{ text.substr(start, end - start) });    // Store the word
+    words.push_back(std::string{ text.substr(start, end - start) }); // Store the word
 // Or: words.emplace_back(text.substr(start, end - start));    // (in-place construction)
     start = text.find_first_not_of(separators, end + 1); // Find 1st character of next word
   }
