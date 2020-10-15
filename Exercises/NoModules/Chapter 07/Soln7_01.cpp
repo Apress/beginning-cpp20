@@ -57,7 +57,7 @@ int main()
   const size_t perline {3};
   for (size_t i {}; i < names.size(); ++i)
   {
-    std::cout << std::format("{:<{}} {:>4}", names[i], max_length, grades[i]);
+    std::cout << std::format("{:<{}} {:>4}\t", names[i], max_length, grades[i]);
     if ((i + 1) % perline) continue;
     std::cout << std::endl;
   }
