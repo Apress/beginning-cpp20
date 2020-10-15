@@ -37,7 +37,7 @@ int main()
     
     std::string s1{ "aaa" };
     std::string s2{ "bbb" };
-    auto s3 = plus(s1, s2);
+    auto s3{ plus(s1, s2) };
     std::cout << "With s1 as " << s1 << " and s2 as " << s2 << std::endl;
     std::cout << "plus(s1, s2) returns " << s3 << std::endl;
 
