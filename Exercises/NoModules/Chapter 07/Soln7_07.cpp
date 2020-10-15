@@ -22,10 +22,10 @@ int main()
   size_t index {};
   while (true)
   {
-    const size_t found = numbers.find(' ', index);  // Search for the next space
+    const size_t found{ numbers.find(' ', index) }; // Search for the next space
     if (found == std::string::npos) break;          // Stop once we're at the end of the string
-    const size_t length = found - index;            // To access substrings, we need the length of the string
-    const int i = std::stoi(numbers.substr(index, length));
+    const size_t length{ found - index };           // To access substrings, we need the length of the string
+    const int i{ std::stoi(numbers.substr(index, length)) };
     sum += i;
     index += length + 1;                            // Increase the starting index (include the space)
   }

@@ -30,7 +30,7 @@ int main()
     size_t max_length {};                                      // Maximum word length
     while (start != std::string::npos)                         // Find the words
     {
-      auto end = text.find_first_of(separators, start + 1);    // Find end of word
+      auto end{ text.find_first_of(separators, start + 1) };   // Find end of word
       if (end == std::string::npos)                            // Found a separator?
         end = text.length();                                   // No, so set to last + 1
       auto word = text.substr(start, end - start);             // Record the word
