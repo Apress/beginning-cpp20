@@ -19,9 +19,9 @@ T plus(const T* a, const T* b)
     return *a + *b;
 }
 
-// Result cannot be const char* (could at best be pointer to local variable),
-// but has to be a new object. Function template specialization can thus not be used
-// either, but that is, as you know, never a good idea anyway.
+// Result cannot be const char*, but has to be a new object.
+// Function template specialization can thus not be used either
+// (but that is, as you know, never a good idea anyway!).
 std::string plus(const char* a, const char* b)
 {
   return std::string{ a } + b;
