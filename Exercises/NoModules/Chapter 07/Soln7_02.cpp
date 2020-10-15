@@ -12,7 +12,7 @@ int main()
 
   const std::string separators {" ,;:.\"!?'\n"};             // Word delimiters
   std::vector<std::string> words;                            // Words found
-  std::vector<size_t> counts;                                // Words found
+  std::vector<size_t> counts;                                // Words counts (same order as words)
 
   size_t start {text.find_first_not_of(separators)};         // First word start index
   while (start != std::string::npos)                         // Find the words
