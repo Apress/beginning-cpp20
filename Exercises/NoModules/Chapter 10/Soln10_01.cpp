@@ -2,7 +2,7 @@
 // Create a function template for my_clamp(), 
 // a template that produces functions to clamp values to a given interval.
 // Different variations are possible, but we opted for the same as in the Standard Library:
-// namely one where both arguments are of the same type, and passed by reference-to-const.
+// namely one where all three arguments are of the same type, and passed by reference-to-const.
 #include <iostream>
 #include <format>
 #include <string>

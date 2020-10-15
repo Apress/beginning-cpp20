@@ -17,7 +17,7 @@ template <typename T, size_t N>
 size_t my_size(const std::array<T,N>& array) { return N; }  // or array.size();
 
 /*
-In stead of the latter two templates, you can create one template that would make my_size 
+Instead of the latter two templates, you can create one template that would make my_size 
 accept any argument and call size() on it. This will make it work
 for std::array<> and std::vector<>, as well as std::string and many other containers:
 
