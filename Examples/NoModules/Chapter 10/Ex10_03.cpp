@@ -5,7 +5,7 @@
 // Template for functions to return the larger of two values
 // Supports implicit converion of differently-typed arguments
 template <typename T1, typename T2>
-auto larger(T1 a, T2 b)
+auto larger(const T1& a, const T2& b)
 {
   return a > b ? a : b;
 }
