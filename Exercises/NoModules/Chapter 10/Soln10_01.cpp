@@ -7,8 +7,17 @@
 #include <format>
 #include <string>
 
+/*
+  Caution: the actual std::clamp() function uses a different argument order.
+  Where the exercise suggests:
+    my_clamp(value, low, high)
+  but for the Standard Library function the order is as follows:
+    std::clamp(low, value, high)
+  This solution does as instructed, but keep this in mind if ever using std::clamp()!
+ */
+
 template<typename T> 
-const T& my_clamp(const T& a, const T& b, const T& c);    // Function template prototype
+const T& my_clamp(const T& value, const T& low, const T& high);    // Function template prototype
 
 int main() 
 {
@@ -18,7 +27,7 @@ int main()
   int big_int {17011983}, small_int {10}, negative_int {-123};
   std::cout 
     << std::format("{} clamped to the interval [{},{}] is {}", 
-          negative_int, small_int, big_int, my_clamp(negative_int, big_int, small_int)) 
+          negative_int, small_int, big_int, my_clamp(negative_int, small_int, big_int))
     << std::endl;
 
   // And now for a less useful example...
@@ -30,9 +39,9 @@ int main()
 
 // Template for functions to clamp a value to a closed interval
 template<typename T> 
-const T& my_clamp(const T& a, const T& b, const T& c)
+const T& my_clamp(const T& value, const T& low, const T& high)
 {
-  if (a < b) return b;
-  else if (a < c) return a;
-  else return c;
+  if (value < low) return low;
+  else if (value < high) return value;
+  else return high;
 }
