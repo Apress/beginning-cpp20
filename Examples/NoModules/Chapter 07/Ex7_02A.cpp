@@ -12,7 +12,7 @@ int main()
 
   unsigned vowels {};                            // Count of vowels
   unsigned consonants {};                        // Count of consonants
-  for (const auto& ch : text)
+  for (const char ch : text)
   {
     if (std::isalpha(ch))                        // Check for a letter
 	{
