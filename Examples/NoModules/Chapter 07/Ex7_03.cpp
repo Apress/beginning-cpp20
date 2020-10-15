@@ -39,7 +39,7 @@ int main()
       max_length = name.length();
 
   // Output the sorted names 5 to a line
-  const size_t field_width = max_length + 2;
+  const size_t field_width{ max_length + 2 };
   size_t count {};
 
   std::cout << "In ascending sequence the names you entered are:\n";

@@ -15,10 +15,10 @@ int main()
 
   while (start != std::string::npos)                    // Find the words
   {
-    size_t end = text.find_first_of(separators, start + 1); // Find end of word
-    if (end == std::string::npos)                       // Found a separator?
-      end = text.length();                              // No, so set to end of text
-    words.push_back(text.substr(start, end - start));   // Store the word
+    size_t end{ text.find_first_of(separators, start + 1) }; // Find end of word
+    if (end == std::string::npos)                        // Found a separator?
+      end = text.length();                               // No, so set to end of text
+    words.push_back(text.substr(start, end - start));    // Store the word
     start = text.find_first_not_of(separators, end + 1); // Find first character of next word
   }
 
