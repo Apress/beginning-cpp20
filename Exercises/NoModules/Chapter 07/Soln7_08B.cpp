@@ -20,12 +20,12 @@ int main()
   std::getline(std::cin, text, '*');
   
   std::vector<std::string> words;
-  for (size_t i = 0; i < text.length(); )
+  for (size_t i {}; i < text.length(); )
   {
     // Skip spaces until we find the start of a word...
     while (i < text.length() && !std::isalpha(text[i])) ++i;
 
-    const size_t start = i;
+    const size_t start{ i };
 
     // Search for the end of the word...
     while (i < text.length() && std::isalpha(text[i])) ++i;
@@ -45,7 +45,7 @@ int main()
     if (word.length() > small_word_bound)
     {
       ++long_word_count;
-      const auto start_letter = std::toupper(word[0]);
+      const auto start_letter{ std::toupper(word[0]) };
       if (start_letter >= 'A' && start_letter <= 'Z')
       {
         ++counts[start_letter - 'A'];
@@ -54,8 +54,8 @@ int main()
   }
 
   // Look for the most common start letter
-  size_t most_common_index = 0;
-  for (size_t i = 1; i < std::size(counts); ++i)
+  size_t most_common_index{ 0 };
+  for (size_t i{ 1 }; i < std::size(counts); ++i)
   {
     if (counts[i] > counts[most_common_index])
     {

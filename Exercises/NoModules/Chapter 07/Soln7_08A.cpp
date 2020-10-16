@@ -18,9 +18,9 @@ int main()
   std::cout << "Enter some text terminated by *:\n";
   std::getline(std::cin, text, '*');
 
-  const auto spaces = " \t\n\r\f\v";  // Can be solved using std::isspace() as well...
+  const auto whitespace{ " \t\n\r\f\v" };  // Can be solved using std::isspace() as well...
 
-  const size_t first_letter_index{ text.find_first_not_of(spaces) };
+  const size_t first_letter_index{ text.find_first_not_of(whitespace) };
   if (first_letter_index == std::string::npos)
   {
     // Is an empty string a tautogram? Let's not go there.
@@ -30,15 +30,15 @@ int main()
   const char start_letter{ static_cast<char>(std::toupper(text[first_letter_index])) };
   bool tautogram{ true };
 
-  for (size_t start_current_word = first_letter_index;;)  // Use an indefinite loop (see the break; statements)
+  for (size_t start_current_word{ first_letter_index };;)  // Use an indefinite loop (see the break; statements)
   {
-    const size_t next_space_index{ text.find_first_of(spaces, start_current_word) };
+    const size_t next_space_index{ text.find_first_of(whitespace, start_current_word) };
     if (next_space_index == std::string::npos)
     {
       break;
     }
 
-    const size_t next_letter_index{ text.find_first_not_of(spaces, next_space_index) };
+    const size_t next_letter_index{ text.find_first_not_of(whitespace, next_space_index) };
     if (next_letter_index == std::string::npos)
     {
       break;
