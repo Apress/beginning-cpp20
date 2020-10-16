@@ -1,7 +1,7 @@
 // Overloading function templates
-#include <iostream>
-#include <format>
-#include <string>
+import <iostream>;
+import <format>;
+import <string>;
 
 template<typename T> T larger(T a, T b);    // Function template prototype
 template <typename T> T* larger(T*, T*);

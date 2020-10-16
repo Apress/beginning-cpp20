@@ -5,8 +5,8 @@
 // Concretely: it'll only work if a single byte is 8 bit (virtually always the case),
 // and the fundamental type int counts at least 4 bytes (true for most modern systems).
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

@@ -1,7 +1,7 @@
 // Exercise 5-6. Working with a vector container
-#include <iostream>
-#include <format>
-#include <vector>
+import <iostream>;
+import <format>;
+import <vector>;
 
 int main()
 {

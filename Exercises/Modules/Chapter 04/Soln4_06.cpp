@@ -2,7 +2,7 @@
 // This is just a question of bolting sufficient conditional operators together
 // in an expression. 
 
-#include <iostream>
+import <iostream>;
 using std::cin;
 using std::cout;
 using std::endl;

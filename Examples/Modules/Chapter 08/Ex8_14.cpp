@@ -1,7 +1,7 @@
 // Overloading a function
-#include <iostream>
-#include <string>
-#include <vector>
+import <iostream>;
+import <string>;
+import <vector>;
 
 // Function prototypes
 double largest(const double data[], size_t count);

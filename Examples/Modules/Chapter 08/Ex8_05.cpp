@@ -1,6 +1,6 @@
 // Passing an array to a function
-#include <iostream>
-#include <array>          // For std::size()
+import <iostream>;
+import <array>;          // For std::size()
 
 double average(double array[], size_t count);   // Function prototype
 

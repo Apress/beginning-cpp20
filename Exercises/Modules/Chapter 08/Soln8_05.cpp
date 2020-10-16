@@ -1,7 +1,7 @@
 // Exercise 8_5 Listing prime numbers
-#include <iostream>
-#include <format>
-#include <vector>
+import <iostream>;
+import <format>;
+import <vector>;
 #include <cmath>    // for std::sqrt()
 
 bool isPrime(unsigned number);

@@ -1,5 +1,5 @@
 // Using explicit type conversions
-#include <iostream>
+import <iostream>;
 
 int main()
 {

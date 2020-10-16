@@ -13,7 +13,7 @@ Finally, doing a bitwise AND on 11010 and 111 leaves 10 (in binary)
 or 2 (in decimal) as the result.
 *********************************************************************************/
 
-#include <iostream>
+import <iostream>;
 
 int main()
 {

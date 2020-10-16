@@ -1,6 +1,6 @@
 // Exercise 9-5. Using fixed-size std::span<>
-#include <iostream>
-#include <span>
+import <iostream>;
+import <span>;
 
 double average10(std::span<const double, 10> data);        // Function prototype
 

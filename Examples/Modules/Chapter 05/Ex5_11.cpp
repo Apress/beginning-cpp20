@@ -1,6 +1,6 @@
 // Working with strings in an array
-#include <iostream>
-#include <array> // for std::size()
+import <iostream>;
+import <array>; // for std::size()
 
 int main()
 {

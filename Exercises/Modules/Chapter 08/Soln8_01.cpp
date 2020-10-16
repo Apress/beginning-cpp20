@@ -1,8 +1,8 @@
 // Exercise 8-1 Reading  and validating a date of birth. 
 // As always, there are many ways of doing this!
-#include <iostream>
-#include <format>
-#include <string>
+import <iostream>;
+import <format>;
+import <string>;
 
 int validate_input(int lower, int upper, const std::string& description);
 int year();

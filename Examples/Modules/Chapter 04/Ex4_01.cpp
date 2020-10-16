@@ -1,5 +1,5 @@
 // Comparing data values
-#include <iostream>
+import <iostream>;
 
 int main()
 {

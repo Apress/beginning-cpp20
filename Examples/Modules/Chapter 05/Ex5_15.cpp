@@ -1,7 +1,7 @@
 // Sorting an array in ascending sequence - using a vector<T> container
-#include <iostream>
-#include <format>
-#include <vector>
+import <iostream>;
+import <format>;
+import <vector>;
 
 int main()
 {

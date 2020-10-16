@@ -1,5 +1,5 @@
 // Using the switch statement
-#include <iostream>
+import <iostream>;
 
 int main()
 {

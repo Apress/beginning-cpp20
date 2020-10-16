@@ -1,6 +1,6 @@
 // Using an array of pointers
-#include <iostream>
-#include <array>      // for std::size()
+import <iostream>;
+import <array>;      // for std::size()
 
 int main()
 {

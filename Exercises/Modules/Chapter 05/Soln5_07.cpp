@@ -1,10 +1,10 @@
 // Exercise 5-7. Outputting product records & cost
 // Getting the alignment right is tricky.
 // You have to adjust the field widths until it looks OK.
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cctype>
-#include <vector>
+import <vector>;
 
 int main()
 {

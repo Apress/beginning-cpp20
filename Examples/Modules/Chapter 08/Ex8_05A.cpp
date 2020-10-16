@@ -1,7 +1,7 @@
 // Passing an array to a function - false expectations
 // Note: with main() as defined in this file, 
 // this program will likely either crash or produce garbage output!
-#include <iostream>
+import <iostream>;
 
 double average10(double array[10]);        // Function prototype
 

@@ -1,5 +1,5 @@
 // Using the std::isupper() / islower() character classification functions
-#include <iostream>
+import <iostream>;
 #include <cctype>
 
 int main()

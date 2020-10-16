@@ -2,7 +2,7 @@
 // In the expression for bmi, both h_feet and h_inches will be implicitly converted to double
 // because the other operand of the sub-expression is double.
 
-#include <iostream>
+import <iostream>;
 
 int main()
 {

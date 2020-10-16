@@ -1,5 +1,5 @@
 // Combining logical operators for loan approval
-#include <iostream>
+import <iostream>;
 
 int main()
 {

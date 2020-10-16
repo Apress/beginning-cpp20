@@ -1,6 +1,6 @@
 // Using the continue statement to display ASCII character codes
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cctype>
 
 int main()

@@ -1,7 +1,7 @@
 // Format specifiers for std::format()
-#include <iostream>
-#include <format>
-#include <numbers>   // For the pi constant
+import <iostream>;
+import <format>;
+import <numbers>;   // For the pi constant
 #include <cmath>     // For the square root function
 
 int main()

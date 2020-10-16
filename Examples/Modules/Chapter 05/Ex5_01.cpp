@@ -1,5 +1,5 @@
 // Using a for loop with an array
-#include <iostream>
+import <iostream>;
 
 int main()
 {

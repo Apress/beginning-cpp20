@@ -1,6 +1,6 @@
 // Operations with enumerations
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

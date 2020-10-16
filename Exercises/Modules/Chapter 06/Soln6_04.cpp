@@ -15,10 +15,10 @@
  * in particular polymorphic ones. You'll learn all about this in later chapters!
  */
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cmath>
-#include <vector>
+import <vector>;
 
 int main()
 {

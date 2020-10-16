@@ -1,5 +1,5 @@
 // Converting distances
-#include <iostream>    // For user input and output through std::cin / cout
+import <iostream>;    // For user input and output through std::cin / cout
 
 int main() 
 {

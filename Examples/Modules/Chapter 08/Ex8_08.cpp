@@ -1,8 +1,8 @@
 // Using a reference parameter
-#include <iostream>
-#include <format>
-#include <string>
-#include <vector>
+import <iostream>;
+import <format>;
+import <string>;
+import <vector>;
 
 using std::string;
 using std::vector;

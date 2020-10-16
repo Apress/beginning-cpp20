@@ -1,10 +1,10 @@
 // Exercise 9.3. Using vocabulary types 
 // Your solution should use all types you learned about in Chapter 9!
-#include <iostream>
-#include <format>
-#include <string_view>
-#include <span>
-#include <optional>
+import <iostream>;
+import <format>;
+import <string_view>;
+import <span>;
+import <optional>;
 
 void show_data(std::span<const double> data, 
                std::string_view title = "Data Values",

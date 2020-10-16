@@ -3,10 +3,10 @@
 // (You could, technically, call get() first and then use pointer notation,
 // though why make the syntax even more convoluted: just use array notation!)
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cmath>
-#include <memory>
+import <memory>;
 
 int main()
 {

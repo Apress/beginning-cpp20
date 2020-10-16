@@ -1,7 +1,7 @@
 // Three-way comparison of integers
-#include <compare>  // Required when using operator <=> (even for fundamental types)
-#include <format>
-#include <iostream>
+import <compare>;  // Required when using operator <=> (even for fundamental types)
+import <format>;
+import <iostream>;
 
 int main()
 {

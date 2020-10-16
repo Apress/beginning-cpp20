@@ -1,6 +1,6 @@
 // Passing an array to a function - use std::array<>
-#include <iostream>
-#include <array>
+import <iostream>;
+import <array>;
 
 double average10(const std::array<double,10>& array);        // Function prototype
 

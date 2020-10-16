@@ -1,7 +1,7 @@
 // Exercise 8_8 More efficient recursive version of function for x to the power n, n positive or negative
 // Based on Ex8_17.cpp
-#include <iostream>
-#include <iomanip>
+import <iostream>;
+import <iomanip>;
 
 long double power(double x, int n);
 

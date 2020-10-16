@@ -23,11 +23,11 @@
       In Chapter 9 you will learn about std::optional<>
       which allows you to handle such "not available" or "undefined" cases more elegantly, though.
 */
-#include <iostream>
-#include <vector>
-#include <string>
+import <iostream>;
+import <vector>;
+import <string>;
+import <limits>;    // for std::numeric_limits's max() and quiet_nan()
 #include <cmath>    // for std::sqrt() and std::isnan()
-#include <climits>  // for std::numeric_limits's max() and quiet_nan()
 
 void sort(std::vector<unsigned>& numbers);
 

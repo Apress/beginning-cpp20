@@ -1,7 +1,7 @@
 // Exercise 9-1 Working with std::string_view<>
-#include <optional>     // std::optional<> is defined in the <optional> module
-#include <iostream>
-#include <string_view>
+import <optional>;     // std::optional<> is defined in the <optional> module
+import <iostream>;
+import <string_view>;
 
 std::optional<size_t> find_last(
   std::string_view string, char to_find,
