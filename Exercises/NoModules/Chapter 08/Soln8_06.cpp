@@ -27,7 +27,7 @@
 #include <vector>
 #include <string>
 #include <cmath>    // for std::sqrt() and std::isnan()
-#include <climits>  // for std::numeric_limits's max() and quiet_nan()
+#include <limits>   // for std::numeric_limits's max() and quiet_nan()
 
 void sort(std::vector<unsigned>& numbers);
 
