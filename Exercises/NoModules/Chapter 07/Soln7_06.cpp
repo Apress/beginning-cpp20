@@ -33,7 +33,7 @@ int main()
       auto end{ text.find_first_of(separators, start + 1) };   // Find end of word
       if (end == std::string::npos)                            // Found a separator?
         end = text.length();                                   // No, so set to last + 1
-      auto word = text.substr(start, end - start);             // Record the word
+      auto word{ text.substr(start, end - start) };            // Record the word
       if (std::toupper(word[0]) == std::toupper(ch))           // If it begins with the current letter...
       {
         words.push_back(word);                                 // ...save the word
