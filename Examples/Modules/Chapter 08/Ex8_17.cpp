@@ -1,8 +1,8 @@
 // Sorting words recursively
-#include <iostream>
-#include <format>
-#include <memory>
-#include <string>
+import <iostream>;
+import <format>;
+import <memory>;
+import <string>;
 using Words = std::vector<std::shared_ptr<std::string>>;
 
 void swap(Words& words, size_t first, size_t second);

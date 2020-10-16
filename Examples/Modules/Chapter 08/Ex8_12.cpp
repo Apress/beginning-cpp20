@@ -1,5 +1,5 @@
 // Program that lists its command line arguments
-#include <iostream>
+import <iostream>;
 
 int  main(int argc, char* argv[])
 {

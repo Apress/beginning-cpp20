@@ -1,6 +1,6 @@
 // Overloading a function with reference parameters
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 double larger(double a, double b); // Non-reference parameters
 long& larger(long& a, long& b);    // Reference parameters

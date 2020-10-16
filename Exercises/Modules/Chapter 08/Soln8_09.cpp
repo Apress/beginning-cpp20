@@ -1,7 +1,7 @@
 // Exercise 8_9 Count the number of multiplications performed by 
 // the divide and conquer power() function of Soln8_08.cpp
-#include <iostream>
-#include <iomanip>
+import <iostream>;
+import <iomanip>;
 
 long double power(double x, int n);
 

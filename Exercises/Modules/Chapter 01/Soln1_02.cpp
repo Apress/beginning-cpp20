@@ -2,7 +2,7 @@
 // There are several possibilities. You can do it in one statement for example.
 // You could also output '\n' to go to a new line.
 
-#include <iostream>
+import <iostream>;
 
 int main()
 {

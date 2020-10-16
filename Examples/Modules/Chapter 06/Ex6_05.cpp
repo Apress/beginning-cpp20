@@ -1,6 +1,6 @@
 // Calculating primes using pointer notation
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

@@ -1,8 +1,8 @@
 // Exercise 6-3. Storing numbers in a dynamic array
 // Btw: notice anything about the result? 
 // Try increasing numbers of array elements...
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cmath>
 
 int main()

@@ -1,5 +1,5 @@
 // The size of pointers
-#include <iostream>
+import <iostream>;
 
 int main()
 {

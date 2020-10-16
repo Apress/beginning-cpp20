@@ -1,6 +1,6 @@
 // Sizing a pond for happy fish
-#include <iostream>
-#include <numbers>   // For the pi constant
+import <iostream>;
+import <numbers>;   // For the pi constant
 #include <cmath>     // For the square root function
 
 int main()

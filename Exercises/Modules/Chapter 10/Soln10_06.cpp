@@ -1,8 +1,8 @@
 // Exercise 10-6 A Quicksort function template
 
-#include <iostream>
-#include <format>
-#include <vector>
+import <iostream>;
+import <format>;
+import <vector>;
 
 template <typename T>
 void swap(std::vector<T>& data, size_t first, size_t second);

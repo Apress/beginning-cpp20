@@ -1,6 +1,6 @@
 // Exercise 8_4 An overloaded plus() function. 
-#include <iostream>
-#include <string>
+import <iostream>;
+import <string>;
 
 int plus(int a, int b);
 double plus(double x, double y);

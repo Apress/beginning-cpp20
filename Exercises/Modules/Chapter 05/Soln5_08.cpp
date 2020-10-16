@@ -3,8 +3,8 @@
 // Fibonacci number grow fairly rapidly.
 // 93 is the most that are possible with type unsigned long long on most platforms.
 
-#include <iostream>
-#include <array>
+import <iostream>;
+import <array>;
 
 // See Appendix A (available online) for static_assert()
 static_assert(sizeof(unsigned long long) >= 8,

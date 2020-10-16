@@ -1,7 +1,7 @@
 // Using multiple default parameter values
-#include <iostream>
-#include <format>
-#include <string>
+import <iostream>;
+import <format>;
+import <string>;
 
 // The function prototype including defaults for parameters
 void show_data(const int data[], size_t count = 1,  

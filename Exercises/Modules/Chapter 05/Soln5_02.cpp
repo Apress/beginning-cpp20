@@ -1,6 +1,6 @@
 // Exercise 5-2 Summing integers and calculating the average
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cctype>
 
 int main()

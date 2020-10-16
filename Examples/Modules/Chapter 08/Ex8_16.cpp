@@ -1,6 +1,6 @@
 // Recursive version of function for x to the power n, n positive or negative
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 double power(double x, int n);
 

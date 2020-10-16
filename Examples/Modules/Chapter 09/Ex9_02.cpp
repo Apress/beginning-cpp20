@@ -1,9 +1,9 @@
 // Using std::string_view parameters
-#include <iostream>
-#include <format>
-#include <string>
-#include <string_view>
-#include <vector>
+import <iostream>;
+import <format>;
+import <string>;
+import <string_view>;
+import <vector>;
 
 using std::string;
 using std::string_view;

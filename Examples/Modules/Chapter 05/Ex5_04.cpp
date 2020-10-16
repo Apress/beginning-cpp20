@@ -1,6 +1,6 @@
 // Multiple initializations in a loop expression
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

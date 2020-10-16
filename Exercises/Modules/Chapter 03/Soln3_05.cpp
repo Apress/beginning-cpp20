@@ -3,8 +3,8 @@
 // Biggest complication is that you cannot apply any binary or other arithmetic operations
 // on values of a scoped enumaration type. For this, you have to first cast them to an integer.
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

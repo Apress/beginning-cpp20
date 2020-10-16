@@ -2,9 +2,9 @@
 // Defining a function template for adding numbers, 
 // and an overload that works for pointer types.
 // Extra: also make plus() work with string literals...
-#include <iostream>
-#include <string>
-#include <string_view>
+import <iostream>;
+import <string>;
+import <string_view>;
 
 template <typename T>
 T plus(const T& a, const T& b)

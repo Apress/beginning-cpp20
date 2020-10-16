@@ -3,9 +3,9 @@
 // to control the precision used when outputting the result
 // (we opted for 2 decimals after the decimal points).
 
-#include <iostream>
-#include <numbers>
-#include <format>
+import <iostream>;
+import <numbers>;
+import <format>;
 
 int main()
 {

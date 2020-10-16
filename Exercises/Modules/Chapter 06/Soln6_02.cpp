@@ -2,8 +2,8 @@
 // An exercise to further deepen your understanding of the relation 
 // between pointers, pointer arithmetic, and arrays.
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

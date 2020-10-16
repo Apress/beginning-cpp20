@@ -1,6 +1,6 @@
 // Calculating powers - rearranged
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 //double power(double x, int n);               // Function prototype - uncomment for successful compilation
 

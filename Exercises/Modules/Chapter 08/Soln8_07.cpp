@@ -3,7 +3,7 @@
 // Key is also to use unsigned values (function would fail for negative numbers)
 // and not to forget about zero either (using n == 1 and n == 2 as base cases 
 // would mean trouble if n == 0 is passed)
-#include <iostream>
+import <iostream>;
 
 unsigned long long fib(size_t n);
 

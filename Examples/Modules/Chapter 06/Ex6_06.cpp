@@ -1,6 +1,6 @@
 // Calculating primes using dynamic memory allocation
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cmath>       // For square root function (std::sqrt())
 
 int main()

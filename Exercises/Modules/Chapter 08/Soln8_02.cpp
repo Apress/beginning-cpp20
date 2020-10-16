@@ -3,8 +3,8 @@
 The reverse() function works with an argument of type string, or a
 C-style string terminated with '\0'.
 *******************************************************************/
-#include <iostream>
-#include <string>
+import <iostream>;
+import <string>;
 
 std::string reverse(std::string str);
 

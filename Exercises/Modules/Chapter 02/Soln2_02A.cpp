@@ -2,8 +2,8 @@
 // This solution uses only std::cout. 
 // See alternate solution for a version that uses std::format().
 
-#include <iostream>
-#include <numbers>
+import <iostream>;
+import <numbers>;
 
 int main()
 {

@@ -1,10 +1,10 @@
 // Exercise 6-6. Storing a dynamically allocated vector in a smart pointer
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cmath>
-#include <vector>
-#include <memory>
+import <vector>;
+import <memory>;
 
 int main()
 {

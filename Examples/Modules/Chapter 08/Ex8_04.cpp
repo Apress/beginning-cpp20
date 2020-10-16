@@ -1,5 +1,5 @@
 // Modifying the value of a caller variable
-#include <iostream>
+import <iostream>;
 
 double changeIt(double* pointer_to_it);    // Function prototype
 

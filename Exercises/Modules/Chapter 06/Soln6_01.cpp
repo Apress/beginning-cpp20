@@ -4,8 +4,8 @@
  * to help you understand the intimate relation between pointers and array names.        *
  * In real code, you'd normally just use array notation, because it is that much easier. */
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

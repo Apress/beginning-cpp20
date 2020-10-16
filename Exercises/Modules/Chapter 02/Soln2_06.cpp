@@ -1,8 +1,8 @@
 // Exercise 2-6. Format a table.
 
-#include <iostream>
-#include <numbers>
-#include <format>
+import <iostream>;
+import <numbers>;
+import <format>;
 
 int main()
 {

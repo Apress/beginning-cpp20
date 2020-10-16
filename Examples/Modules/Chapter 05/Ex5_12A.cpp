@@ -1,8 +1,8 @@
 // Allocating an array at runtime (for loop merged into preceding while loop)
 // This example does not work with some compilers (such as Visual C++)
 // because dynamic arrays is not standard C++ (it is valid C though).
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 #ifdef _MSC_VER   // See Appendix A for an explanation of preprocessing macros
   #error Visual Studio does not support variable length arrays (not standard C++)

@@ -1,7 +1,7 @@
 // Exercise 2-5. Output your BMI with one decimal after the decimal point.
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

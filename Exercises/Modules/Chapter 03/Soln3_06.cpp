@@ -1,6 +1,6 @@
 // Exercise 3-6. Swapping integers.
 
-#include <iostream>
+import <iostream>;
 
 int main()
 {

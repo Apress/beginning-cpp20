@@ -1,8 +1,8 @@
 // Expressions with mixed variables types
 // (The difference with the original example 
 //  is the type of fish_count and inches_per_foot)
-#include <iostream>
-#include <numbers>   // For the pi constant
+import <iostream>;
+import <numbers>;   // For the pi constant
 #include <cmath>     // For the square root function
 
 int main()

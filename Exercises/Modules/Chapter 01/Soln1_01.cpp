@@ -1,6 +1,6 @@
 // Exercise 1-1 Writing the line "Hello World" to the screen.
 
-#include <iostream>
+import <iostream>;
 
 int main()
 {

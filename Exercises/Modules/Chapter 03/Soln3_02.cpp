@@ -7,7 +7,7 @@
 // By including static_cast<>() in the code, we are effectively telling the
 // compiler that we know what information will be lost in the cast.
 
-#include <iostream>
+import <iostream>;
 
 int main() 
 {
