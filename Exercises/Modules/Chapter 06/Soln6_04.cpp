@@ -17,8 +17,9 @@
 
 import <iostream>;
 import <format>;
-#include <cmath>
 import <vector>;
+
+#include <cmath>
 
 int main()
 {

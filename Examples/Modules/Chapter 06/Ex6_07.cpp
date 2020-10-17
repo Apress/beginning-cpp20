@@ -3,7 +3,8 @@ import <iostream>;
 import <format>;
 import <memory>;   // For smart pointers
 import <vector>;   // For std::vector<> container
-#include <cctype>   // For std::toupper()
+
+#include <cctype>  // For std::toupper()
 
 int main()
 {

@@ -1,5 +1,6 @@
 // Using a do-while loop to manage input
 import <iostream>;
+
 #include <cctype>                                  // For tolower() function
 
 int main()

@@ -1,5 +1,6 @@
 // Multiple case actions
 import <iostream>;
+
 #include <cctype>
 
 int main()

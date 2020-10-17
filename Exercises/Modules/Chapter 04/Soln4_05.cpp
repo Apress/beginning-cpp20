@@ -1,7 +1,7 @@
 // Exercise 4-05
 // Using the conditional operator to select output.
-#include  <iostream>
-#include  <format>
+import <iostream>;
+import <format>;
 
 int main()
 {

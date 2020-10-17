@@ -10,6 +10,7 @@
  * Ones and zeros are therefore output as appropriate.
  */
 import <iostream>;
+
 #include <cctype>
 
 int main()

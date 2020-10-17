@@ -2,6 +2,7 @@
 import <iostream>;
 import <format>;
 import <vector>;
+
 #include <cmath>    // for std::sqrt()
 
 bool isPrime(unsigned number);

@@ -3,8 +3,9 @@
 // You have to adjust the field widths until it looks OK.
 import <iostream>;
 import <format>;
-#include <cctype>
 import <vector>;
+
+#include <cctype>
 
 int main()
 {
