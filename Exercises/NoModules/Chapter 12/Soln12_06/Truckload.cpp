@@ -105,7 +105,6 @@ bool Truckload::removeBox(SharedBox boxToRemove)
       // Update pointers in member variables where required:
       if (current == m_head) m_head = current->m_next;
       if (current == m_tail) m_tail = previous;
-      if (current == m_current) m_current = current->m_next;
 
       current->m_next = nullptr;     // Disconnect the current Package from the list
       delete current;                // and delete it
