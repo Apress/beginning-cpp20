@@ -29,7 +29,7 @@ public:
   void addBox(SharedBox box);       // Add a new SharedBox
   bool removeBox(SharedBox box);    // Remove a Box from the Truckload
 
-  SharedBox operator[](size_t index) const;   // Overloaded subscript operator
+  SharedBox& operator[](size_t index) const;   // Overloaded subscript operator
 
 private:
   class Package;
@@ -37,6 +37,8 @@ private:
   Package* m_head {};               // First in the list
   Package* m_tail {};               // Last in the list
   Package* m_current {};            // Last retrieved from the list
+
+  static inline SharedBox nullBox{}; // Pointer to nullptr
 };
 
 // Out-of-class definition of the nested Iterator class 
