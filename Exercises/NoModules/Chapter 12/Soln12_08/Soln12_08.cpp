@@ -42,8 +42,8 @@ int main()
   load.listBoxes();
   std::cout << std::endl;
 
-  auto largestIter = findLargestBox(load);
-  auto smallestIter = findSmallestBox(load);
+  const auto largestIter{ findLargestBox(load) };
+  const auto smallestIter{ findSmallestBox(load) };
 
   std::cout << "The largest box (found using forward iteration) is ";
   largestIter.getCurrentBox()->listBox();
