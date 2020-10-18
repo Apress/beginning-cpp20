@@ -16,7 +16,9 @@ public:
 
   Truckload(SharedBox box);         // Constructor - one Box
   Truckload(const std::vector<SharedBox>& boxes);  // Constructor - vector of Boxes
+  
   Truckload(const Truckload& src);  // Copy constructor
+  Truckload& operator=(const Truckload& src);  // Copy assignment operator
 
   ~Truckload();                     // Destructor
 
