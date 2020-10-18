@@ -1,5 +1,5 @@
 // Implementing the copy constructor
-// Note: this is example is explained but not named in the text
+// Note: this example is explained but not named in the text
 #include <iostream>
 
 class Box
