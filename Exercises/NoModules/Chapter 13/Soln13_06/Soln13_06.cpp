@@ -34,7 +34,7 @@ int main()
   std::cout << "box2 is " << box2 << std::endl;
   testBox(box2);  
 
-  // bool b1 = box1;    /* Does not compile! */
-  bool b2 = static_cast<bool>(box2);  // Needs an explicit type conversion
+  // bool b1{ box1 };    /* Does not compile! */
+  bool b2{ static_cast<bool>(box2) };  // Needs an explicit type conversion
 }
 

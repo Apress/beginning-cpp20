@@ -12,7 +12,7 @@ public:
   // Unlike many function call operators, this one alters the state of the object.
   int operator()()
   {
-    const int current = m_n;
+    const int current{ m_n };
     m_n = (m_n * 41 + 7) % 100; // See chapter 12
     return current;
   }
