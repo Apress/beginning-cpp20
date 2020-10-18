@@ -36,7 +36,6 @@ private:
 
   Package* m_head {};               // First in the list
   Package* m_tail {};               // Last in the list
-  Package* m_current {};            // Last retrieved from the list
 
   static inline SharedBox nullBox{}; // Pointer to nullptr
 };

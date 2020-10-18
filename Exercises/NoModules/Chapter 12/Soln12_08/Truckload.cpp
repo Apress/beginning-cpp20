@@ -167,7 +167,6 @@ void Truckload::removePackage(Package* package)
   // Update pointers in member variables where required:
   if (package == m_head) m_head = package->m_next;
   if (package == m_tail) m_tail = package->m_previous;
-  if (package == m_current) m_current = package->m_next;
 
   package->m_next = nullptr;     // Disconnect the current Package from the list
   delete package;                // and delete it

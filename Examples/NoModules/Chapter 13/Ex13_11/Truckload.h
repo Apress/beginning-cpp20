@@ -34,7 +34,6 @@ private:
 
   Package* m_head {};               // First in the list
   Package* m_tail {};               // Last in the list
-  Package* m_current {};            // Last retrieved from the list
 
   // Caution: inline is required to allow for this definition to appear in-class.
   // In the text we forgot to add this. See Chapter 12 for more explanation,
