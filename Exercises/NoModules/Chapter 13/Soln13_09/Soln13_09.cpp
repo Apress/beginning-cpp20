@@ -18,7 +18,7 @@ auto createUniformPseudoRandomNumberGenerator(double max)
 int main()
 {
   const double limit{ 99.0 };    // Upper limit on Box dimensions
-  auto random = createUniformPseudoRandomNumberGenerator(limit);
+  auto random{ createUniformPseudoRandomNumberGenerator(limit) };
 
   Truckload load;
   const size_t boxCount {20};               // Number of Box object to be created
