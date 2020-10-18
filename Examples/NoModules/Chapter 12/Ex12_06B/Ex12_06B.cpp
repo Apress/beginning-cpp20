@@ -1,10 +1,10 @@
 // Defining classes with in-class member definitions.
-#include "Box.h"
-#include <iostream>
+
+#include <iostream>   // For use of std::cout, std::endl, etc.
+#include "Box.h"      // For use of the Box class
 
 int main()
 {
-  Box firstBox {80.0, 50.0, 40.0};            // Create a box
-  double firstBoxVolume {firstBox.volume()};  // Calculate the box volume
-  std::cout << "Volume of Box object is " << firstBoxVolume << std::endl;
+  Box myBox{ 6.0, 6.0, 18.5 }; // Create a box
+  std::cout << "Volume of the first Box object is " << myBox.volume() << std::endl;
 }
