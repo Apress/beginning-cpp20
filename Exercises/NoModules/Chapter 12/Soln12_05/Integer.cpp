@@ -7,7 +7,7 @@
 #include "Integer.h"
 
 // Constructor
-Integer::Integer(int m) : m_value{m}
+Integer::Integer(int value) : m_value{value}
 {
   ++s_count;
   std::cout << "Object created." << std::endl;
