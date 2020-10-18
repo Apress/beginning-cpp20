@@ -41,6 +41,19 @@ Truckload::Truckload(const Truckload& src)
   }
 }
 
+Truckload& Truckload::operator=(const Truckload& src)
+{
+  // Delete and reset the current list
+  delete m_head;
+  m_head = m_tail = nullptr;
+
+  // Add all boxes from the src truckload
+  for (Package* package{ src.m_head }; package; package = package->m_next)
+  {
+    addBox(package->m_box);
+  }
+}
+
 // Destructor: clean up the list (moved to source file to gain access to definition of Package)
 Truckload::~Truckload()
 {
