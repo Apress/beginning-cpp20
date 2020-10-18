@@ -47,8 +47,8 @@ int main()
   std::cout << "\nThe second list:\n";
   load2.listBoxes();
 
-  auto smallestBox = load2.getFirstBox();
-  for (auto box = load2.getNextBox(); box; box = load2.getNextBox())
+  auto smallestBox{ load2.getFirstBox() };
+  for (auto box{ load2.getNextBox() }; box; box = load2.getNextBox())
     if (box->compare(*smallestBox) < 0)
       smallestBox = box;
 
