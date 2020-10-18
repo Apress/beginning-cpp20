@@ -107,7 +107,7 @@ bool Truckload::removeBox(SharedBox boxToRemove)
   return false;     // Return false: boxToRemove was not found
 }
 
-SharedBox Truckload::operator[](size_t index) const
+SharedBox& Truckload::operator[](size_t index) const
 {
   size_t count{};             // Package count
   for (Package* package{ m_head }; package; package = package->m_next)
@@ -115,7 +115,7 @@ SharedBox Truckload::operator[](size_t index) const
     if (count++ == index)      // Up to index yet?
       return package->m_box;   // If so return the pointer to Box
   }
-  return nullptr;
+  return nullBox;
 }
 
 std::ostream& operator<<(std::ostream& stream, const Truckload& load)
