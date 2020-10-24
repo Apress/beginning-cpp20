@@ -39,7 +39,7 @@ int main()
     if (!lists.element_exists_at(i))
       continue;
   
-	size_t count {};                               // Word counter
+    size_t count {};                               // Word counter
     for (auto iterator { lists[i].front_iterator() }; iterator; iterator.next())
     {
       std::cout << iterator.value() << ' ';
