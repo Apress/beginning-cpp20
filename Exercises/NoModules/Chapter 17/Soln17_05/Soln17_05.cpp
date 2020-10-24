@@ -15,7 +15,7 @@ int main()
   LinkedList<std::string> words;                 // List to store words
 
   // Extract words and store in the list
-  std::string_view separators(" ,.\"?!;:\n");         // Separators between words
+  std::string_view separators{ " ,.\"?!;:\n" };  // Separators between words
   size_t start {};                               // Start of a word
   size_t end {};                                 // separator position after a word
   while (std::string::npos != (start = text.find_first_not_of(separators, start)))
@@ -27,7 +27,7 @@ int main()
 
   // List the words 5 to a line
   std::cout << "\nThe words are:\n\n";
-  auto iterator = words.front_iterator();
+  auto iterator{ words.front_iterator() };
   size_t count {};                               // Word counter
   const size_t perline {5};                      // Worde per line
   while (iterator.hasValue())
