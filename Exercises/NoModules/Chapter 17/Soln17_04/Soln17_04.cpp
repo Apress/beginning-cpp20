@@ -38,14 +38,14 @@ int main()
   
   for (size_t i {}; i < count; ++i)       // Create count entries in numbers array
   {
-	  size_t index {};                      // Stores new index value
+    size_t index {};                      // Stores new index value
 
     // Must ensure that indexes after the first are not duplicates
     do
     {
       index = generate_random_index();    // Get a random index 0 to max_index-1
     }
-	  while (numbers.element_exists_at(index));
+    while (numbers.element_exists_at(index));
 
     numbers[index] = generate_random_value();  // Store value at new index position
   }
