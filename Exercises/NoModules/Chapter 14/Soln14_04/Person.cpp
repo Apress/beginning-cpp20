@@ -34,7 +34,7 @@ std::string_view Person::getGenderString() const
   case Gender::other:  return "an other-gendered";
   }
 
-  // Unreacheble return statement required by some compilers 
+  // Unreachable return statement required by some compilers 
   // (switch statement is exhaustive)
   return {};
 }

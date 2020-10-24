@@ -21,7 +21,7 @@ public:
 
   double getWeight() const { return volume * density; }
 
-protected:  // Protected to make initialization in Carton constructor word (book says private)
+protected:  // Protected to make initialization in CerealPack constructor work (book says private)
   std::string name {"cereal"};  // Food type
   double volume {};             // Cubic inches
   double density {0.03};        // Pounds per cubic inch
