@@ -28,7 +28,7 @@ private:
 
 // Forwarding default constructor template
 template <typename T>
-Array<T>::Array() : Array(0)
+Array<T>::Array() : Array{0}
 {}
 
 // Constructor template
@@ -84,8 +84,8 @@ Array<T>& Array<T>::operator=(const Array& rhs)
 template <typename T>
 void Array<T>::push_back(const T& newElement)
 {
-  Array<T> copy(m_size + 1);          // Copy...
-  for (size_t i = 0; i < m_size; ++i)
+  Array<T> copy{ m_size + 1 };        // Copy...
+  for (size_t i {}; i < m_size; ++i)
     copy[i] = m_elements[i];
 
   copy[m_size] = newElement;          // ... modify ...

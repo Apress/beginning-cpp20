@@ -89,7 +89,7 @@ LinkedList<T>::LinkedList(const LinkedList& list)
 {
   // Use existing members (iteration, push_back()) to implement the copying
   // This avoids duplicating any code that manipulates the list's pointers / size members.
-  for (auto iterator = list.front_iterator(); iterator; iterator.next())
+  for (auto iterator{ list.front_iterator() }; iterator; iterator.next())
     push_back(iterator.value());
 }
 
@@ -109,8 +109,8 @@ void LinkedList<T>::push_front(const T& value)
 	// any and all change occur after the line annotated with (*),
 	// which is the only line that may throw.
 
-	Node* oldHead = m_head;
-	m_head = new Node(value);  // (*)
+	Node* oldHead{ m_head };
+	m_head = new Node{ value };  // (*)
 	++m_size;
 
 	if (oldHead)
@@ -132,8 +132,8 @@ void LinkedList<T>::push_back(const T& value)
 	// any and all change occur after the line annotated with (*),
 	// which is the only line that may throw.
 
-	Node* oldTail = m_tail;
-	m_tail = new Node(value);	 // (*)
+	Node* oldTail{ m_tail };
+	m_tail = new Node{value};	 // (*)
 	++m_size;                 
 
 	if (oldTail)
@@ -151,7 +151,7 @@ void LinkedList<T>::push_back(const T& value)
 template<typename T> 
 void LinkedList<T>::pop_front()
 {
-	Node* oldHead = m_head;
+	Node* oldHead{ m_head };
 	if (oldHead == m_tail)
 	{
 		m_head = m_tail = nullptr;
@@ -170,7 +170,7 @@ void LinkedList<T>::pop_front()
 template<typename T>
 void LinkedList<T>::pop_back()
 {
-	Node* oldTail = m_tail;
+	Node* oldTail{ m_tail };
 	if (oldTail == m_head)
 	{
 		m_head = m_tail = nullptr;

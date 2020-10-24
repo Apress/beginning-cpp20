@@ -29,7 +29,7 @@ private:
 template<typename T>
 T& SparseArray<T>::operator[](size_t index)
 {
-  if (auto* found = find(index); found)    // Using C++17 initialization statements for if statement 
+  if (auto* found{ find(index) }; found)   // Using C++17 initialization statements for if statement 
   {                                        // (see at() function for common, traditional equivalent)
 	  return *found;
   }
@@ -43,7 +43,7 @@ T& SparseArray<T>::operator[](size_t index)
 template<typename T>
 const T& SparseArray<T>::at(size_t index) const
 {
-  const auto* found = find(index);
+  const auto* found{ find(index) };
   if (found)
   {
 	  return *found;

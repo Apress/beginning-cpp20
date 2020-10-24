@@ -5,10 +5,10 @@
 
 int main()
 {
-  const unsigned numElements = 100;
+  const unsigned numElements{ 100 };
 
   Array<unsigned> squares;       // default construction
-  for (unsigned i = 0; i < numElements; ++i)
+  for (unsigned i {}; i < numElements; ++i)
 	  squares.push_back(i * i);    // push_back()
 
   std::cout << squares.getSize() << " squares were added." << std::endl;

@@ -25,7 +25,7 @@ public:
     // We first find the range where for instance ".2" is present,
     // and then inject that three times into a format string of the correct form.
 
-    auto iter = context.begin(); 
+    auto iter{ context.begin() };
     if (iter == context.end())  // May happen for empty {} format specifiers
     {
       m_format = "Box({}, {}, {})";
@@ -37,7 +37,7 @@ public:
 
     if (*iter != '}') // If not found, fail
     {
-      throw std::format_error("missing closing braces, }");
+      throw std::format_error{ "missing closing braces, }" };
     }
     
     // Main trick in this format expression is that to get { or } 

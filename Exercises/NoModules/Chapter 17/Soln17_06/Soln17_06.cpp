@@ -25,8 +25,8 @@ int main()
   while (std::string::npos != (start = text.find_first_not_of(separators, start)))
   {
     end = text.find_first_of(separators, start+1);
-    const auto word = text.substr(start, end - start);
-    const auto letter = static_cast<char>(std::toupper(word[0]));
+    const auto word{ text.substr(start, end - start) };
+    const auto letter{ static_cast<char>(std::toupper(word[0])) };
     lists[letters.find(letter)].push_back(word);
     start = end;
   }

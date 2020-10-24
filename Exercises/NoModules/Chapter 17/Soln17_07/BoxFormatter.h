@@ -24,7 +24,7 @@ public:
    */
   auto format(const Box& box, auto& context)
   {
-    auto iter = std::format_to(context.out(), "Box(");
+    auto iter{ std::format_to(context.out(), "Box(") };
     context.advance_to(iter);
     iter = std::formatter<double>::format(box.getLength(), context);
     iter = std::format_to(iter, ", ");
