@@ -8,17 +8,17 @@ int main()
   // (this constructor, unlike the std::string_view name itself, is visible)
   std::cout << "MMXX in Arabic numerals is " << from_roman("MMXX") << std::endl;
 
-  // The names of the c_data() and size() members are visible as well
+  // The names of the c_str() and size() members are visible as well
   // (because the definition of std::string is reachable), 
   // and can thus be invoked.
-  std::cout << "1234 in Roman numerals is " << to_roman(1234).c_data() << std::endl;
+  std::cout << "1234 in Roman numerals is " << to_roman(1234).c_str() << std::endl;
   std::cout << "This consists of " << to_roman(1234).size() << " numerals" << std::endl;
 
   // std::string_view s{ "MMXX" };   /* Error: the name std::string_view is not visible */
   // std::string roman{ to_roman(567) };  /* Error: the name std::string is not visible */
 
   auto roman{ to_roman(567) };
-  std::cout << "567 in Roman numerals is " << roman.c_data() << std::endl;
+  std::cout << "567 in Roman numerals is " << roman.c_str() << std::endl;
 
   // std::cout << "std::stoi() is not visible: " << std::stoi("1234") << std::endl;
 
