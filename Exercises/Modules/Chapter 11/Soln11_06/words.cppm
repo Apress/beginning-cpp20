@@ -19,9 +19,9 @@ export namespace w = words;
 
   namespace wrds
   {
-    // A using directive us not a declaration, 
+    // A using directive is not a declaration, 
     // and can therefore not be exported from a module.
-    // Namespace aliases are therefore the preferred over 
+    // Namespace aliases are therefore preferred over 
     // using directives inside a namespace...
     export using namespace words;
   }
