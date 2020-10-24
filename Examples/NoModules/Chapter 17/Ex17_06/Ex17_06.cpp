@@ -36,9 +36,9 @@ void Derived<T>::derivedFun()
   this->baseFun();
   std::cout << this->m_base_var << std::endl;
 
-  // Option 2: add Base::
-  Base::baseFun();
-  std::cout << Base::m_base_var << std::endl;
+  // Option 2: add Base<T>::
+  Base<T>::baseFun();
+  std::cout << Base<T>::m_base_var << std::endl;
 }
 
 int main()
