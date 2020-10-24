@@ -71,9 +71,9 @@ Stack<T>& Stack<T>::operator=(const Stack& rhs)
 template <typename T>
 void Stack<T>::push(const T& item)
 {
-  Node* node{new Node(item)}; // Create the new node
-  node->m_next = m_head;      // Point to the old top node
-  m_head = node;              // Make the new node the top
+  Node* node{ new Node{item} }; // Create the new node
+  node->m_next = m_head;  // Point to the old top node
+  m_head = node;          // Make the new node the top
 }
 
 // Pop an object off the stack

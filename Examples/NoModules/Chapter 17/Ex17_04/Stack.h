@@ -56,7 +56,7 @@ Stack<T>::~Stack()
 {
   while (m_head)
   {                               // While current pointer is not null
-    auto* next = m_head->m_next;  // Get the pointer to the next node
+    auto* next{ m_head->m_next }; // Get the pointer to the next node
     delete m_head;                // Delete the current head
     m_head = next;                // Make m_head point to the next node
   }
@@ -75,9 +75,9 @@ Stack<T>& Stack<T>::operator=(const Stack& rhs)
 template <typename T>
 void Stack<T>::push(const T& item)
 {
-  Node* node{new Node(item)}; // Create the new node
-  node->m_next = m_head;      // Point to the old top node
-  m_head = node;              // Make the new node the top
+  Node* node{ new Node{item} }; // Create the new node
+  node->m_next = m_head;  // Point to the old top node
+  m_head = node;          // Make the new node the top
 }
 
 // Pop an object off the stack
