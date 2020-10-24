@@ -1,4 +1,5 @@
 // Using using declarations and using directives
+// (Note: example was not named in the text)
 import <iostream>;
 import squaring;
 
