@@ -1,4 +1,4 @@
-// Changing the access specification of inherited members
+// Changing the access specification of inherited members using using
 #include <iostream>
 #include "Box.h"                 // For the Box class
 #include "Carton.h"              // For the Carton class
