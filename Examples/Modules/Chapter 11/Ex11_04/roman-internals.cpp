@@ -1,4 +1,4 @@
-// Implementation of the to_roman() function
+// Implementation of the internal from_roman() function
 module roman:internals;
 
 unsigned int from_roman(char c)
