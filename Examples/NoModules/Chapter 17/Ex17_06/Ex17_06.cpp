@@ -9,7 +9,7 @@ class Base
 public:
   void baseFun() { /* ... */ }
 protected:
-  int m_base_var = 0;
+  int m_base_var {};
 };
 
 template <typename T>

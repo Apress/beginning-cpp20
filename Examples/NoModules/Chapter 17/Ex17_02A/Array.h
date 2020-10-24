@@ -46,7 +46,7 @@ const T& Array<T, startIndex>::operator[](int index) const
 {
   // Subtract startIndex to obtain the actual index into the m_elements array.
   // If startIndex is 0, conventional 0-based array indexing is used.
-  const int actualIndex = index - startIndex;
+  const int actualIndex{ index - startIndex };
 
   if (actualIndex < 0)
     throw std::out_of_range {"Index too small: " + std::to_string(index)};
