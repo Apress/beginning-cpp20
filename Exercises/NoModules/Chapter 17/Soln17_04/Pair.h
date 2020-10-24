@@ -19,7 +19,7 @@ public:
   // (replacing auto with std::strong_ordering may make Soln17_02.cpp compile then,
   // but in general auto is better because First and/or Second could be types 
   // that are not strongly ordered, such as a floating-point types)
-  std::strong_ordering operator<=>(const Pair& other) const = default;
+  auto operator<=>(const Pair& other) const = default;
 };
 
 // Constructor
