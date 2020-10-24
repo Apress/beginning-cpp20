@@ -1,5 +1,6 @@
 // Defining and using a namespace
 import <iostream>;
+import <numbers>;
 import squaring;
 
 int main()
