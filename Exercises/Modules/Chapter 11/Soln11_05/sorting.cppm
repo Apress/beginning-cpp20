@@ -1,7 +1,7 @@
 // A module interface partition containing words::sort()
 export module words:sorting;
 
-import words;   // For the use of words::Words
+import :alias;   // For the use of words::Words
 import :internals;
 
 export namespace words

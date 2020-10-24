@@ -1,7 +1,7 @@
 // A module interface partition containing some extra words-related utilities
 export module words:utils;
 
-import words;   // For use of words::Words alias
+import :alias;   // For use of words::Words alias
 import :internals;
 
 import <iostream>;

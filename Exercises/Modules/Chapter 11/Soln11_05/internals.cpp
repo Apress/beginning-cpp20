@@ -1,6 +1,6 @@
 module words:internals;
 
-import words; // For use of words::Words
+import :alias; // For use of words::Words
 
 void swap(words::Words& words, size_t first, size_t second)
 {
