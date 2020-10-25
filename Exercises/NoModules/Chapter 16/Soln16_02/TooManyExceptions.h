@@ -1,6 +1,8 @@
 // Definition of TooManyExceptions exception class
 // We added an extra "how many" members to illustrate derived 
 // exceptions can carry extra information regarding their cause.
+// Notice how the constructor is explicit (implicit conversions
+// from size_t to TooManyExceptions are not desired).
 
 #ifndef TOOMANYEXCEPTIONS_H
 #define TOOMANYEXCEPTIONS_H
@@ -11,7 +13,7 @@
 class TooManyExceptions : public std::exception
 {
 public:
-  TooManyExceptions(size_t howMany)
+  explicit TooManyExceptions(size_t howMany)
     : m_how_many{ howMany }
     , m_message{ "Too many exceptions occurred: " + std::to_string(m_how_many) }
   {}
