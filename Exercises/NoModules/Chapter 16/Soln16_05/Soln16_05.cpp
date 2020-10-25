@@ -60,14 +60,14 @@ void askEvenNumber()
 // Option 2: use a loop
 void askEvenNumber()
 {
-  bool repeat{ false };
-  do
+  while (true)
   {
     try
     {
       std::cout << "Please enter an even number: ";
       const int read = readEvenNumber();
       std::cout << std::format("Well done. {} is a beautiful even number. Thank you!\n", read);
+      break;
     }
     catch (const NotANumber& nan)
     {
@@ -77,7 +77,6 @@ void askEvenNumber()
     catch (const std::out_of_range& range)
     {
       std::cerr << range.what() << std::endl;
-      repeat = true;
     }
     catch (const std::exception& exception)
     {
@@ -85,7 +84,6 @@ void askEvenNumber()
       throw;
     }
   }
-  while (repeat);
 }
 */
 
