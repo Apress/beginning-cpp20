@@ -32,7 +32,7 @@ int main()
   try
   {
     std::vector v{ 1, 2, 3, 4, 5 };
-    std::cout << v[10] << std::endl;
+    std::cout << v.at(10) << std::endl;
   }
   catch (const std::out_of_range& exception)
   {
