@@ -7,7 +7,9 @@
 class Trouble
 {
 public:
-  Trouble(std::string_view message = "There's a problem") : m_message {message} {}
+  explicit Trouble(std::string_view message = "There's a problem") 
+    : m_message {message} 
+  {}
   virtual ~Trouble() = default;   // Base classes must have a virtual destructor!
 
   virtual std::string_view what() const { return m_message; }
