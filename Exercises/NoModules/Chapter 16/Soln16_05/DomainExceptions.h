@@ -16,7 +16,7 @@
 class NotANumber : public std::domain_error
 {
 public:
-  NotANumber(const std::string& nan) 
+  explicit NotANumber(const std::string& nan) 
     : std::domain_error{"Not a number: " + nan} 
   {}
 };
@@ -24,7 +24,7 @@ public:
 class NegativeNumber : public std::domain_error
 {
 public:
-  NegativeNumber(int number) 
+  explicit NegativeNumber(int number)
     : std::domain_error{"A negative number was entered: " + std::to_string(number)}
   {}
 };
@@ -32,7 +32,7 @@ public:
 class OddNumber : public std::domain_error
 {
 public:
-  OddNumber(int number) 
+  explicit OddNumber(int number)
     : std::domain_error{"An odd number was entered: " + std::to_string(number)}
   {}
 };
