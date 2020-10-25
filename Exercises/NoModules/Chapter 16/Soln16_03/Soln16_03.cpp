@@ -16,7 +16,7 @@ int main()
   try
   {
     std::cout << "The truckload contains the following boxes: " << std::endl;
-    for (size_t i = 0; i < 100; ++i)
+    for (size_t i {}; i < 100; ++i)
     {
 	    std::cout << *load[i] << std::endl;
     }
