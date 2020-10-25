@@ -19,7 +19,7 @@ class DBConnectionRAII
 {
 public:
   DBConnectionRAII(DB_CONNECTION* connection) noexcept
-    : m_connection(connection)
+    : m_connection{ connection }
   {
   }  
   ~DBConnectionRAII() // implicitly noexcept
@@ -44,7 +44,7 @@ class DBQueryResultRAII
 {
 public:
   DBQueryResultRAII(DB_QUERY_RESULT* result) noexcept 
-    : m_result(result)
+    : m_result{ result }
   {
   }
   

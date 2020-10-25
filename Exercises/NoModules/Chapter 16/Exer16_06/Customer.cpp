@@ -8,11 +8,11 @@ Customer::Customer(
       std::string_view street,
       int streetNumber,
       std::string_view city)
-  : m_surname(surname)
-  , m_name(name)
-  , m_street(street)
-  , m_streetNumber(streetNumber)
-  , m_city(city)
+  : m_surname{ surname }
+  , m_name{ name }
+  , m_street{ street }
+  , m_streetNumber{ streetNumber }
+  , m_city{ city }
 {}
 
 std::string Customer::toString() const
