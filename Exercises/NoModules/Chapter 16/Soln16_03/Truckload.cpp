@@ -141,8 +141,8 @@ SharedBox& Truckload::operator[](size_t index) const
 std::ostream& operator<<(std::ostream& stream, const Truckload& load)
 {
   size_t count{};
-  auto iterator = load.getIterator();
-  for (auto box = iterator.getFirstBox(); box; box = iterator.getNextBox())
+  auto iterator{ load.getIterator() };
+  for (auto box{ iterator.getFirstBox() }; box; box = iterator.getNextBox())
   {
     std::cout << *box << ' ';
     if (!(++count % 4)) std::cout << std::endl;
