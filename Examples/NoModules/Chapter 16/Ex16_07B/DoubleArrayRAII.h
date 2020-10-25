@@ -7,7 +7,7 @@
 class DoubleArrayRAII final
 {
 public:
-  DoubleArrayRAII(size_t size) : m_resource{ new double[size] } {}
+  explicit DoubleArrayRAII(size_t size) : m_resource{ new double[size] } {}
   ~DoubleArrayRAII()
   {
     std::cout << "Freeing memory..." << std::endl;
