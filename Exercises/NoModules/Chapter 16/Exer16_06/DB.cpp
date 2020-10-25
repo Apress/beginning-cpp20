@@ -69,7 +69,7 @@ QueryResult* Database::query(const char* query)
     return nullptr;
   }
   
-  auto result = std::make_unique<QueryResult>();
+  auto result{ std::make_unique<QueryResult>() };
   result->data = std::vector<std::vector<const char*>>{
     { "Sherlock", "Holmes", "Baker Street", "221", "London" },
     { "Donald", "Trump", "Pennsylvania Avenue", "1600", "Washington DC" },
@@ -83,7 +83,7 @@ QueryResult* Database::query(const char* query)
 
 int db_num_fields(DB_QUERY_RESULT* result)
 {
-  auto* theResult = reinterpret_cast<QueryResult*>(result);
+  auto* theResult{ reinterpret_cast<QueryResult*>(result) };
   if (!theResult || theResult->data.empty())
   {
     return -1;
@@ -96,7 +96,7 @@ int db_num_fields(DB_QUERY_RESULT* result)
 
 DB_ROW db_fetch_row(DB_QUERY_RESULT* result)
 {
-  auto* theResult = reinterpret_cast<QueryResult*>(result);
+  auto* theResult{ reinterpret_cast<QueryResult*>(result) };
   if (!theResult || theResult->index >= theResult->data.size())
   {
     return nullptr;
