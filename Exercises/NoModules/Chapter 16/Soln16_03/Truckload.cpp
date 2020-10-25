@@ -41,20 +41,26 @@ Truckload::Truckload(const Truckload& src)
   }
 }
 
-Truckload& Truckload::operator=(const Truckload& src)
+Truckload& Truckload::operator=(const Truckload& other)
 {
-  // Delete and reset the current list
-  delete m_head;
-  m_head = m_tail = nullptr;
-
-  // Add all boxes from the src truckload
-  for (Package* package{ src.m_head }; package; package = package->m_next)
+  if (&other != this)   // Do not forget: avoid issues with self-assignment!
   {
-    addBox(package->m_box);
+    delete m_head;              // Delete all current packages
+    m_head = m_tail = nullptr;  // Reset both pointers
+
+    // Same as copy constructor 
+    // (see Chapter 17 for the copy-and-swap idiom that allows you to avoid 
+    // duplicating logic like this...)
+    for (Package* package{ other.m_head }; package; package = package->m_next)
+    {
+      addBox(package->m_box);
+    }
   }
+
+  return *this;
 }
 
-// Destructor: clean up the list (moved to source file to gain access to definition of Package)
+// Destructor: clean up the list
 Truckload::~Truckload()
 {
   delete m_head;

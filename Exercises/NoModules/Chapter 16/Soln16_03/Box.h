@@ -27,6 +27,4 @@ private:
   double m_height {1.0};
 };
 
-
-
 #endif
