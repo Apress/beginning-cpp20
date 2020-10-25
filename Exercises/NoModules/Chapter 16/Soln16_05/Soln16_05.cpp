@@ -7,6 +7,7 @@
 #include <iostream>
 #include <random>     // For random number generation
 #include <functional> // For std::bind()
+#include <format>
 #include "CurveBall.h"
 #include "DomainExceptions.h"
 
@@ -35,7 +36,8 @@ void askEvenNumber()
   try
   {
     std::cout << "Please enter an even number: ";
-    readEvenNumber();
+    const int read = readEvenNumber();
+    std::cout << std::format("Well done. {} is a beautiful even number. Thank you!\n", read);
   }
   catch (const NotANumber& nan)
   {
@@ -64,6 +66,8 @@ void askEvenNumber()
     try
     {
       std::cout << "Please enter an even number: ";
+      const int read = readEvenNumber();
+      std::cout << std::format("Well done. {} is a beautiful even number. Thank you!\n", read);
     }
     catch (const NotANumber& nan)
     {
