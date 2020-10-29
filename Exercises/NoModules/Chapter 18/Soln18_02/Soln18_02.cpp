@@ -9,7 +9,7 @@
 void printList(std::string_view message, const LinkedList<std::unique_ptr<int>>& list)
 {
   std::cout << message << ": ";
-  for (auto iterator = list.front_iterator(); iterator; iterator.next())
+  for (auto iterator{ list.front_iterator() }; iterator; iterator.next())
   {
     std::cout << *iterator.value() << ' ';
   }
@@ -26,13 +26,13 @@ int main()
   
   LinkedList<std::unique_ptr<int>> number_pointers;
   
-  auto one = std::make_unique<int>(1);
+  auto one{ std::make_unique<int>(1) };
   number_pointers.push_back(std::move(one));
   number_pointers.push_back(std::make_unique<int>(2));
   
   printList("Elements in the original list", number_pointers);
   
-  LinkedList<std::unique_ptr<int>> move_constructed(std::move(number_pointers));
+  LinkedList<std::unique_ptr<int>> move_constructed{std::move(number_pointers)};
   
   printList("Elements in the move constructed list", move_constructed);
   

@@ -51,15 +51,15 @@ Truckload::Truckload(const Truckload& src)
 // Copy assignment operator (updated to use copy-and-swap of course!)
 Truckload& Truckload::operator=(const Truckload& src)
 {
-  auto copy(src);
+  auto copy{src};
   swap(copy);
   return *this;
 }
 
 // Move constructor (noexcept!)
 Truckload::Truckload(Truckload&& src) noexcept
-  : m_head(src.m_head)
-  , m_tail(src.m_tail)
+  : m_head{ src.m_head }
+  , m_tail{ src.m_tail }
 {
   // Do not forget to dislodge the linked list from the moved src Truckload
   src.m_head = src.m_tail = nullptr;
@@ -68,7 +68,7 @@ Truckload::Truckload(Truckload&& src) noexcept
 // Move assignment operator (noexcept + move-and-swap of course!)
 Truckload& Truckload::operator=(Truckload&& src) noexcept
 {
-  auto moved(std::move(src));
+  auto moved{std::move(src)};
   swap(moved);
   return *this;
 }
@@ -161,8 +161,8 @@ SharedBox& Truckload::operator[](size_t index) const
 std::ostream& operator<<(std::ostream& stream, const Truckload& load)
 {
   size_t count{};
-  auto iterator = load.getIterator();
-  for (auto box = iterator.getFirstBox(); box; box = iterator.getNextBox())
+  auto iterator{ load.getIterator() };
+  for (auto box{ iterator.getFirstBox() }; box; box = iterator.getNextBox())
   {
     std::cout << *box << ' ';
     if (!(++count % 4)) std::cout << std::endl;

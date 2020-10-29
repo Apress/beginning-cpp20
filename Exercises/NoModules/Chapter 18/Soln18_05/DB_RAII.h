@@ -41,7 +41,7 @@ public:
 
   // Allow moving by adding the appropriate members
   DBConnectionRAII(DBConnectionRAII&& other) noexcept
-    : m_connection(std::exchange(other.m_connection, nullptr))
+    : m_connection{ std::exchange(other.m_connection, nullptr) }
   {
   }
   DBConnectionRAII& operator=(DBConnectionRAII&& other) noexcept

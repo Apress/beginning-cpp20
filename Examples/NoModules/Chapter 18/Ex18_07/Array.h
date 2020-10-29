@@ -32,7 +32,7 @@ private:
 
 // Forwarding default constructor template
 template <typename T>
-Array<T>::Array() : Array(0)
+Array<T>::Array() : Array{0}
 {}
 
 // Constructor template
@@ -126,7 +126,7 @@ void swap(Array<T>& one, Array<T>& other) noexcept
 template <typename T>
 void Array<T>::push_back(T element)   // Pass by value (copy of lvalue, or moved rvalue!)
 {
-  Array<T> newArray(m_size + 1);      // Allocate a larger Array<>
+  Array<T> newArray{m_size + 1};      // Allocate a larger Array<>
   for (size_t i{}; i < m_size; ++i)   // Move all existing elements...
     newArray[i] = std::move(m_elements[i]);
 
