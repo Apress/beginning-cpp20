@@ -62,7 +62,7 @@ private:
   DB_CONNECTION* m_connection;
 };
 
-/* RAII object that takes a DB_CONNECTION and ensures it is closed */
+/* RAII object that takes a DB_QUERY_RESULT and ensures it is freed */
 class DBQueryResultRAII
 {
 public:
