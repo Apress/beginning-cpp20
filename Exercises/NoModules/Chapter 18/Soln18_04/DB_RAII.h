@@ -41,7 +41,7 @@ public:
 
   // Allow moving by adding the appropriate members
   DBConnectionRAII(DBConnectionRAII&& other) noexcept
-    : m_connection(other.m_connection)
+    : m_connection{ other.m_connection }
   {
     other.m_connection = nullptr; // Make sure other no longer closes the connection
   }

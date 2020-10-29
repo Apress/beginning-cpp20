@@ -127,7 +127,7 @@ LinkedList<T>::LinkedList(const LinkedList& list)
 {
   // Use existing members (iteration, push_back()) to implement the copying
   // This avoids duplicating any code that manipulates the list's pointers / size members.
-  for (auto iterator = list.front_iterator(); iterator; iterator.next())
+  for (auto iterator{ list.front_iterator() }; iterator; iterator.next())
     push_back(iterator.value());
 }
 
@@ -165,7 +165,7 @@ LinkedList<T>& LinkedList<T>::operator=(LinkedList&& other) noexcept
 template<typename T> 
 void LinkedList<T>::push_front(Node* node) noexcept
 {
-  Node* oldHead = m_head;
+  Node* oldHead{ m_head };
   m_head = node;
   ++m_size;
 
@@ -185,7 +185,7 @@ void LinkedList<T>::push_front(Node* node) noexcept
 template<typename T>
 void LinkedList<T>::push_front(const T& value)
 {
-  push_front(new Node(value));
+  push_front(new Node{value});
 }
 
 // Template for member functions that moves a value to the head of the list
@@ -193,14 +193,14 @@ void LinkedList<T>::push_front(const T& value)
 template<typename T>
 void LinkedList<T>::push_front(T&& value)
 {
-  push_front(new Node(std::move(value)));
+  push_front(new Node{std::move(value)});
 }
 
 // Template for member functions that add a node to the tail of the list
 template<typename T>
 void LinkedList<T>::push_back(Node* node) noexcept
 {
-  Node* oldTail = m_tail;
+  Node* oldTail{ m_tail };
   m_tail = node;
   ++m_size;                 
 
@@ -220,7 +220,7 @@ void LinkedList<T>::push_back(Node* node) noexcept
 template<typename T>
 void LinkedList<T>::push_back(const T& value)
 {
-  push_back(new Node(value));
+  push_back(new Node{value});
 }
 
 // Template for member functions that moves a value to the tail of the list
@@ -228,14 +228,14 @@ void LinkedList<T>::push_back(const T& value)
 template<typename T>
 void LinkedList<T>::push_back(T&& value)
 {
-  push_back(new Node(std::move(value)));
+  push_back(new Node{std::move(value)});
 }
 
 // Template for member functions that remove an object from the head of the list
 template<typename T> 
 void LinkedList<T>::pop_front()
 {
-  Node* oldHead = m_head;
+  Node* oldHead{ m_head };
   if (oldHead == m_tail)
   {
     m_head = m_tail = nullptr;
@@ -254,7 +254,7 @@ void LinkedList<T>::pop_front()
 template<typename T>
 void LinkedList<T>::pop_back()
 {
-  Node* oldTail = m_tail;
+  Node* oldTail{ m_tail };
   if (oldTail == m_head)
   {
     m_head = m_tail = nullptr;
