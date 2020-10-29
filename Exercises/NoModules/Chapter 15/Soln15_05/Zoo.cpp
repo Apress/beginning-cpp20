@@ -37,22 +37,3 @@ std::vector<SheepPtr> Zoo::herd() const
   }
   return sheep;
 }
-
-/*
-// Collect all Sheep in the Zoo using the typeid() operator and a static cast
-// (for the sake of the exercise only)
-#include <typeinfo>       // required when using typeid()
-
-std::vector<Sheep*> Zoo::herd() const
-{
-  std::vector<Sheep*> sheep;
-  for (auto animal : animals)
-  {
-    if (typeid(*animal) == typeid(Sheep))
-    {
-      sheep.push_back(static_cast<Sheep*>(animal.get()));
-    }
-  }
-  return sheep;
-}
-*/
