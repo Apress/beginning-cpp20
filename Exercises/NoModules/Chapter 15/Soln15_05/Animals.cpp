@@ -15,7 +15,7 @@
 
 // Constructor
 Animal::Animal(std::string_view name, unsigned weight) 
-  : m_name(name), m_weight(weight)
+  : m_name{ name }, m_weight{ weight }
 {}
 
 // Return string describing the animal

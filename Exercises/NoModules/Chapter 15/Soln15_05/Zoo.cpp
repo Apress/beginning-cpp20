@@ -29,7 +29,7 @@ std::vector<SheepPtr> Zoo::herd() const
   std::vector<SheepPtr> sheep;
   for (auto animal : m_animals)
   {
-    auto casted = std::dynamic_pointer_cast<Sheep>(animal);
+    auto casted{ std::dynamic_pointer_cast<Sheep>(animal) };
     if (casted)
     {
       sheep.push_back(casted);
