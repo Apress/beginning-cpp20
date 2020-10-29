@@ -32,7 +32,7 @@ public:
   Sheep(std::string_view name, unsigned weight, unsigned wool);
   
   std::string_view sound() const override;  // Return the sound of a sheep
-  void shear();
+  unsigned shear();
 
 protected:
   std::string getName() const override;

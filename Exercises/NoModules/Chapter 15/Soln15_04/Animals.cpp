@@ -53,13 +53,19 @@ unsigned Sheep::getWeight() const
   return Animal::getWeight() - m_wool_weight;
 }
 
-void Sheep::shear()
+unsigned Sheep::shear()
 {
   // Somewhat odd statement that updates the total weight (stored in the Animal subobject)
   // to the actual weight of the sheep (see Sheep::getWeight()). 
   // Of course, we do this *before* setting the wool's weight to 0.
-  setWeight(getWeight()); 
+  setWeight(getWeight());
+  
+  const unsigned wool_weight{ m_wool_weight };
   m_wool_weight = 0;
+  return wool_weight;
+
+  // Alternative: use std::exchange() (see Exercise 18-5)
+  //return std::exchange(m_wool_weight, 0);
 }
 
 // Make like a sheep
