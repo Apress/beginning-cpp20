@@ -29,7 +29,7 @@ std::vector<Sheep*> Zoo::herd() const
   std::vector<Sheep*> sheep;
   for (auto animal : m_animals)
   {
-    auto* casted = dynamic_cast<Sheep*>(animal.get());
+    auto* casted{ dynamic_cast<Sheep*>(animal.get()) };
     if (casted)
     {
       sheep.push_back(casted);

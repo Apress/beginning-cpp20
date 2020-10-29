@@ -43,11 +43,11 @@ int main()
   const unsigned minCowWt{ 800 };   // Minimum weight of a dog in pounds
   const unsigned maxCowWt{ 1500 };  // Maximum weight of a dog in pounds
 
-  auto randomAnimalType  = createUniformPseudoRandomNumberGenerator(0, 2); // 0, 1, or 2
-  auto randomNameIndex   = createUniformPseudoRandomNumberGenerator(0, num_name_options - 1);
-  auto randomDogWeight   = createUniformPseudoRandomNumberGenerator(minDogWt, maxDogWt);
-  auto randomSheepWeight = createUniformPseudoRandomNumberGenerator(minSheepWt, maxSheepWt);
-  auto randomCowWeight   = createUniformPseudoRandomNumberGenerator(minCowWt, maxCowWt);
+  auto randomAnimalType { createUniformPseudoRandomNumberGenerator(0, 2) }; // 0, 1, or 2
+  auto randomNameIndex  { createUniformPseudoRandomNumberGenerator(0, num_name_options - 1) };
+  auto randomDogWeight  { createUniformPseudoRandomNumberGenerator(minDogWt, maxDogWt) };
+  auto randomSheepWeight{ createUniformPseudoRandomNumberGenerator(minSheepWt, maxSheepWt) };
+  auto randomCowWeight  { createUniformPseudoRandomNumberGenerator(minCowWt, maxCowWt) };
 
   std::vector<AnimalPtr> animals;   // Stores smart pointers to animals
   size_t numAnimals {};             // Number of animals to be created

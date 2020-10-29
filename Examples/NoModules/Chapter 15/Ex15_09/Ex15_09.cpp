@@ -19,7 +19,7 @@ int main()
 
   // Part 2: typeid() on polymorphic references
   Carton carton{ 1, 2, 3, "paperboard" };
-  Box& boxReference = carton;
+  Box& boxReference{ carton };
 
   std::cout << "Type of carton is "       << typeid(carton).name()       << std::endl;
   std::cout << "Type of boxReference is " << typeid(boxReference).name() << std::endl;
@@ -27,20 +27,20 @@ int main()
             << "equal" << std::endl;
 
   // Part 3: typeid() on polymorphic pointers
-  Box* boxPointer = &carton;
+  Box* boxPointer{ &carton };
   std::cout << "Type of &carton is "     << typeid(&carton).name()     << std::endl;
   std::cout << "Type of boxPointer is "  << typeid(boxPointer).name()  << std::endl;
   std::cout << "Type of *boxPointer is " << typeid(*boxPointer).name() << std::endl;
 
   // Part 4: typeid() with non-polymorphic classes
   NonPolyDerived derived;
-  NonPolyBase& baseRef = derived;
+  NonPolyBase& baseRef{ derived };
 
   std::cout << "Type of baseRef is " << typeid(baseRef).name() << std::endl;
 
   // Part 5: typeid() on expressions
-  const auto& type_info1 = typeid(getSomeBox());       // function call evaluated
-  const auto& type_info2 = typeid(getSomeNonPoly());   // function call not evaluated
+  const auto& type_info1{ typeid(getSomeBox()) };       // function call evaluated
+  const auto& type_info2{ typeid(getSomeNonPoly()) };   // function call not evaluated
   std::cout << "Type of getSomeBox() is " << type_info1.name() << std::endl;
   std::cout << "Type of getSomeNonPoly() is "    << type_info2.name() << std::endl;
 }
