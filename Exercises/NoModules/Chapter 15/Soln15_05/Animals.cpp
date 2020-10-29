@@ -3,12 +3,12 @@
 /*
   Because the Animal::m_weight member currently represents the total weight of the animal
   (we kept this from previous versions of these classes),
-  we need to update the Animal's (total) weight during Sheep::sheep().
+  we need to update the Animal's (total) weight during Sheep::shear().
   
   In an alternate, arguably more elegant solution:
     - Animal::m_weight could reprent the "true" weight of the animal
     - Sheep::getWeight() could return Animal::getWeight() + m_wool_weight
-    - Sheep::sheer() could simply set m_wool_weight to 0
+    - Sheep::shear() could simply set m_wool_weight to 0
  */
 
 #include "Animals.h"
