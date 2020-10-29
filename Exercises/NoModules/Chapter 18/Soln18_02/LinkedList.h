@@ -11,19 +11,9 @@ your program will likely crash...
 
 New in this version are the move constructor / assignment operators 
 (mind the noexcepts, as always), and the fact that the push_back() and push_front() 
-members have been updated to allow new T values to be moved in.
-The latter was done by passing values in by value.
-
-Given that this is a class template the might be used by legacy, non-moveable types,
-a perfectly sensible alternative would be to provide both overloads:
-
-  void push_front(const T& value);  // Add an object to the head (object is copied)
-  void push_back(const T& value);   // Add an object to the tail (object is copied)
-
-  void push_front(T&& value);       // Add an object to the head (object is moved)
-  void push_back(T&& value);        // Add an object to the tail (object is moved)
-
-Do not forget to the Node constructor to prevent any unnecessary copies there!
+members have been updated to allow new T values to be moved in as well.
+Do not forget to add a move constructor for the nested Node class as well
+to prevent any unnecessary copies there!
 
 Note that if you are not defining a generic container template, 
 you'd usually not add multiple overloads for copying and moving anymore.
@@ -32,9 +22,10 @@ Even here, you could consider simply defining these two pass-by-value members:
   void push_front(T value);       // Copy or move an object to the head
   void push_back(T value);        // Copy or move an object to the tail
 
-The only downside is then that this is not optimal for values that have no support
-move support yet, which given that move semantics has been around for almost a decade
-now should be the exception.
+And then apply the same simplification to the constructor of the nested Node class.
+The only downside then is that this is not optimal for objects without support for move semantics, 
+bit given that move semantics has been around for almost a decade should be increasingly unlikely.
+We invite you to give it a try, and simplify the code along these lines.
 */
 
 #include <cstddef>        // for the size_t typedef
