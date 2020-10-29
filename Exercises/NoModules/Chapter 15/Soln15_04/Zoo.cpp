@@ -46,7 +46,7 @@ std::vector<Sheep*> Zoo::herd() const
 std::vector<Sheep*> Zoo::herd() const
 {
   std::vector<Sheep*> sheep;
-  for (auto animal : animals)
+  for (auto animal : m_animals)
   {
     if (typeid(*animal) == typeid(Sheep))
     {
