@@ -130,8 +130,8 @@ LinkedList<T>::LinkedList(LinkedList&& list) noexcept
   , m_size{ list.m_size }
 {
   // Make sure list no longer deletes the nodes when destructed
-  list.m_head = nullptr;
-  // Resetting list.m_tail and list.m_size is optional
+  list.m_size = 0;
+  list.m_head = list.m_tail = nullptr;  // <-- optional
 }
 
 // Copy assignment operator template (uses copy-and-swap idiom)
