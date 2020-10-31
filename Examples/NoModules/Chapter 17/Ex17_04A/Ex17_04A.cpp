@@ -3,7 +3,6 @@
 #include "Stack.h"
 #include <iostream>
 #include <string>
-#include <array>              // for std::size()
 
 int main()
 {
