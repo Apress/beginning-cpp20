@@ -27,8 +27,8 @@ int main()
             << *std::ranges::max_element(numbers, nearer) << std::endl;
 
 /*
-  const auto [nearest, furthest] =
-    std::ranges::minmax_element(numbers, nearer);
+  const auto [nearest, furthest]
+    { std::ranges::minmax_element(numbers, nearer) };
 
   std::cout << "The number nearest to " << number_to_search_for << " is "
             << *nearest << std::endl;

@@ -12,7 +12,7 @@ int main()
 {
   const size_t num_numbers{20};
 
-  const auto numbers = fillSet_1toN(num_numbers);
+  const auto numbers{ fillSet_1toN(num_numbers) };
 
   std::vector<int> odd_numbers;
   std::copy_if(begin(numbers), end(numbers), back_inserter(odd_numbers),
