@@ -15,8 +15,8 @@ int main()
             << *findOptimum(numbers, std::greater<>{}) << std::endl;
 
   // Define two anonymous comparison functions for strings:
-  auto alpha = std::greater<>{};
-  auto longer = [](std::string_view x, std::string_view y) { return x.length() > y.length(); };
+  auto alpha{ std::greater<>{} };
+  auto longer{ [](std::string_view x, std::string_view y) { return x.length() > y.length(); } };
 
   std::vector<std::string> names{ "Moe", "Larry", "Shemp", "Curly", "Joe", "Curly Joe" };
   std::cout << "Alphabetically last name: " << *findOptimum(names, alpha) << std::endl;
