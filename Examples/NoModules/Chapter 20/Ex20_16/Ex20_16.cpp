@@ -10,7 +10,7 @@ using namespace std::ranges::views;
 
 int main()
 {
-  // Our challenge: give a sequence of boxes, 
+  // Our challenge: given a sequence of boxes, 
   // gather pointers to all boxes larger than required_volume
   std::vector<Box> boxes{ { 1, 2, 3 }, { 4, 5, 6}, { 7, 8, 9 }, { 10, 11, 12 } };
   const double required_volume{ 200 };

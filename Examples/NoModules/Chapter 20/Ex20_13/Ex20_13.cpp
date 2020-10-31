@@ -11,11 +11,11 @@ int main()
 {
   const size_t num_numbers{20};
 
-  const auto numbers = fillSet_1toN(num_numbers);
+  const auto numbers{ fillSet_1toN(num_numbers) };
 
   std::vector<int> odd_numbers( numbers.size() ); // Caution: not { numbers.size() } here!
-  auto end_odd_numbers = std::copy_if(begin(numbers), end(numbers), begin(odd_numbers),
-                                      [](int n) { return n % 2 == 1; });
+  auto end_odd_numbers{ std::copy_if(begin(numbers), end(numbers), begin(odd_numbers),
+                                      [](int n) { return n % 2 == 1; }) };
   odd_numbers.erase(end_odd_numbers, end(odd_numbers));
 
   printVector(odd_numbers);
