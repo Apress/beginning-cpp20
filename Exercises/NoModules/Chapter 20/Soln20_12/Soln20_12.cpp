@@ -8,11 +8,13 @@ using namespace std::ranges::views;
 
 bool isPrime(unsigned number)   
 {
-  // Of course we use an algorithm and a range factory here as well!
-  return std::ranges::none_of(
-    iota(2, static_cast<int>(std::sqrt(number))),
-    [number](int divisor) { return number % divisor == 0; }
-  );
+  // Of course we use an algorithm and a range factory here as well ;-)
+  // Caution: mind the corner cases where number is 0, 1, or 2!
+  return number >= 2 
+      && std::ranges::none_of(
+           iota(2u, std::max(2u, static_cast<unsigned>(std::sqrt(number)))),
+           [number](unsigned divisor) { return number % divisor == 0; }
+         );
 }
 
 int main()
