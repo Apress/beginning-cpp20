@@ -30,10 +30,9 @@ auto generateRandomNumbers(unsigned number)
 int main()
 {  
   unsigned count {};
-  auto counting_less = [&count](int x, int y) { ++count; return x < y; };
+  const auto counting_less{ [&count](int x, int y) { ++count; return x < y; } };
   
-  const auto sizes = { 500u, 1'000u, 2'000u, 4'000u };
-  for (auto size : sizes)
+  for (auto size : { 500u, 1'000u, 2'000u, 4'000u })
   {
     const auto numbers{ generateRandomNumbers(size) };
     

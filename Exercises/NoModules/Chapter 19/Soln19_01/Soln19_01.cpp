@@ -14,12 +14,14 @@ int main()
     std::cout << std::format("{:10}", word);
   std::cout << std::endl;
 
-  auto count = [&words](char letter)
-  {
-    size_t n {};
-    for (auto& word : words)
-      if (letter == word[0]) ++n;
-    return n;
+  const auto count {
+    [&words](char letter)
+    {
+      size_t n {};
+      for (auto& word : words)
+        if (letter == word[0]) ++n;
+      return n;
+    }
   };
   
   char ch {'p'};
