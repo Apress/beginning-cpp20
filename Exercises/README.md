@@ -1,4 +1,4 @@
-:construction: **We are still working on getting these exercise solutions ready. Because we are doing this in our spare time, it may take us a few more weeks. So please bear with us.
+:construction: **We are still working on getting these exercise solutions ready. Because we are doing this in our spare time, it may take us a few more weeks. So please bear with us.**
 
 # Exercise Solutions
 
