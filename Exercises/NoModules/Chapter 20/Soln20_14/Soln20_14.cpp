@@ -11,7 +11,7 @@ bool isPrime(unsigned number)
 {
   return number >= 2 
       && std::ranges::none_of(
-           iota(2u, std::max(2u, static_cast<unsigned>(std::sqrt(number)))),
+           iota(2u, static_cast<unsigned>(std::sqrt(number) + 1)),
            [number](unsigned divisor) { return number % divisor == 0; }
          );
 }
