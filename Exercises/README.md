@@ -1,4 +1,4 @@
-:construction: **We are still working on getting these exercise solutions ready. Because we are doing this in our spare time, it may take us a few more weeks. So please bear with us. For time being, you can consult the source code of the previous edition at https://github.com/Apress/beg-cplusplus17**
+:construction: **We are still working on getting these exercise solutions ready. Because we are doing this in our spare time, it may take us a few more weeks. So please bear with us.
 
 # Exercise Solutions
 
