@@ -7,13 +7,13 @@
 #include <iterator>
 
 /*
-  Appologies. When we wrote the exercise, we misread what a std::sized_range() was.
-  This is no concept for statically fixed-size ranges, 
-  but for ranges for which std::ranges::size() may be invoked at runtime.
+  Apologies. When we wrote the exercise, we misread what a std::sized_range() was.
+  std::sized_range() is no concept for statically fixed-size ranges, 
+  but for ranges for which std::ranges::size() may be invoked *at runtime*.
   So this solution presents the next best thing: a medianOfSorted() that works
   for any range (not just fixed-size ranges), with appropriate type constraints.
   Key point is that underlying, range-based algorithms still very much work with iterators.
-  Most constraints use Standard Library concepts in the std::ranges namespace,
+  Most requirements use Standard Library concepts in the std::ranges namespace,
   and the function implementations use Standard Library functions in that same namespace.
  */
 
