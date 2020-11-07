@@ -20,7 +20,7 @@ void swap(std::vector<T>& data, size_t first, size_t second)
   std::swap(data[first], data[second]);
 }
 
-// The top level quicksort() template with one parameter calls the quicksort() template with three parameters
+// The primary quicksort() template with two parameter calls the quicksort() template with four parameters
 
 // Sort a range of vector elements
 template<typename T, typename Compare>
@@ -49,10 +49,10 @@ void quicksort(std::vector<T>& data, Compare compare, size_t start, size_t end)
 
 // Sort all vector elements using quicksort
 template<typename T, typename Compare>
-void quicksort(std::vector<T>& values, Compare compare)
+void quicksort(std::vector<T>& data, Compare compare)
 {
-  if (!values.empty())
-    quicksort(values, compare, 0, values.size() - 1);
+  if (!data.empty())
+    quicksort(data, compare, 0, data.size() - 1);
 }
 
 template<typename T, typename Compare>
