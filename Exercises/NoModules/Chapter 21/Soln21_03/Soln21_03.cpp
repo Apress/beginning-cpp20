@@ -43,9 +43,9 @@ int main()
   std::array values_even{ 1., 2., 3., 4., 5., 6. };
   std::cout << medianOfSorted(std::span{ values_even }) << std::endl;
 
-  std::string strings_odd[] = { "1", "2", "3", "4", "5" };
+  std::string strings_odd[] { "1", "2", "3", "4", "5" };
   std::cout << medianOfSorted(std::span{ strings_odd }) << std::endl;
 
-  std::string strings_even[] = { "1", "2", "3", "4", "5", "6" };
+  std::string strings_even[] { "1", "2", "3", "4", "5", "6" };
   std::cout << medianOfSorted(std::span{ strings_even }) << std::endl;
 }

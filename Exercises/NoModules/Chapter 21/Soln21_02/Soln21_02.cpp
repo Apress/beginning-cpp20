@@ -75,7 +75,7 @@ int main()
   // Step 1: create a view where begin() and end() are different.
   // The result of the take_while() range adapter has this property
   // (or, at least, it should have as per its specification in the Standard).
-  auto first_boxes = boxes | take_while([](const Box& box) { return box.volume() < 15; });
+  auto first_boxes{ boxes | take_while([](const Box& box) { return box.volume() < 15; }) };
   
   /* This therefore generally does not compile... */
   //std::cout << "Volume of smallest box: " 
@@ -85,7 +85,7 @@ int main()
 
   // Side-note: you can use the std::ranges::views::common to turn a range
   // where begin and end have a different type into a view where they do.
-  auto common_boxes = first_boxes | common;
+  auto common_boxes{ first_boxes | common };
   std::cout << "Volume of smallest box: " 
     << original_find_optimum(common_boxes.begin(), common_boxes.end(),
           [](const Box& box1, const Box& box2) { return box1.isSmallerThan(box2); })->volume()
