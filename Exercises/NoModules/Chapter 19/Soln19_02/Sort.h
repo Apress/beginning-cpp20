@@ -7,16 +7,17 @@
 #include <utility>    // for std::swap()
 #include <vector>
 
-// The top level sort() template with one parameter calls the sort() template with three parameters
+// The primary sort() template with two parameters calls 
+// this internal sort() template with four parameters
 template<typename T, typename Compare>
 void sort(std::vector<T>& data, Compare compare, size_t start, size_t end);
 
 // Sort all vector elements
 template<typename T, typename Compare>
-void sort(std::vector<T>& values, Compare compare)
+void sort(std::vector<T>& data, Compare compare)
 {
-  if (!values.empty())
-    sort(values, compare, 0, values.size() - 1);
+  if (!data.empty())
+    sort(data, compare, 0, data.size() - 1);
 }
 
 // Swap two vector elements
