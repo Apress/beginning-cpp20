@@ -11,7 +11,7 @@ int main()
   std::vector<int&> v;
 
   MyClass one, other;
-  auto biggest = std::max(one, other);
+  auto biggest{ std::max(one, other) };
 
   std::set<MyClass> objects;
   objects.insert(MyClass{});

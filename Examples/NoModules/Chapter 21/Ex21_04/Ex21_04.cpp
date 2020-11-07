@@ -26,7 +26,7 @@ int main()
 {
   std::list l{ 'a', 'b', 'c' };
   std::vector v{ 1, 2, 3, 4, 5 };
-  float a[] = { 1.2f, 3.4f, 4.5f };
+  float a[] { 1.2f, 3.4f, 4.5f };
 
   std::cout << distanceBetween(cbegin(l), cend(l)) << std::endl;
   std::cout << distanceBetween(begin(v), end(v)) << std::endl;
