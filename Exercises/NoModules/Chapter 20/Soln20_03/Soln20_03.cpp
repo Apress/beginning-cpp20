@@ -29,10 +29,8 @@ int main()
   getline(std::cin, text, '#');
 
   std::map<char, std::vector<std::string>> lists;
-  const std::string_view letters {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-
+  
   // Extract words and store in the appropriate list
-  // A list in the SparseArray is selected by the index in letters of the first letter in a word.
   const std::string_view separators {" \n\t,.\"?!;:"}; // Separators between words
   size_t start {};                                 // Start of a word
   size_t end {};                                   // separator position after a word
@@ -49,6 +47,7 @@ int main()
   const size_t perline {5};
   
   /* Option 1: use a loop similar to the original one */
+  const std::string_view letters{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ" };
   for (char letter : letters)
   {
     if (!lists.contains(letter))
@@ -57,25 +56,25 @@ int main()
     size_t count {};                               // Word counter
     for (const auto& word : lists[letter])
     {
-      std::cout << word << ' ';
-      if (!(++count % perline))
+      if (count++ % perline == 0 && count != 1)
         std::cout << std::endl;
-    }
-    std::cout << std::endl;
-  }
-
-  /* Option 2: take advantage of the fact that the keys are already sorted in the map */
-  for (const auto& [letter, list] : lists)
-  {
-    size_t count{};                               // Word counter
-    for (const auto& word : lists[letter])
-    {
       std::cout << word << ' ';
-      if (!(++count % perline))
-        std::cout << std::endl;
     }
     std::cout << std::endl;
   }
 
   std::cout << std::endl;
+
+  /* Option 2: take advantage of the fact that the keys are already sorted in the map */
+  for (const auto& [letter, list] : lists)
+  {
+    size_t count{};                               // Word counter
+    for (const auto& word : list)
+    {
+      if (count++ % perline == 0 && count != 1)
+        std::cout << std::endl;
+      std::cout << word << ' ';
+    }
+    std::cout << std::endl;
+  }
 }

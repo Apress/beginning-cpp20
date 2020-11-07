@@ -53,15 +53,18 @@ int main()
 
     size_t count{};                               // Word counter
     // Retrieve the range of all words that begin with letter
-    const auto [begin, end] = lists.equal_range(letter);
-    for (auto iter = begin; iter != end; ++iter)
+    const auto [begin, end] { words.equal_range(letter) };
+    for (auto iter{ begin }; iter != end; ++iter)
     {
-      std::cout << iter->second << ' ';
-      if (!(++count % perline))
+      if (count++ % perline == 0 && count != 1)
         std::cout << std::endl;
+      std::cout << iter->second << ' ';
+      
     }
     std::cout << std::endl;
   }
+
+  std::cout << std::endl;
 
   /* Option 2: take advantage of the fact that the keys are already sorted in the multimap */
   size_t count{};          // Word counter
@@ -73,12 +76,13 @@ int main()
     {
       std::cout << std::endl;
       count = 0;
-      previous_letter = letter;
     }
 
-    std::cout << word << ' ';
-    if (!(++count % perline))
+    if (count++ % perline == 0 && count != 1)
       std::cout << std::endl;
+    std::cout << word << ' ';
+
+    previous_letter = letter;
   }
 
   std::cout << std::endl;
