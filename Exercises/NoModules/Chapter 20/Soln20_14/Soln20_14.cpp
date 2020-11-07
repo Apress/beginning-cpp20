@@ -24,12 +24,14 @@ int main()
   // return values of the same type, something which in general is not true for ranges. 
   // Legacy algorithms, such as the iterator-pair-based std::copy() algorithm, 
   // often expect iterator pairs to have the same type, though.
-  auto view = std::ranges::istream_view<int>(std::cin)
-    | take_while([](int i) { return i >= 0; })
-    | transform([](int i) { return static_cast<unsigned>(i); })
-    | filter(isPrime)
-    | transform([](unsigned i) { return "Yes, that is a prime!"; })
-    | common;
+  auto view { 
+    std::ranges::istream_view<int>(std::cin)
+      | take_while([](int i) { return i >= 0; })
+      | transform([](int i) { return static_cast<unsigned>(i); })
+      | filter(isPrime)
+      | transform([](unsigned i) { return "Yes, that is a prime!"; })
+      | common 
+  };
 
   std::copy(view.begin(), view.end(), std::ostream_iterator<std::string>(std::cout, "\n"));
 
@@ -37,11 +39,13 @@ int main()
   // Same as the previous one, but then without the legacy iterator-pair-based copy()
   // (and thus without the common range adaptor).
   // At the time we tried this, this did not compile yet in any compiler.
-  auto view = std::ranges::istream_view<int>(std::cin)
-    | take_while([](int i) { return i >= 0; })
-    | transform([](int i) { return static_cast<unsigned>(i); })
-    | filter(isPrime)
-    | transform([](unsigned i) { return "Yes, that is a prime!"; });
+  auto view {
+    std::ranges::istream_view<int>(std::cin)
+      | take_while([](int i) { return i >= 0; })
+      | transform([](int i) { return static_cast<unsigned>(i); })
+      | filter(isPrime)
+      | transform([](unsigned i) { return "Yes, that is a prime!"; })
+  };
 
   std::ranges::copy(view, std::ostream_iterator<std::string>(std::cout, "\n"));
 */
@@ -63,11 +67,13 @@ int main()
 
 /*
   // A "clever" version where we print during a filter step
-  auto view = std::ranges::istream_view<int>(std::cin)
-    | take_while([](int i) { return i >= 0; })
-    | transform([](int i) { return static_cast<unsigned>(i); })
-    | filter(isPrime)
-    | filter([](unsigned i) { std::cout << "Yes, that is a prime!\n"; return false; });
+  auto view {
+    std::ranges::istream_view<int>(std::cin)
+      | take_while([](int i) { return i >= 0; })
+      | transform([](int i) { return static_cast<unsigned>(i); })
+      | filter(isPrime)
+      | filter([](unsigned i) { std::cout << "Yes, that is a prime!\n"; return false; })
+  };
   view.begin(); // Try to find the begin of the view
                 // Since the last step filters out all elements, though,
                 // this will never find a begin, and eventually return view.end()...

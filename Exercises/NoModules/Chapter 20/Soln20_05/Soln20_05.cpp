@@ -11,23 +11,24 @@
 template <typename T, typename IterType>
 std::optional<T> average(IterType begin, IterType end)
 {
-	const auto count = std::distance(begin, end);
-	const auto sum = std::accumulate(begin, end, T{});
+	const auto count{ std::distance(begin, end) };
+	const auto sum{ std::accumulate(begin, end, T{}) };
 
-	return count ? std::optional<T>(sum / count) : std::nullopt;
+	return count ? std::optional<T>{ sum / count } : std::nullopt;
 }
 
 // Solution 2: accumulate a pair<> that counts both the number of elements and the sum
 //template <typename T, typename IterType>
 //std::optional<T> average(IterType begin, IterType end)
 //{
-//  const auto accumulated = 
+//  const auto accumulated { 
 //    std::accumulate(begin, end, std::make_pair(0u, T{}), [](const auto& accumulated, const auto& element)
 //    { 
 //      return std::make_pair(accumulated.first + 1, accumulated.second + element); 
-//    });
+//    })
+//	};
 //
-//  return accumulated.first? std::optional<T>(accumulated.second / accumulated.first) : std::nullopt;
+//  return accumulated.first ? std::optional<T>{ accumulated.second / accumulated.first } : std::nullopt;
 //}
 
 

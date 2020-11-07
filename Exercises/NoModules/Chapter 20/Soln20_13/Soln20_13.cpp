@@ -21,15 +21,17 @@ void showWordCounts(const WordCounts& wordCounts);
 
 /*
   Below we list a number of possible solutions.
-  We're sure there are pleny more variations possible...
+  We're sure there are plenty more variations possible...
  */
 
 size_t maxWordLength(const WordCounts& wordCounts)
 {
   // Filter out words that occur only once + transform to word lengths using lambda expression
-  auto frequentWordLengths = wordCounts
-    | filter([](const auto wordCount) { return wordCount.second >= 2; })
-    | transform([](const auto wordCount) { return wordCount.first.length(); });
+  auto frequentWordLengths {
+    wordCounts
+      | filter([](const auto wordCount) { return wordCount.second >= 2; })
+      | transform([](const auto wordCount) { return wordCount.first.length(); })
+  };
 
   return std::ranges::empty(frequentWordLengths) ? 0 : *std::ranges::max_element(frequentWordLengths);
 }
@@ -37,10 +39,12 @@ size_t maxWordLength(const WordCounts& wordCounts)
 size_t maxWordLength_1(const WordCounts& wordCounts)
 {
   // Filter out words that occur only once, transform twice in a row with member pointers.
-  auto frequentWordLengths = wordCounts
-    | filter([](const auto wordCount) { return wordCount.second >= 2; })
-    | transform(&WordCounts::value_type::first)  // Or, without alias: transform(&std::pair<const std::string_view, size_t>::first)
-    | transform(&std::string_view::length);
+  auto frequentWordLengths {
+    wordCounts
+      | filter([](const auto wordCount) { return wordCount.second >= 2; })
+      | transform(&WordCounts::value_type::first)  // Or, without alias: transform(&std::pair<const std::string_view, size_t>::first)
+      | transform(&std::string_view::length)
+  };
 
   return std::ranges::empty(frequentWordLengths) ? 0 : *std::ranges::max_element(frequentWordLengths);
 }
@@ -48,9 +52,11 @@ size_t maxWordLength_1(const WordCounts& wordCounts)
 size_t maxWordLength_2(const WordCounts& wordCounts)
 {
   // Filter out words that occur only once, transform to words, project to lengths.
-  auto frequentWords = wordCounts
-    | filter([](const auto wordCount) { return wordCount.second >= 2; })
-    | transform([](const auto wordCount) { return wordCount.first; });
+  auto frequentWords {
+    wordCounts
+      | filter([](const auto wordCount) { return wordCount.second >= 2; })
+      | transform([](const auto wordCount) { return wordCount.first; })
+  };
 
   return std::ranges::empty(frequentWords) 
     ? 0 
@@ -60,8 +66,8 @@ size_t maxWordLength_2(const WordCounts& wordCounts)
 size_t maxWordLength_3(const WordCounts& wordCounts)
 {
   // Filter out words that occur only once
-  auto frequentWordCounts = 
-    wordCounts | filter([](const auto wordCount) { return wordCount.second >= 2; });
+  auto frequentWordCounts 
+    { wordCounts | filter([](const auto wordCount) { return wordCount.second >= 2; }) };
   
   // Project to obtain the words (the first element of the pairs in the map), 
   // and compare their lengths using a lambda expression
@@ -90,7 +96,7 @@ int main()
     return 0;
   }
 
-  WordCounts wordCounts = countWords(words);
+  const WordCounts wordCounts{ countWords(words) };
   showWordCounts(wordCounts);
 }
 
