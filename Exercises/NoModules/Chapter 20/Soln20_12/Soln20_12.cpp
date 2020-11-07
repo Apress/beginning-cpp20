@@ -8,19 +8,19 @@ using namespace std::ranges::views;
 
 bool isPrime(unsigned number)   
 {
-  // Of course we use an algorithm and a range factory here as well ;-)
+  // Of course we use an algorithm and a range factory here as well!
   // Caution: mind the corner cases where number is 0, 1, or 2!
   return number >= 2 
-      && std::ranges::none_of(
-           iota(2u, std::max(2u, static_cast<unsigned>(std::sqrt(number)))),
-           [number](unsigned divisor) { return number % divisor == 0; }
-         );
+    && std::ranges::none_of(
+          iota(2u, static_cast<unsigned>(std::sqrt(number) + 1)),
+          [number](unsigned divisor) { return number % divisor == 0; }
+       );
 }
 
 int main()
 {
-  const unsigned max = 1'000;
-  const unsigned per_line = 10;
+  const unsigned max{ 1'000 };
+  const unsigned per_line{ 10 };
 
   // As you no doubt deduced, drop_while() is not really applicable here,
   // but take_while() fits nicely!
