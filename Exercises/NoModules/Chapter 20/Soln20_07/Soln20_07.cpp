@@ -23,7 +23,7 @@ int main()
 
   printVector("The original set of numbers", numbers);
 
-  auto odd_numbers{ numbers | filter([](int i) { return i % 2 == 0; }) };
+  auto odd_numbers{ numbers | filter([](int i) { return i % 2 != 0; }) };
 
   printVector("The numbers that were kept", odd_numbers);
 }

@@ -19,9 +19,9 @@ void printVector(std::string_view message, const std::vector<int>& numbers);
 
 void removeEvenNumbers(std::vector<int>& numbers)
 {
-  auto first_even_number = 
-    std::stable_partition(begin(numbers), end(numbers), [](auto num) { return num % 2 == 1; });
-  /*     ^^^^^^^^^^^^^^^^ if you use partition(), the order of the odd elements may become scrambled */ 
+  const auto first_even_number
+    { std::stable_partition(begin(numbers), end(numbers), [](auto num) { return num % 2 == 1; }) };
+  /*       ^^^^^^^^^^^^^^^^ if you use partition(), the order of the odd elements may become scrambled */ 
   
   numbers.erase(first_even_number, end(numbers));
 }

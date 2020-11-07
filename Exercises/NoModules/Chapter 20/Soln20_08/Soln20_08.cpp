@@ -19,7 +19,7 @@ auto createUniformPseudoRandomNumberGenerator(unsigned min, unsigned max)
 
 int main()
 {
-  const size_t num_numbers = 25'000;
+  const size_t num_numbers{ 25'000 };
   std::vector<int> numbers(num_numbers);
 
   // Why not use an algorithm as well to generate the random numbers!!
@@ -36,7 +36,7 @@ int main()
   /* Option 1: iterator-based */
   numbers.erase(std::unique(begin(numbers), end(numbers)), end(numbers));
   /* Option 2: range-based (sadly requires two statements...) */
-  //auto [to_erase_begin, to_erase_end] = std::ranges::unique(numbers);
+  //const auto [to_erase_begin, to_erase_end] { std::ranges::unique(numbers) };
   //numbers.erase(to_erase_begin, to_erase_end);
 
   std::cout << "Number of unique numbers: " << numbers.size() << std::endl;

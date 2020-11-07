@@ -20,7 +20,7 @@ auto createUniformPseudoRandomNumberGenerator(unsigned min, unsigned max)
 
 int main()
 {
-  const size_t num_numbers = 25'000;
+  const size_t num_numbers{ 25'000 };
   std::vector<int> numbers(num_numbers);
 
   /* Caution: a pseudo-random number generator cannot safely be accessed concurrently! */
