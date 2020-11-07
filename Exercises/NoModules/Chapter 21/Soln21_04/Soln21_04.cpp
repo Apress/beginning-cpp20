@@ -17,8 +17,8 @@
   and the function implementations use Standard Library functions in that same namespace.
  */
 
-/* Not requested, but just for fun, here is a concept that prescrives 
-   a complate set of operations one would require to take an average */
+/* Not requested, but just for fun, here is a concept that prescribes 
+   a complete set of operations one would require to take an average */
 template <typename T>
 concept Averagable = requires (const T x, const T y, T z, const int i)
 {
