@@ -5,8 +5,8 @@
 #include <array>
 #include <string>
 
-/* Not requested, but just for fun, here is a concept that prescrives 
-   a complate set of operations one would require to take an average */
+/* Not requested, but just for fun, here is a concept that prescribes 
+   a complete set of operations one would require to take an average */
 template <typename T>
 concept Averagable = requires (const T x, const T y, T z, const int i)
 {
@@ -26,13 +26,15 @@ concept Averagable = requires (const T x, const T y, T z, const int i)
 template <typename T, size_t N>
 auto& medianOfSorted(std::span<T, N> span)
 {
+  static_assert(N != 0, "The median of an empty span is not undefined");
   return span[N / 2];
 }
 
 template <Averagable T, size_t N> requires (N % 2 == 0)
 auto medianOfSorted(std::span<T, N> span)
 {
-  return (span[N / 2] + span[N / 2 + 1]) / 2;
+  static_assert(N != 0, "The median of an empty span is not undefined");
+  return (span[N / 2 - 1] + span[N / 2]) / 2;
 }
 
 int main()
