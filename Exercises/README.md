@@ -1,4 +1,4 @@
-:construction: **We are still working on getting these exercise solutions ready. Because we are doing this in our spare time, it may take us a few more weeks. The sources in the [NoModules](NoModules) directory are near complete, though, so you can consult these (for most examples, the modular aspects are irrelevant anyway).**
+:construction: **We are still working on getting these exercise solutions ready. Because we are doing this in our spare time, it may take us a few more weeks. The sources in the [NoModules](NoModules) directory are near complete, though, so you can consult these (for most exercises, the modular aspects are irrelevant anyway).**
 
 # Exercise Solutions
 
