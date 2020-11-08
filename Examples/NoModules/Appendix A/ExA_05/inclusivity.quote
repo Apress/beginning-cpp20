@@ -1,0 +1,3 @@
+std::cout << "We are trying to construct a more inclusive society.\n";
+std::cout << "We are going to make a country in which no one is left out.\n"
+          << "\t\t\t\t- Franklin D. Roosevelt" << std::endl;
