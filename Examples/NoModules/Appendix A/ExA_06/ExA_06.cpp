@@ -1,4 +1,4 @@
-// Defining the same function twice
+// Defining the same function twice (won't compile!)
 #include <iostream>
 #include <format>
 
