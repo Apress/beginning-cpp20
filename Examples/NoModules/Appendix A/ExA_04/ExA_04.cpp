@@ -1,10 +1,10 @@
 // Demonstrating assertions
 #include <iostream>
 #include <format>
-#include <cassert> 
 
-// Uncomment to disable the assertion in main()
+// Uncomment to disable the assertion in main() (needs to be defined before including <cassert>)
 //#define NDEBUG
+#include <cassert> 
 
 int main()
 {
