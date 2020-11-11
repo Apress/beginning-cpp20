@@ -21,11 +21,13 @@ template <typename T>
 concept NoThrowMoveAssignable =
   requires (T left, T right) { { left = std::move(right) } noexcept -> std::same_as<T&>; };
 
-// By default: copy
-const auto& move_assign_if_noexcept(auto& x) { return x; }
+// By default: return lvalue reference (will result in x being copied)
+// (Note: this default move_assign_if_noexcept() template in itself is noexcept, 
+//  the copy assignment that generally follows is not...)
+auto& move_assign_if_noexcept(auto& x) noexcept { return x; }
 
-// Specialisation that moves if possible without throwing
-// Uses abbreviated template syntax as well, but with a type constraint on auto)
+// Specialization that moves if possible without throwing
+// Uses abbreviated template syntax with a type constraint on auto)
 auto&& move_assign_if_noexcept(NoThrowMoveAssignable auto& x) noexcept { return std::move(x); }
 
 
@@ -37,7 +39,7 @@ public:
   explicit Array(size_t size);              // Constructor
   ~Array();                                 // Destructor
   Array(const Array& array);                // Copy constructor
-  Array(Array&& array) noexcept;                     // Move constructor
+  Array(Array&& array) noexcept;            // Move constructor
   Array& operator=(const Array& rhs);       // Copy assignment operator
   Array& operator=(Array&& rhs) noexcept;   // Move assignment operator
   void swap(Array& other) noexcept;         // Swap member function
