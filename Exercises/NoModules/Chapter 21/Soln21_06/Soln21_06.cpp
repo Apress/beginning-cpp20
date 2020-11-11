@@ -1,5 +1,4 @@
-// Exercise 21-6  Simplifying move_assign_if_noexcept from before using concepts
-// See Array.h for this only update compared to the original example.
+// Exercise 21-6  Simplifying move_assign_if_noexcept using concepts (see Array.h)
 #include "Array.h"
 #include <string>
 
