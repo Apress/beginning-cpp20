@@ -1,5 +1,5 @@
 // Defining object-like macros
-import <iostream>;
+#include <iostream>
 
 #define POINTER_SIZE sizeof(int*) * BITS_PER_BYTE
 #define BITS_PER_BYTE 8
