@@ -26,14 +26,14 @@ concept Averagable = requires (const T x, const T y, T z, const int i)
 template <typename T, size_t N>
 auto& medianOfSorted(std::span<T, N> span)
 {
-  static_assert(N != 0, "The median of an empty span is not undefined");
+  static_assert(N != 0, "The median of an empty span is not defined");
   return span[N / 2];
 }
 
 template <Averagable T, size_t N> requires (N % 2 == 0)
 auto medianOfSorted(std::span<T, N> span)
 {
-  static_assert(N != 0, "The median of an empty span is not undefined");
+  static_assert(N != 0, "The median of an empty span is not defined");
   return (span[N / 2 - 1] + span[N / 2]) / 2;
 }
 
