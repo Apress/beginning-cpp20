@@ -25,7 +25,7 @@ private:
 
 // Out-of-class member definitions must be explicitly marked as inline 
 inline Box::Box(double length, double width, double height)
-  : m_length(length), m_width(width), m_height(height)
+  : m_length{ length }, m_width{ width }, m_height{ height }
 {}
 
 inline double Box::volume() const
