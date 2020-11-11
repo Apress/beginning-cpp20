@@ -1,6 +1,6 @@
 // ExA_05.cpp
 // Introducing the #include directive
-import <iostream>;
+#include <iostream>
 
 int main()
 {
