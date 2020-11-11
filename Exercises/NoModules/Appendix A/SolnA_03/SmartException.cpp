@@ -8,6 +8,7 @@ SmartException::SmartException(const std::string& message, std::source_location 
 
 void SmartException::throwFromHere(std::source_location location)
 {
+  m_location = std::move(location);
   throw* this;
 }
 

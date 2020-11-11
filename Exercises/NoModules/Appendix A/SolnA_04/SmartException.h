@@ -30,6 +30,7 @@ private:
 // Note: do not repeat the default argument value!
 inline void SmartException::throwFromHere(std::source_location location)
 {
+  m_location = std::move(location);
   throw* this;
 }
 
