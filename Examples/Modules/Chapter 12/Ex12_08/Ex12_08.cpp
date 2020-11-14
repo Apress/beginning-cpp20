@@ -1,6 +1,6 @@
 // Accessing private members through getters and setters (method chaining variant)
-#include "Box.h"
 import <iostream>;
+import box;
 
 int main()
 {

@@ -1,5 +1,4 @@
-#include "Truckload.h"
-
+module truckload;
 import <iostream>;
 
 // Constructor - one Box (moved to source file to gain access to definition of Package)

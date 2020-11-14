@@ -1,6 +1,6 @@
 // Implementing a destructor
 import <iostream>;
-#include "Box.h"
+import box;
 
 int main()
 {

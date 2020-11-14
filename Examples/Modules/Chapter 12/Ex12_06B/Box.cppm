@@ -1,10 +1,8 @@
-#ifndef BOX_H
-#define BOX_H
-
+export module box;
 import <iostream>;
 
 // Class to represent a box
-class Box
+export class Box
 {
 public:
   Box() = default;
@@ -22,5 +20,3 @@ private:
   double m_width{ 1.0 };
   double m_height{ 1.0 };
 };
-
-#endif

@@ -1,7 +1,6 @@
-#ifndef PACKAGE_H
-#define PACKAGE_H
+module truckload:package;
 
-#include "SharedBox.h"
+import :shared_box;
 
 class Package
 {
@@ -20,5 +19,3 @@ private:
   SharedBox m_box;    // Pointer to the Box object contained in this Package
   Package* m_next;    // Pointer to the next Package in the list
 };
-
-#endif

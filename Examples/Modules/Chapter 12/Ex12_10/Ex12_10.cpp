@@ -1,6 +1,6 @@
 // Overloading on const
-#include "Box.h"
 import <iostream>;
+import box;
 
 int main()
 {

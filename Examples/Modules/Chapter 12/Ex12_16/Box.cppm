@@ -1,7 +1,6 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-class Box
+export class Box
 {
 public:
   Box();                     // Default constructor  
@@ -20,5 +19,3 @@ private:
   double m_height {1.0};
   static inline size_t s_object_count {};   // Count of objects ever created
 };
-
-#endif

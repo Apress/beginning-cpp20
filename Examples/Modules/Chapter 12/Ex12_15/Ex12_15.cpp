@@ -1,6 +1,6 @@
 // Defining and using static constants
 import <iostream>;
-#include "CylindricalBox.h"
+import cylindrical;
 
 int main()
 {

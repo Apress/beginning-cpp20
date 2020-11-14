@@ -1,6 +1,7 @@
 // Using nested classes
-#include "RandomBoxes.h"
-#include "Truckload.h"
+import box.random;
+import truckload;
+import <iostream>;
 
 int main()  
 {

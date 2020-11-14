@@ -1,7 +1,7 @@
 // Using a friend function of a class
 import <iostream>;
 import <memory>;
-#include "Box.h"
+import box;
 
 int main()
 {

@@ -1,9 +1,7 @@
-#ifndef BOX_H
-#define BOX_H
-
+export module box;
 import <iostream>;
 
-class Box
+export class Box
 {
 public:
   // Constructors
@@ -32,5 +30,3 @@ private:
   double m_width {1.0};
   double m_height{1.0};
 };
-
-#endif

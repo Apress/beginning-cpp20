@@ -1,7 +1,6 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-class Box
+export class Box
 {
 public:
   Box() : Box{ 1.0, 1.0, 1.0} {}        // A delegating default constructor
@@ -14,5 +13,3 @@ public:
 private:
   double m_length, m_width, m_height;
 };
-
-#endif
