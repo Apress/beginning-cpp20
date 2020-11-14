@@ -4,7 +4,7 @@
 // here we define all members in the header as well (as inline functions).
 // See online Appendix A for details.
 
-#include <iostream>   // For use of std::cout, std::endl, etc.
+import <iostream>;   // For use of std::cout, std::endl, etc.
 #include "Box.h"      // For use of the Box class
 
 int main()

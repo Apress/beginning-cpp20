@@ -3,7 +3,7 @@
 // and the member functions in source file like we did for this example. 
 // See online Appendix A for details.
 
-#include <iostream>   // For use of std::cout, std::endl, etc.
+import <iostream>;   // For use of std::cout, std::endl, etc.
 #include "Box.h"      // For use of the Box class
 
 int main()

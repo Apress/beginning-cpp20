@@ -2,7 +2,7 @@
 #define TRUCKLOAD_H
 
 #include "SharedBox.h"
-#include <vector>
+import <vector>;
 
 // Do not #include "Package.inl" here to avoid this class definition to leak into consumers of Truckload
 // (best we can do here to mimick internal module implementation partitions...)
