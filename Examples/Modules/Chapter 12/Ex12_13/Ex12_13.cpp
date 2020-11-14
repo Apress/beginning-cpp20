@@ -1,6 +1,6 @@
 // Creating an array of objects
 import <iostream>;
-#include "Box.h"
+import box;
 
 int main()
 {

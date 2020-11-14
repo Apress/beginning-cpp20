@@ -1,6 +1,6 @@
 // Using a static member variable
 import <iostream>;
-#include "Box.h"
+import box;
 
 int main()
 {

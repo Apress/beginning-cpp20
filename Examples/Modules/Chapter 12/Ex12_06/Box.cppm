@@ -1,10 +1,9 @@
-#ifndef BOX_H
-#define BOX_H
-
+// Module interface file for a module exporting the Box class
+export module box;
 import <iostream>;
 
 // Class to represent a box
-class Box
+export class Box
 {
 public:
   Box() = default;
@@ -19,18 +18,11 @@ private:
 };
 
 // Constructor definition
-// (inline because this member is defined in a header file: see online Appendix A)
-inline Box::Box(double length, double width, double height)
+Box::Box(double length, double width, double height)
   : m_length{ length }, m_width{ width }, m_height{ height }
 {
   std::cout << "Box constructor called." << std::endl;
 }
 
 // Member function definition
-// (inline because this member is defined in a header file: see online Appendix A)
-inline double Box::volume()
-{
-  return m_length * m_width * m_height;
-}
-
-#endif
+double Box::volume() { return m_length * m_width * m_height; }

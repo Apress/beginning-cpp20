@@ -1,7 +1,6 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-class Box
+export class Box
 {
 public:
   // Constructors
@@ -27,5 +26,3 @@ private:
   double m_height{1.0};
   mutable unsigned m_count{};   // Counts the amount of time printVolume() is called
 };
-
-#endif

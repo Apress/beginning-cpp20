@@ -1,13 +1,11 @@
-#ifndef RANDOM_BOXES_H
-#define RANDOM_BOXES_H
-
-#include "Box.h"
+export module box.random;
+import box;
 import <random>;        // For random number generation
 import <functional>;    // For std::bind()
 import <memory>;        // For std::make_shared<>() and std::shared_ptr<>;
 
 // Creates a pseudorandom number generator (PRNG) for random doubles between 0 and max
-inline auto createUniformPseudoRandomNumberGenerator(double max)
+auto createUniformPseudoRandomNumberGenerator(double max)
 {
   std::random_device seeder;      // True random number generator to obtain a seed (slow)
   std::default_random_engine generator{ seeder() };    // Efficient pseudo-random generator
@@ -15,16 +13,14 @@ inline auto createUniformPseudoRandomNumberGenerator(double max)
   return std::bind(distribution, generator);         //... and in the darkness bind them!
 }
 
-inline Box randomBox()
+export Box randomBox()
 {
   const int dimLimit{ 100 };          // Upper limit on Box dimensions
   static auto random{ createUniformPseudoRandomNumberGenerator(dimLimit) };
-  return Box{ random(), random(), random() };
+  return { random(), random(), random() };
 }
 
-inline auto randomSharedBox()
+export auto randomSharedBox()
 {
   return std::make_shared<Box>(randomBox());   // Uses copy constructor
 }
-
-#endif

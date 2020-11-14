@@ -1,10 +1,9 @@
-#ifndef CYLINDRICAL_BOX_H
-#define CYLINDRICAL_BOX_H
+export module cylindrical;
 
 import <string>;
 import <string_view>;
 
-class CylindricalBox
+export class CylindricalBox
 {
 public:
   static inline const float s_max_radius { 35.0f };
@@ -23,5 +22,3 @@ private:
   float m_height;
   std::string m_material;
 };
-
-#endif

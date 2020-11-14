@@ -1,14 +1,12 @@
-#ifndef TRUCKLOAD_H
-#define TRUCKLOAD_H
-
-#include "Box.h"
+export module truckload;
+import box;
 
 import <memory>;
 import <vector>;
 
-using SharedBox = std::shared_ptr<Box>;
+export using SharedBox = std::shared_ptr<Box>;
 
-class Truckload
+export class Truckload
 {
 public:
   Truckload() = default;            // Default constructor - empty truckload
@@ -40,5 +38,3 @@ private:
   Package* m_tail {};               // Last in the list
   Package* m_current {};            // Last retrieved from the list
 };
-
-#endif

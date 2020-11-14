@@ -1,6 +1,6 @@
 // Const objects and const member functions
-#include "Box.h"
 import <iostream>;
+import box;
 
 int main()
 {

@@ -1,9 +1,6 @@
-#ifndef SHARED_BOX_H
-#define SHARED_BOX_H
+export module truckload:shared_box;
 
 import <memory>;
-#include "Box.h"
+import box;
 
-using SharedBox = std::shared_ptr<Box>;
-
-#endif 
+export using SharedBox = std::shared_ptr<Box>;

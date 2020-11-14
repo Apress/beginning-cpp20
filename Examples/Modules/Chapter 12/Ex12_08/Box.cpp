@@ -1,5 +1,5 @@
+module box;
 import <iostream>;
-#include "Box.h"
 
 // Constructor definition
 Box::Box(double length, double width, double height)

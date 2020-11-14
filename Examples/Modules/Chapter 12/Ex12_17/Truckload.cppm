@@ -1,14 +1,10 @@
-#ifndef TRUCKLOAD_H
-#define TRUCKLOAD_H
+export module truckload;
 
-#include "SharedBox.h"
+export import :shared_box;
+import :package;
 import <vector>;
 
-// Do not #include "Package.inl" here to avoid this class definition to leak into consumers of Truckload
-// (best we can do here to mimick internal module implementation partitions...)
-class Package;  
-
-class Truckload
+export class Truckload
 {
 public:
   Truckload() = default;            // Default constructor - empty truckload
@@ -30,5 +26,3 @@ private:
   Package* m_tail {};               // Last in the list
   Package* m_current {};            // Last retrieved from the list
 };
-
-#endif

@@ -1,5 +1,4 @@
-#include "Truckload.h"
-#include "Package.h" 
+module truckload;
 
 import <iostream>;
 
