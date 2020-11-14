@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string_view>
 
-inline int count = 0;
+inline int count {};
 
 inline void print(std::string_view string)
 {
