@@ -1,21 +1,10 @@
 // Exercise A-2   Conditional compilation
 #include <iostream>
 #include <format>
-#include <cstdlib> 
 
-// Define to disable the assertion in main()
+// Define (before including ASSERT.h) to disable the assertion
 #define NDEBUG
-
-#ifndef NDEBUG
-  #define ASSERT(condition, message)       \
-    if (!(condition))                      \
-    {                                      \
-      std::cerr << (message) << std::endl; \
-      std::abort();                        \
-    }
-#else
-  #define ASSERT(condition, message)
-#endif
+#include "ASSERT.h"
 
 int main()
 {
