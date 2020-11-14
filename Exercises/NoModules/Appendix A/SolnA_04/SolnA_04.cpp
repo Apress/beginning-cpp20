@@ -17,7 +17,7 @@ int main()
   // but it seems like something a smart exception could use...
   try
   {
-    SmartException exception{ "Throwing later...", {} };
+    SmartException exception{ "Throwing later...", {} };  // Optional: {} to avoid calling std::source_location::current()
     // ...
     exception.throwFromHere();
   }

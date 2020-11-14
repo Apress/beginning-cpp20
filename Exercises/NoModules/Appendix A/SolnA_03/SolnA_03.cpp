@@ -1,5 +1,5 @@
 // Exercise A-3   Writing an exception class that records where 
-// the exception object was thrown (or at least, where it was created).
+// the exception object was created/thrown.
 #include <iostream>
 #include "SmartException.h"
 
@@ -18,7 +18,7 @@ int main()
   // but it seems like something a smart exception could use...
   try
   {
-    SmartException exception{ "Throwing later...", {} };
+    SmartException exception{ "Throwing later...", {} };  // Optional: {} to avoid calling std::source_location::current()
     // ...
     exception.throwFromHere();
   }
