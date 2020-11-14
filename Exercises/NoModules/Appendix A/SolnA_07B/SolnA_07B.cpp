@@ -6,8 +6,8 @@
 
 int main()
 {
-  print_this("All we have to decide is ");
-  print_that("what to do with the time that is given to us.");
+  print_this("All we have to decide is what to do ");
+  print_that("with the time that is given to us.");
                                  // -- Gandalf the Grey
 
   std::cout << "\n(print() was called " << count << " times)";
