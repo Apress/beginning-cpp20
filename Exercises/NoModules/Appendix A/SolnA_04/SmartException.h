@@ -9,15 +9,17 @@ class SmartException : public std::logic_error
 public:
   SmartException(const std::string& message, std::source_location location = std::source_location::current())
     : std::logic_error{ message }
-    , m_location(location)
+    , m_location{ std::move(location) }
   {
   }
 
   /* Throws the exception at this location
    * For cases where the exception is not created at the same line where it is thrown:
-   *   SmartException exception("BOOM!", {});   // Optional: do not use std::source_location::current() yet
+   *   SmartException exception{ "BOOM!", {} };
    *   ... // more code
    *   exception.throwFromHere();
+   * Note: in the example above, {} is optional 
+   * (it avoids calling std::source_location::current() during construction)
    */
   void throwFromHere(std::source_location location = std::source_location::current());
 
@@ -31,7 +33,7 @@ private:
 inline void SmartException::throwFromHere(std::source_location location)
 {
   m_location = std::move(location);
-  throw* this;
+  throw *this;
 }
 
 inline const std::source_location& SmartException::where() const
