@@ -1,8 +1,8 @@
 #ifndef BOX_H
 #define BOX_H
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 class Box
 {

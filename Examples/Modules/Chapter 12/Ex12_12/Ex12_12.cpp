@@ -1,6 +1,6 @@
 // Using a friend function of a class
-#include <iostream>
-#include <memory>
+import <iostream>;
+import <memory>;
 #include "Box.h"
 
 int main()

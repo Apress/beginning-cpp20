@@ -1,7 +1,7 @@
 // Using the explicit keyword
 // Uncomment "explicit" to make the compilation of 
 // the expression "box1.hasLargerVolumeThan(50.0)" fail
-#include <iostream>
+import <iostream>;
 
 class Cube
 {

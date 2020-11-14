@@ -1,5 +1,5 @@
 // Using a static member variable
-#include <iostream>
+import <iostream>;
 #include "Box.h"
 
 int main()
