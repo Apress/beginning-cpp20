@@ -1,8 +1,8 @@
 // Exercise 13-1
 // Implementing the * operator for the Box class
 // to post-multiply by an integer
-#include <iostream>
-#include "Box.h"
+import <iostream>;
+import box;
 
 int main()
 {

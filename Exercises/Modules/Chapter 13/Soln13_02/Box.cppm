@@ -1,8 +1,7 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-#include <compare>  // For std::partial_ordering (see Chapter 4)
-#include <ostream>  // For std::ostream
+import <compare>;  // For std::partial_ordering (see Chapter 4)
+import <ostream>;  // For std::ostream
 
 class Box
 {
@@ -35,6 +34,9 @@ private:
   double m_height {1.0};
 };
 
+// Function to pre-multiply a Box with a given factor
+Box operator*(double factor, const Box& box);
+
 std::ostream& operator<<(std::ostream& stream, const Box& box);
 
-#endif
+

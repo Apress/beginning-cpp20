@@ -1,6 +1,6 @@
 // Exercise 13-7
 // Rational operators
-#include <iostream>
+import <iostream>;
 #include "Rational.h"
 
 int main()

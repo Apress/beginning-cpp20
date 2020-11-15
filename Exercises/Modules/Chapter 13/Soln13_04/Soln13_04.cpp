@@ -1,7 +1,7 @@
 // Exercise 13-4
 // Adding support for equality operators that compare Boxes and volumes
-#include <iostream>
-#include "Box.h"
+import <iostream>;
+import box;
 
 /*
   Because the C++20 compiler automatically rewrites != expression 

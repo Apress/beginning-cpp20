@@ -2,7 +2,7 @@
 
 #ifndef RATIONAL_H
 #define RATIONAL_H
-#include <iostream>
+import <iostream>;
 
 class Rational
 {

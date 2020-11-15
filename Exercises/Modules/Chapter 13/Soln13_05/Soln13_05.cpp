@@ -2,8 +2,8 @@
 // Implementing the obvious operators for the Box class 
 // to allow it to be used, for instance, in if statements.
 // A Box is "true" if and only if its volume is non-zero.
-#include <iostream>
-#include "Box.h"
+import <iostream>;
+import box;
 
 void testBox(const Box& box)
 {

@@ -1,8 +1,7 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-#include <compare>  // For std::partial_ordering (see Chapter 4)
-#include <ostream>  // For std::ostream
+import <compare>;  // For std::partial_ordering (see Chapter 4)
+import <ostream>;  // For std::ostream
 
 class Box
 {
@@ -37,4 +36,3 @@ private:
 
 std::ostream& operator<<(std::ostream& stream, const Box& box);
 
-#endif

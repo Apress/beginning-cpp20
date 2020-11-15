@@ -1,7 +1,7 @@
 // Exercise 13-2
 // Implementing the * operator for the Box class to pre-multiply by a number
-#include <iostream>
-#include "Box.h"
+import <iostream>;
+import box;
 
 int main()
 {
