@@ -1,8 +1,7 @@
 // Shape classes
-#ifndef SHAPE_H
-#define SHAPE_H
+export module shapes;
 
-#include "Point.h"
+import point;
 import <numbers>;
 
 // Generic base class for shapes

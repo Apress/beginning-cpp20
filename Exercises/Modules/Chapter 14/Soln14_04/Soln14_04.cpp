@@ -2,7 +2,7 @@
 
 import <iostream>;
 import <vector>;
-#include "Person.h"
+import person;
 
 int main()
 {

@@ -26,7 +26,7 @@ Sheep::Sheep(std::string_view name, unsigned weight, unsigned wool)
 }
 
 // Override the behaviour of getName() for Sheep to prepend "Woolly "
-const std::string& Sheep::getName() const
+std::string Sheep::getName() const
 {
   return "Woolly " + Animal::getName();
 }

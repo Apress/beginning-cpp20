@@ -4,14 +4,20 @@ export module animals;
 
 import <string>;
 import <string_view>;
+import <iostream>;
 
 export class Animal
 {
 public:
-  Animal(std::string_view name, int weight);    // Constructor
+  Animal(std::string_view name, int weight)     // Constructor
+    : m_name{ name }, m_weight{ weight }
+  {}
 
 protected:
-  void who() const;                 // Display name and weight
+  void who() const                  // Display name and weight
+  {
+    std::cout << "My name is " << m_name << " and I weigh " << m_weight << "lbs." << std::endl;
+  }
 
 private:
   std::string m_name;                    // Name of the animal

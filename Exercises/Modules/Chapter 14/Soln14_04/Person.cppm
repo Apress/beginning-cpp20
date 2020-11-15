@@ -1,7 +1,5 @@
 // Person class and classes derived from Person
-#ifndef PERSON_H
-#define PERSON_H
-
+export module person;
 import <string>;
 import <string_view>;
 
@@ -24,7 +22,7 @@ import <string_view>;
 //  - a char value (say 'm', 'f', 'o'), but then how to enforce that no other values are assigned?
 //  - a string ("male", "female", etc), but same problem as with chars (and also excessively expensive)
 // The safest, most readable solution is therefore probably an enumeration:
-enum class Gender { male, female, other };
+export enum class Gender { male, female, other };
 
 export class Person
 {
@@ -74,4 +72,3 @@ public:
   
   void who() const;           // Display details
 };
-

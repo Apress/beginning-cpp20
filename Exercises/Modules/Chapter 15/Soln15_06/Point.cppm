@@ -1,6 +1,5 @@
 // A simple class for 2-dimensional points
-#ifndef POINT_H
-#define POINT_H
+export module point;
 
 export class Point final
 {

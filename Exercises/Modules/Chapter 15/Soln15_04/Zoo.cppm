@@ -5,7 +5,7 @@ import animals;
 import <vector>;
 import <memory>;
 
-using AnimalPtr = std::shared_ptr<Animal>;         // Define a type alias for convenience
+export using AnimalPtr = std::shared_ptr<Animal>;         // Define a type alias for convenience
 
 export class Zoo
 {

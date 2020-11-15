@@ -1,5 +1,4 @@
 // Animal class and classes derived from Animal
-
 export module animals;
 
 import <string>;
@@ -8,8 +7,10 @@ import <string_view>;
 export class Animal
 {
 public:
-  Animal(std::string_view name, int weight);    // Constructor
-  
+  Animal(std::string_view name, int weight)     // Constructor
+      : m_name{ name }, m_weight{ weight }
+  {}
+
   void who() const;                 // Display name and weight
 
 private:

@@ -1,5 +1,6 @@
 // Exercise 15-6 Exercising Shape classes
-#include "Shapes.h"
+import shapes;
+import point;
 import <iostream>;
 import <vector>;
 
