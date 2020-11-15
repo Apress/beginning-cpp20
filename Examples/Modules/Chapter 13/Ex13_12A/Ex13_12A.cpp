@@ -1,7 +1,7 @@
 // Always define both copy members together
 // (see also 'Rule of Five' in Chapter 18!)
 #include "Message.h"
-#include <iostream>
+import <iostream>;
 
 int main()
 {

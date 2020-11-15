@@ -1,9 +1,9 @@
 // Using the addition operator for Box objects
-#include <iostream>
-#include <format>
-#include <vector>
-#include <random>       // For random number generation
-#include <functional>   // For std::bind()
+import <iostream>;
+import <format>;
+import <vector>;
+import <random>;       // For random number generation
+import <functional>;   // For std::bind()
 #include "Box.h"
 
 // See Chapter 12 for an explanation of this function

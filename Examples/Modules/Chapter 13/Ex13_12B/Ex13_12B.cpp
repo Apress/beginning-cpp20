@@ -5,7 +5,7 @@
 // Less duplication means less room for error, less maintenance overhead, etc.
 // Note: this solution is hinted at in a Note in the text, but not explicitly named.
 #include "Message.h"
-#include <iostream>
+import <iostream>;
 
 int main()
 {
