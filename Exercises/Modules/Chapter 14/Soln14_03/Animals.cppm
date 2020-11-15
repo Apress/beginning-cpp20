@@ -5,7 +5,7 @@ export module animals;
 import <string>;
 import <string_view>;
 
-class Animal
+export class Animal
 {
 public:
   Animal(std::string_view name, int weight);    // Constructor
@@ -17,7 +17,7 @@ private:
   int m_weight;                        // Weight of the animal
 };
 
-class Lion : public Animal
+export class Lion : public Animal
 {
 public:
   // Define Lion constructor that calls base class constructor
@@ -27,7 +27,7 @@ public:
   void who() const;           // Define Lion-specific function
 };
 
-class Aardvark : public Animal
+export class Aardvark : public Animal
 {
 public:
   using Animal::Animal;                 // Inherit constructor

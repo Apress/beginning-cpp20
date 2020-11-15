@@ -5,7 +5,7 @@
 
 #include <cmath>   // For std::abs()
 
-class Nearer
+export class Nearer
 {
 public:
   explicit Nearer(int value) : m_value{ value } {}

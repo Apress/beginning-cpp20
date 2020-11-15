@@ -7,7 +7,7 @@ import <memory>;
 
 using AnimalPtr = std::shared_ptr<Animal>;         // Define a type alias for convenience
 
-class Zoo
+export class Zoo
 {
 public:
   Zoo() = default;                                 // Default constructor for an empty zoo

@@ -11,7 +11,7 @@ import <utility>;      // For std::as_const()
 import <stdexcept>;
 
 template<typename T>
-class SparseArray
+export class SparseArray
 {
 public:
   T& operator[](size_t index);              // Subscript operator (creates default-constructed value if no value exists for the given index)

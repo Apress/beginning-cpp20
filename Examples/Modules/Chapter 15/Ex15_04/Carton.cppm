@@ -4,7 +4,7 @@ import <string>;
 import <string_view>;
 import box;
 
-class Carton : public Box
+export class Carton : public Box
 {
 public:
   // Constructor explicitly calling the base constructor

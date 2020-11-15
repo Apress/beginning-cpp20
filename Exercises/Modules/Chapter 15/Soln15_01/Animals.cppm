@@ -5,7 +5,7 @@ export module animals;
 import <string>;
 import <string_view>;
 
-class Animal
+export class Animal
 {
 public:
   Animal(std::string_view name, unsigned weight);// Constructor
@@ -18,21 +18,21 @@ private:
   unsigned m_weight;                             // Weight of the animal
 };
 
-class Sheep : public Animal
+export class Sheep : public Animal
 {
 public:
   using Animal::Animal;                          // Inherit constructor
   std::string_view sound() const override;       // Return the sound of a sheep
 };
 
-class Dog : public Animal
+export class Dog : public Animal
 {
 public:
   using Animal::Animal;                          // Inherit constructor
   std::string_view sound() const override;       // Return the sound of a dog
 };
 
-class Cow : public Animal
+export class Cow : public Animal
 {
 public:
   using Animal::Animal;                          // Inherit constructor

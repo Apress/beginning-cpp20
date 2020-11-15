@@ -4,7 +4,7 @@ import <iostream>;
 import carton;
 import food;
 
-class CerealPack : public Carton, public FoodContainer
+export class CerealPack : public Carton, public FoodContainer
 {
 public:
   CerealPack(double length, double width, double height, std::string_view cerealType)

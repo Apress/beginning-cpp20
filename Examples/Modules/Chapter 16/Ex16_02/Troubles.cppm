@@ -3,7 +3,7 @@ export module troubles;
 import <string>;
 import <string_view>;
 
-class Trouble
+export class Trouble
 {
 public:
   explicit Trouble(std::string_view message = "There's a problem") 

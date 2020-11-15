@@ -4,7 +4,7 @@ export module box;
 import <ostream>;
 import <format>;
 
-class Box
+export class Box
 {
 public:
   Box() = default;

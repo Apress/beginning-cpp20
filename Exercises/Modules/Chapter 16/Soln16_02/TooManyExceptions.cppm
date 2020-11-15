@@ -10,7 +10,7 @@
 import <exception>;
 import <string>;     // For std::string / std::to_string()
 
-class TooManyExceptions : public std::exception
+export class TooManyExceptions : public std::exception
 {
 public:
   explicit TooManyExceptions(size_t howMany)

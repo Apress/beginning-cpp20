@@ -2,7 +2,7 @@
 export module box;
 #define BOX_H
 
-class Box
+export class Box
 {
 public:
   Box() = default;

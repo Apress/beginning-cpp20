@@ -6,7 +6,7 @@ import truckload;
 import <functional>      // For std::function<>;
 import <vector>          // For std::vector<>;
 
-class DeliveryTruck
+export class DeliveryTruck
 {
 public:
   using Callback = std::function<void(SharedBox)>;  // Type alias for the type of the delivery callback functions

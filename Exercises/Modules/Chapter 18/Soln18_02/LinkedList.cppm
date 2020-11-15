@@ -32,7 +32,7 @@ We invite you to give it a try, and simplify the code along these lines.
 import <utility>;        // for std::swap()
 
 template<typename T>
-class LinkedList
+export class LinkedList
 {
 public:
   LinkedList() = default;                  // Default constructor (all pointers are initialised to nullptr)
@@ -317,7 +317,7 @@ void LinkedList<T>::swap(LinkedList& other) noexcept
 
 // Definition of the nested Iterator class
 template<typename T>
-class LinkedList<T>::Iterator
+export class LinkedList<T>::Iterator
 {
 public:
   explicit Iterator(Node* node) 

@@ -5,7 +5,7 @@
 import <stdexcept>;
 
 template <typename T>
-class Stack
+export class Stack
 {
 public:
   Stack() = default;                  // Default constructor

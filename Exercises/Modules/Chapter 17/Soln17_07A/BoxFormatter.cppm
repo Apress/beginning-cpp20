@@ -7,7 +7,7 @@ import <string>;
 
 // Adding specific specializations to the std namespace is allowed
 template <>
-class std::formatter<Box>
+export class std::formatter<Box>
 {
 public:
   auto parse(auto& context)

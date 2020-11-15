@@ -4,7 +4,7 @@
 import <stdexcept>;        // For derived exception classes such as std::out_of_range
 import <string>;           // For std::to_string() and the std::string type
 
-class DimensionError : public std::out_of_range
+export class DimensionError : public std::out_of_range
 {
 public:
   explicit DimensionError(double value)

@@ -3,7 +3,7 @@
 
 import box;
 
-class ToughPack : public Box
+export class ToughPack : public Box
 {
 public:
   // Inherit the Box(length, width, height) constructor

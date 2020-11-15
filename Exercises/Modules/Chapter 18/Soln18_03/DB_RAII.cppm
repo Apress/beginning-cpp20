@@ -19,7 +19,7 @@
  * RAII object that ensures that a given database connection is closed
  * once the RAII object goes out of scope.
  */ 
-class DBConnectionRAII
+export class DBConnectionRAII
 {
 public:
   DBConnectionRAII(DB_CONNECTION* connection) noexcept
@@ -48,7 +48,7 @@ private:
 };
 
 /* RAII object that takes a DB_QUERY_RESULT and ensures it is freed */
-class DBQueryResultRAII
+export class DBQueryResultRAII
 {
 public:
   DBQueryResultRAII(DB_QUERY_RESULT* result) noexcept 

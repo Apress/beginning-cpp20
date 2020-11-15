@@ -4,7 +4,7 @@
 import <compare>;
 
 template <typename First, typename Second>
-class Pair
+export class Pair
 {
 public:
   // Public members + no m_ prefix analogous to std::pair<> (see <utility> module)

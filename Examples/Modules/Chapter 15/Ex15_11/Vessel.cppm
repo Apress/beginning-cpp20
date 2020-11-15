@@ -2,7 +2,7 @@
 #ifndef VESSEL_H
 #define VESSEL_H
 
-class Vessel
+export class Vessel
 {
 public:
   virtual ~Vessel() = default;         // As always: a virtual destructor!

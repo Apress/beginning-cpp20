@@ -9,7 +9,7 @@ import <ostream>;
 
 using SharedBox = std::shared_ptr<Box>;
 
-class Truckload
+export class Truckload
 {
 public:
   Truckload() = default;            // Default constructor - empty truckload
@@ -35,7 +35,7 @@ private:
 // Out-of-class definition of the nested Iterator class 
 // (class itself is part of the public interface, so belongs in the header)
 // Note that this is effectively a const iterator...
-class Truckload::Iterator
+export class Truckload::Iterator
 {
 public:
   SharedBox getFirstBox();  // Get the first Box
@@ -50,7 +50,7 @@ private:
     : m_boxes{ &boxes }, m_current{ boxes.end() } {}
 };
 
-std::ostream& operator<<(std::ostream& stream, const Truckload& load);
+export std::ostream& operator<<(std::ostream& stream, const Truckload& load);
 
 // Optional yet conventional non-member function (forwards to member function)
 void swap(Truckload& one, Truckload& other) noexcept;

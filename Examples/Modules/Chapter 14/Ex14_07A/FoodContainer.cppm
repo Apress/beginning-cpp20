@@ -4,7 +4,7 @@ import <iostream>;
 import <string>;
 import <string_view>;
 
-class FoodContainer
+export class FoodContainer
 {
 public:
   FoodContainer() { std::cout << "FoodContainer() called.\n"; }

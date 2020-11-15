@@ -13,7 +13,7 @@ import <string>;
 	square root function be called with a negative number)
 */
 
-class NotANumber : public std::domain_error
+export class NotANumber : public std::domain_error
 {
 public:
   explicit NotANumber(const std::string& nan) 
@@ -21,7 +21,7 @@ public:
   {}
 };
 
-class NegativeNumber : public std::domain_error
+export class NegativeNumber : public std::domain_error
 {
 public:
   explicit NegativeNumber(int number)
@@ -29,7 +29,7 @@ public:
   {}
 };
 
-class OddNumber : public std::domain_error
+export class OddNumber : public std::domain_error
 {
 public:
   explicit OddNumber(int number)

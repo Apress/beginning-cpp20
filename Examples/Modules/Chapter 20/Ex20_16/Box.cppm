@@ -3,7 +3,7 @@ export module box;
 
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 
-class Box
+export class Box
 {
 public:
   // Constructors

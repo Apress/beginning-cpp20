@@ -2,7 +2,7 @@
 #ifndef LESS_H
 #define LESS_H
 
-class Less
+export class Less
 {
 public:
   bool operator()(int a, int b) const { return a < b; }
