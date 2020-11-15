@@ -37,4 +37,3 @@ int main()
   // bool b1{ box1 };    /* Does not compile! */
   bool b2{ static_cast<bool>(box2) };  // Needs an explicit type conversion
 }
-

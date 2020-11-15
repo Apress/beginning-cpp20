@@ -4,7 +4,7 @@ import <ostream>;
 import <format>;
 import <algorithm>;    // For the std::min()/max() function templates
 
-class Box
+export class Box
 {
 public:
   Box() = default;
@@ -40,4 +40,3 @@ private:
   double m_width {1.0};
   double m_height {1.0};
 };
-

@@ -3,7 +3,7 @@ export module box;
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 import <ostream>;  // For std::ostream
 
-class Box
+export class Box
 {
 public:
   Box() = default;       // Default constructor
@@ -35,8 +35,6 @@ private:
 };
 
 // Function to pre-multiply a Box with a given factor
-Box operator*(double factor, const Box& box);
+export Box operator*(double factor, const Box& box);
 
-std::ostream& operator<<(std::ostream& stream, const Box& box);
-
-
+export std::ostream& operator<<(std::ostream& stream, const Box& box);

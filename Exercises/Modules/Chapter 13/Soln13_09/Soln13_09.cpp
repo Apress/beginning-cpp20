@@ -4,7 +4,7 @@ import <iostream>;
 import <memory>;
 import <random>;       // For random number generation
 import <functional>;   // For std::bind()
-#include "Truckload.h"
+import truckload;
 
 // See Chapter 12 for an explanation of this function
 auto createUniformPseudoRandomNumberGenerator(double max)
