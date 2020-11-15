@@ -1,8 +1,6 @@
 // Using an abstract class
 import <iostream>;
-import box;                                 // For the Box class
-#include "ToughPack.h"                           // For the ToughPack class
-import carton;                              // For the Carton class
+import boxes;
 
 int main()
 {

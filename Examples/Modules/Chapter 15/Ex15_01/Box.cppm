@@ -1,5 +1,5 @@
-export module box;
-#define BOX_H
+export module boxes:box;
+
 import <iostream>;
 
 export class Box

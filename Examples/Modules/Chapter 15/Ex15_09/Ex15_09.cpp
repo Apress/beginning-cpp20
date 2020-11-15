@@ -1,8 +1,7 @@
 // Using the typeid() operator
 import <iostream>;
 import <typeinfo>;         // For the std::type_info class
-import box;
-import carton;
+import boxes;
 
 // Define trivial non-polymorphic base and derived classes:
 class NonPolyBase {};

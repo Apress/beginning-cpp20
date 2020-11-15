@@ -1,8 +1,8 @@
-export module carton;
+export module boxes:carton;
 import <algorithm>;    // For std::max()
 import <string>;
 import <string_view>;
-import box;
+import :box;
 
 export class Carton : public Box
 {
@@ -21,4 +21,3 @@ public:
 private:
   std::string m_material;
 };
-

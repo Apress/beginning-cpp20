@@ -1,7 +1,7 @@
 // Can.h Class defining a cylindrical can of a given height and diameter
 export module can;
 
-#include "Vessel.h"
+import vessel;
 import <numbers>;
 
 export class Can : public Vessel

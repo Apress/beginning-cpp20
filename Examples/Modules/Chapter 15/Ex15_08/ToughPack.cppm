@@ -1,7 +1,6 @@
-#ifndef TOUGH_PACK_H
-#define TOUGH_PACK_H
-
-import box;
+export module boxes:tough_pack;
+import :box;
+import <iostream>;
 
 export class ToughPack : public Box
 {
