@@ -3,6 +3,7 @@ export module carton;
 
 import <string>;
 import <string_view>;
+import <iostream>;
 import box;
 
 export class Carton : public Box
