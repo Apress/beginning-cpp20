@@ -1,6 +1,6 @@
 // Using a function with a reference parameter in the Integer class
 import <iostream>;
-#include "Integer.h"
+import integer;
 
 /*****************************************************************\
  Using the version of compare() with the pass-by-value parameter,

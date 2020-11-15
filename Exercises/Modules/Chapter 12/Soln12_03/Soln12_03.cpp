@@ -1,6 +1,6 @@
 // Implementing add(), subtract() and multiply() 
 import <iostream>;
-#include "Integer.h"
+import integer;
 
 /***********************************************************
  By returning the dereferenced this pointer in the functions

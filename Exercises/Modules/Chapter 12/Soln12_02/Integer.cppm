@@ -12,7 +12,7 @@
 export module integer;
 
 // Option 1: zero-initialize n and add a default constructor
-class Integer
+export class Integer
 {
 public:
   Integer() = default;                     // Zero-arg constructor
@@ -50,5 +50,3 @@ private:
   int m_value;
 };
 */
-
-#endif

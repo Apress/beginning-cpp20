@@ -1,5 +1,5 @@
 import <iostream>;
-#include "Integer.h"
+module integer;
 
 /****************************************************************\
  Implementing compare() as a friend is quite simple.

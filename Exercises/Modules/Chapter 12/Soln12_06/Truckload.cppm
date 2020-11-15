@@ -1,14 +1,13 @@
-#ifndef TRUCKLOAD_H
-#define TRUCKLOAD_H
+export module truckload;
 
 import box;
 
 import <memory>;
 import <vector>;
 
-using SharedBox = std::shared_ptr<Box>;
+export using SharedBox = std::shared_ptr<Box>;
 
-class Truckload
+export class Truckload
 {
 public:
   Truckload() = default;            // Default constructor - empty truckload
@@ -50,5 +49,3 @@ private:
   friend class Truckload;   // Only a Truckload can create an Iterator
   explicit Iterator(Package* head) : m_head{ head }, m_current{ nullptr } {}
 };
-
-#endif

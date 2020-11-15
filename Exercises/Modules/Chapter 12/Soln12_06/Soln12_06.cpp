@@ -1,6 +1,7 @@
 // Creating a nested iterator class
-#include "RandomBoxes.h"
-#include "Truckload.h"
+import box.random;
+import truckload;
+import <iostream>;
 
 /* 
  Turns out moving the getFirstBox() and getLastBox() functions 

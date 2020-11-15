@@ -1,6 +1,6 @@
 // Using a friend function
 import <iostream>;
-#include "Integer.h"
+import integer;
 
 int main()
 {

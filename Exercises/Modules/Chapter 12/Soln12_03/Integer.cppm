@@ -1,6 +1,6 @@
 export module integer;
 
-class Integer
+export class Integer
 {
 public:
   Integer(int value = 0);
@@ -20,5 +20,3 @@ public:
 private:
   int m_value;
 };
-
-#endif
