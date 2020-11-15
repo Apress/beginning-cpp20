@@ -1,7 +1,7 @@
 // Exercise 13-4 Person.cpp 
 // Person class implementation
 
-#include "Person.h"
+module person;
 import <iostream>;
 
 Person::Person(size_t age, std::string_view name, Gender gender) 

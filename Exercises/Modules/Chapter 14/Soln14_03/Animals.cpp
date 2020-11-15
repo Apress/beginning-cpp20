@@ -1,12 +1,7 @@
 // Exercise 14-3 - Animals.cpp
 // Implementations of the Animal class and classes derived from Animal
-
-import <iostream>;
 module animals;
-
-// Constructor
-Animal::Animal(std::string_view name, int weight) 
-	: m_name{name}, m_weight{weight} {}
+import <iostream>;
 
 // Identify the animal
 void Animal::who() const

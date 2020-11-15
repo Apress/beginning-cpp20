@@ -15,7 +15,7 @@ public:
   virtual std::string_view sound() const = 0;      // Return the sound of an animal
 
 protected:              // Protected getters for use in derived classes
-  virtual const std::string& getName() const { return m_name; }
+  virtual std::string getName() const { return m_name; }
   virtual unsigned getWeight() const { return m_weight; }
 
 private:
@@ -32,7 +32,7 @@ public:
   std::string_view sound() const override;  // Return the sound of a sheep
 
 protected:
-  const std::string& getName() const override;
+  std::string getName() const override;
   unsigned getWeight() const override;
 
 private:

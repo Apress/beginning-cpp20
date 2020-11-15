@@ -51,4 +51,3 @@ public:
   std::string who() const override;         // Override the behaviour of who() for Cows
   std::string_view sound() const override;  // Return the sound of a cow
 };
-
