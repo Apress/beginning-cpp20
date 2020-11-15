@@ -3,7 +3,7 @@ export module troubles;
 import <string>;
 import <string_view>;
 
-class Trouble
+export class Trouble
 {
 public:
   explicit Trouble(std::string_view message = "There's a problem") 
@@ -17,7 +17,7 @@ private:
 };
 
 // Derived exception class
-class MoreTrouble : public Trouble
+export class MoreTrouble : public Trouble
 {
 public:
   explicit MoreTrouble(std::string_view str = "There's more trouble...") 
@@ -26,7 +26,7 @@ public:
 };
 
 // Derived exception class
-class BigTrouble : public MoreTrouble
+export class BigTrouble : public MoreTrouble
 {
 public:
   explicit BigTrouble(std::string_view str = "Really big trouble...") 

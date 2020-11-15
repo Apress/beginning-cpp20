@@ -5,7 +5,7 @@ import <compare>;
 import <iostream>;
 
 template <typename First, typename Second>
-class Pair
+export class Pair
 {
 public:
   // Public members + no m_ prefix analogous to std::pair<> (see <utility> module)
@@ -29,7 +29,7 @@ Pair<First, Second>::Pair(const First& f, const Second& s)
 {}
 
 template <typename First, typename Second>
-std::ostream& operator<<(std::ostream& out, const Pair<First, Second>& pair)
+export std::ostream& operator<<(std::ostream& out, const Pair<First, Second>& pair)
 {
   return out << '(' << pair.first << ", " << pair.second << ')';
 }

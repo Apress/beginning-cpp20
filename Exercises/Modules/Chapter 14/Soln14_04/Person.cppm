@@ -26,7 +26,7 @@ import <string_view>;
 // The safest, most readable solution is therefore probably an enumeration:
 enum class Gender { male, female, other };
 
-class Person
+export class Person
 {
 public:
   Person() = default;   // Default constructor - necessary to define arrays
@@ -51,7 +51,7 @@ private:
   Gender m_gender{ Gender::female };
 };
 
-class Employee : public Person
+export class Employee : public Person
 {
 public:
   Employee() = default;   // Default constructor - necessary to define arrays
@@ -67,7 +67,7 @@ private:
   long m_personnelNumber{};
 };
 
-class Executive : public Employee
+export class Executive : public Employee
 {
 public:
   using Employee::Employee;   // Inherit all constructors

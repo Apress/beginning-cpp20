@@ -4,7 +4,7 @@
 #define CURVEBALL_H
 import <exception>;
 
-class CurveBall : public std::exception
+export class CurveBall : public std::exception
 {
 public:
   const char* what() const noexcept override

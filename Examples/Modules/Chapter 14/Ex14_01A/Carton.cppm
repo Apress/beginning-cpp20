@@ -5,7 +5,7 @@ import <string>;
 import <string_view>;
 import box;
 
-class Carton : private Box
+export class Carton : private Box
 {
 public:
   explicit Carton(std::string_view mat = "Cardboard") : m_material {mat} {}

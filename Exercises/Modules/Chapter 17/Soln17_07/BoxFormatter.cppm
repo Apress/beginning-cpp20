@@ -6,7 +6,7 @@ import <format>;
 
 // Adding specific specializations to the std namespace is allowed
 template <>
-class std::formatter<Box> : public std::formatter<double>
+export class std::formatter<Box> : public std::formatter<double>
 {
 public:
   

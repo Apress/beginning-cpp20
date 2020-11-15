@@ -3,7 +3,7 @@
 
 import box;
 
-class ToughPack : public Box
+export class ToughPack : public Box
 {
 public:
   ToughPack(double length, double width, double height)

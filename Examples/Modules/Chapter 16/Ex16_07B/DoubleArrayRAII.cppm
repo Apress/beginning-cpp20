@@ -4,7 +4,7 @@
 
 import <iostream>;
 
-class DoubleArrayRAII final
+export class DoubleArrayRAII final
 {
 public:
   explicit DoubleArrayRAII(size_t size) : m_resource{ new double[size] } {}

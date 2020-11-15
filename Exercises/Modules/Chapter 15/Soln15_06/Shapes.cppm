@@ -6,7 +6,7 @@
 import <numbers>;
 
 // Generic base class for shapes
-class Shape
+export class Shape
 {
 public:
   Shape(const Point& position) : m_position {position} {}
@@ -24,7 +24,7 @@ private:
 };
 
 // Class defining a circle
-class Circle : public Shape
+export class Circle : public Shape
 {
 public:
   Circle(const Point& center, double radius) : Shape{center}, m_radius{radius} {}
@@ -45,7 +45,7 @@ private:
 };
 
 // Class defining a rectangle
-class Rectangle : public Shape
+export class Rectangle : public Shape
 {
 
 public:

@@ -4,7 +4,7 @@ export module can;
 #include "Vessel.h"
 import <numbers>;
 
-class Can : public Vessel
+export class Can : public Vessel
 {
 public:
   Can(double diameter, double height) 

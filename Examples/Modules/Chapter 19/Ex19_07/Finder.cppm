@@ -5,7 +5,7 @@
 import <vector>;
 import <optional>;
 
-class Finder
+export class Finder
 {
 public:
   double getNumberToSearchFor() const;

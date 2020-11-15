@@ -2,7 +2,7 @@
 #ifndef POINT_H
 #define POINT_H
 
-class Point final
+export class Point final
 {
 public:
   Point(double x, double y) : m_x{x}, m_y{y} {}

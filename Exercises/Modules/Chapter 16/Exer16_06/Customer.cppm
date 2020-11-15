@@ -6,7 +6,7 @@
 import <string>;
 import <string_view>;
 
-class Customer
+export class Customer
 {
 public:
   Customer(

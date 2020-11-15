@@ -2,7 +2,7 @@ export module box;
 #define BOX_H
 import <iostream>;
 
-class Box
+export class Box
 {
 public:
   Box(double l, double w, double h) : m_length {l}, m_width {w}, m_height {h} {}

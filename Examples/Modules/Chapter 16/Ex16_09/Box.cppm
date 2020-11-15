@@ -3,7 +3,7 @@ export module box;
 import <algorithm>;                        // For std::min() function template
 #include "DimensionError.h"
 
-class Box
+export class Box
 {
 public:
   Box(double l, double w, double h) : m_length{ l }, m_width{ w }, m_height{ h }

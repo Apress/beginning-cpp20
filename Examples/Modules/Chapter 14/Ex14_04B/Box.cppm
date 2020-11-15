@@ -5,7 +5,7 @@ export module box;
 import <iostream>;     // For standard streams
 import <format>;       // For string formatting
 
-class Box
+export class Box
 {
 public:
   // Constructors

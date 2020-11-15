@@ -3,7 +3,7 @@ export module box;
 
 #include "Vessel.h"
 
-class Box : public Vessel
+export class Box : public Vessel
 {
 public:
   Box(double l, double w, double h) : m_length {l}, m_width {w}, m_height {h} {}
