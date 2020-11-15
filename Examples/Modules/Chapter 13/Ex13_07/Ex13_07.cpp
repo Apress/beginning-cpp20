@@ -1,6 +1,6 @@
 // Implicit conversions reduce the number of operator functions
 import <iostream>;
-#include "Integer.h"
+import integer;
 
 int main() 
 {

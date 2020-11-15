@@ -1,4 +1,4 @@
-#include "Box.h"
+module box;
 
 import <format>;
 import <algorithm>;    // For the min() and max() function templates

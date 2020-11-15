@@ -1,15 +1,14 @@
-#ifndef TRUCKLOAD_H
-#define TRUCKLOAD_H
+export module truckload;
 
-#include "Box.h"
+import box;
 
 import <memory>;
 import <vector>;
 import <ostream>;
 
-using SharedBox = std::shared_ptr<Box>;
+export using SharedBox = std::shared_ptr<Box>;
 
-class Truckload
+export class Truckload
 {
 public:
   Truckload() = default;            // Default constructor - empty truckload
@@ -52,6 +51,4 @@ private:
   explicit Iterator(Package* head) : m_head{ head }, m_current{ nullptr } {}
 };
 
-std::ostream& operator<<(std::ostream& stream, const Truckload& load);
-
-#endif
+export std::ostream& operator<<(std::ostream& stream, const Truckload& load);

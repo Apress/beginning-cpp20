@@ -1,7 +1,6 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-class Box
+export class Box
 {
 public:
   // Constructors
@@ -29,15 +28,13 @@ private:
 };
 
 // Compare the volume of a Box object with a constant
-inline bool Box::operator<(double value) const
+bool Box::operator<(double value) const
 {
-	return volume() < value;
+  return volume() < value;
 }
 
 // Function comparing a constant with volume of a Box object
-inline bool operator<(double value, const Box& aBox)
+export bool operator<(double value, const Box& aBox)
 {
   return value < aBox.volume();
 }
-
-#endif

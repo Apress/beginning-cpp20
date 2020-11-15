@@ -1,11 +1,10 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 import <ostream>;  // For std::ostream
 import <format>;
 
-class Box
+export class Box
 {
 public:
   // Constructors
@@ -41,7 +40,7 @@ private:
   double m_height{ 1.0 };
 };
 
-inline Box& Box::operator++()   // Prefix ++operator
+Box& Box::operator++()   // Prefix ++operator
 {
   ++m_length;
   ++m_width;
@@ -49,14 +48,14 @@ inline Box& Box::operator++()   // Prefix ++operator
   return *this;
 }
 
-inline const Box Box::operator++(int)  // Postfix operator++
+const Box Box::operator++(int)  // Postfix operator++
 {
   auto copy{ *this };  // Create a copy of the current object
   ++(*this);           // Increment the current object using the prefix operator...
   return copy;         // Return the unincremented copy
 }
 
-inline Box& Box::operator--()   // Prefix --operator
+Box& Box::operator--()   // Prefix --operator
 {
   --m_length;
   --m_width;
@@ -64,18 +63,17 @@ inline Box& Box::operator--()   // Prefix --operator
   return *this;
 }
 
-inline const Box Box::operator--(int)  // Postfix operator--
+const Box Box::operator--(int)  // Postfix operator--
 {
   auto copy{ *this };  // Create a copy of the current object
   --(*this);           // Decrement the current object using the prefix operator...
   return copy;         // Return copy of the original value
 }
 
-inline std::ostream& operator<<(std::ostream& stream, const Box& box)
+export std::ostream& operator<<(std::ostream& stream, const Box& box)
 {
   stream << std::format("Box({:.1f}, {:.1f}, {:.1f})",
                              box.getLength(), box.getWidth(), box.getHeight());
   return stream;
 }
 
-#endif
