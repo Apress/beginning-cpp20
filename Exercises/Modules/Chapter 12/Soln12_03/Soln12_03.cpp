@@ -1,5 +1,5 @@
 // Implementing add(), subtract() and multiply() 
-#include <iostream>
+import <iostream>;
 #include "Integer.h"
 
 /***********************************************************

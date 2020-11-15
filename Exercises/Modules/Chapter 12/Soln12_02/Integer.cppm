@@ -9,8 +9,7 @@
      single-argument constructor.
 \***************************************************************/
 
-#ifndef INTEGER_H
-#define INTEGER_H
+export module integer;
 
 // Option 1: zero-initialize n and add a default constructor
 class Integer

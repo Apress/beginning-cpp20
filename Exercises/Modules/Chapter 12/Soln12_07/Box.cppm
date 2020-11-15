@@ -1,8 +1,7 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 
 class Box
 {
@@ -34,4 +33,3 @@ private:
   double m_height {1.0};
 };
 
-#endif

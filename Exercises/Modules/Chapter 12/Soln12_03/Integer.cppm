@@ -1,5 +1,4 @@
-#ifndef INTEGER_H
-#define INTEGER_H
+export module integer;
 
 class Integer
 {

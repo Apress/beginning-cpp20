@@ -1,10 +1,10 @@
 #ifndef RANDOM_BOXES_H
 #define RANDOM_BOXES_H
 
-#include "Box.h"
-#include <random>        // For random number generation
-#include <functional>    // For std::bind()
-#include <memory>        // For std::make_shared<>() and std::shared_ptr<>
+import box;
+import <random>;        // For random number generation
+import <functional>;    // For std::bind()
+import <memory>        // For std::make_shared<>() and std::shared_ptr<>;
 
 // Creates a pseudorandom number generator (PRNG) for random doubles between 0 and max
 inline auto createUniformPseudoRandomNumberGenerator(double max)

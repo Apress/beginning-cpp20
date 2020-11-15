@@ -1,10 +1,10 @@
 #ifndef TRUCKLOAD_H
 #define TRUCKLOAD_H
 
-#include "Box.h"
+import box;
 
-#include <memory>
-#include <vector>
+import <memory>;
+import <vector>;
 
 using SharedBox = std::shared_ptr<Box>;
 
@@ -25,12 +25,15 @@ public:
 
   void addBox(SharedBox box);       // Add a new SharedBox
   bool removeBox(SharedBox box);    // Remove a Box from the Truckload
+  bool removeBox(Iterator iter);    // Remove the Box pointed to by this Iterator
 
   void listBoxes() const;           // Output the Boxes
   void listBoxesReversed() const;   // Output the Boxes in reversed order
 
 private:
   class Package;
+
+  void removePackage(Package* package);
 
   Package* m_head {};               // First in the list
   Package* m_tail {};               // Last in the list
@@ -45,6 +48,7 @@ public:
   SharedBox getLastBox();     // Get the first Box
   SharedBox getNextBox();     // Get the next Box
   SharedBox getPreviousBox(); // Get the previous Box
+  SharedBox getCurrentBox() const;  // Get the current Box
 
 private:
   Package* m_head;          // The head of the linked list (needed for getFirstBox())

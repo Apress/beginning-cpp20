@@ -1,5 +1,5 @@
 // Using static members and a destructor to keep track of an object count
-#include <iostream>
+import <iostream>;
 #include "Integer.h"
 
 void showIntegerVal(Integer it)

@@ -1,10 +1,10 @@
 #ifndef TRUCKLOAD_H
 #define TRUCKLOAD_H
 
-#include "Box.h"
+import box;
 
-#include <memory>
-#include <vector>
+import <memory>;
+import <vector>;
 
 using SharedBox = std::shared_ptr<Box>;
 

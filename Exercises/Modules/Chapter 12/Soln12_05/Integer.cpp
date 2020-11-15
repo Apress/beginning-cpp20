@@ -3,7 +3,7 @@
  to store the object count. Every constructor should then increment
  this count, and you need to add a destructor that decrements it. 
 \*****************************************************************/
-#include <iostream>
+import <iostream>;
 #include "Integer.h"
 
 // Constructor
