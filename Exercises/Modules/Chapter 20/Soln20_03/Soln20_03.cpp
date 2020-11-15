@@ -14,12 +14,12 @@
 
 	Soln20_03A contains alternative solutions based on std::multimap<>
 */
-#include <vector>
-#include <map>
-#include <string>
-#include <iostream>
-#include <cctype>
-#include <utility>
+import <vector>;
+import <map>;
+import <string>;
+import <iostream>;
+#include <cctype>;
+import <utility>;
 
 int main()
 {

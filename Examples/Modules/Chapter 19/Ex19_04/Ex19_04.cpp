@@ -1,7 +1,7 @@
 // Exercising a function object with a member variable
-#include <iostream>
-#include <format>
-#include "Optimum.h"
+import <iostream>;
+import <format>;
+import optimum;
 #include "Nearer.h"
 
 int main()

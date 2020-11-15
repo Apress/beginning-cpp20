@@ -1,9 +1,9 @@
 // Constraint based specialization
-#include <concepts>  // For the std::equality_comparable<> concept
-#include <iterator>  // The iterator concepts and the iter_difference_t<>() trait
-#include <vector>
-#include <list>
-#include <iostream>
+import <concepts>  // For the std::equality_comparable<>; concept
+import <iterator>  // The iterator concepts and the iter_difference_t<>;() trait
+import <vector>;
+import <list>;
+import <iostream>;
 
 // Precondition: incrementing first eventually leads to last
 template <std::input_or_output_iterator Iter> requires std::equality_comparable<Iter>

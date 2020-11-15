@@ -1,8 +1,8 @@
 // Using a class template
-#include "Box.h"
-#include "Array.h"
-#include <iostream>
-#include <format>
+import box;
+import array;
+import <iostream>;
+import <format>;
 
 int main()
 {

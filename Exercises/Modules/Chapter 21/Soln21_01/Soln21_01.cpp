@@ -1,10 +1,10 @@
 // Exercise 21-1  Understanding compound and simple requirements
-#include <concepts>    // For the std::same_as<> and std::convertible_to<> concepts
-#include <ranges>      // For std::ranges::range<> concept
-#include <type_traits> // For the std::remove_cv<> type trait
-#include <list>
-#include <vector>
-#include <string>
+import <concepts>    // For the std::same_as<> and std::convertible_to<>; concepts
+import <ranges>      // For std::ranges::range<>; concept
+import <type_traits> // For the std::remove_cv<>; type trait
+import <list>;
+import <vector>;
+import <string>;
 
 template <typename Iter>
 concept BidirectionalIterator = true; // Feel free to further work out all requirements...

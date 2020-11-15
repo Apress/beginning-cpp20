@@ -1,7 +1,7 @@
 // Removing all elements that satisfy a certain condition usign std::erase_if()
-#include <vector>
-#include <string_view>
-#include <iostream>
+import <vector>;
+import <string_view>;
+import <iostream>;
 
 std::vector<int> fillVector_1toN(size_t N);  // Fill a vector with 1, 2, ..., N
 void printVector(std::string_view message, const std::vector<int>& numbers);

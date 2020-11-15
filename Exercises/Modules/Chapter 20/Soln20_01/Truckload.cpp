@@ -1,7 +1,7 @@
-#include "Truckload.h"
+module truckload;
 
-#include <iostream>
-#include <algorithm>
+import <iostream>;
+import <algorithm>;
 
 // Constructor - one Box
 Truckload::Truckload(SharedBox box)

@@ -1,9 +1,9 @@
 // Defaulting the default constructor in a derived class
 // without a default constructor in the base class
 // is equivalent to deleting the default constructor.
-#include <iostream>
-#include "Box.h"                 // For the Box class
-#include "Carton.h"              // For the Carton class
+import <iostream>;
+import box;                 // For the Box class
+import carton;              // For the Carton class
 
 /* Note: this example will fail to compile! */
 

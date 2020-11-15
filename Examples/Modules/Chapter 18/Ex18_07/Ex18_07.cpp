@@ -1,9 +1,9 @@
 // The effect of not adding noexcept to move members
 // Uncomment the noexcept specifiers in the Array<> template source 
 // to avoid copying when a std::vector<> grows its dynamic array.
-#include "Array.h"
-#include <string>
-#include <vector>
+import array;
+import <string>;
+import <vector>;
 
 // Construct an Array<> of a given size, filled with some arbitrary string data
 Array<std::string> buildStringArray(const size_t size)

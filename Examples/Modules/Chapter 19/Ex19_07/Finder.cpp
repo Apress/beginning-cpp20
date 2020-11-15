@@ -1,6 +1,6 @@
 // Exercising capturing the this pointer
 #include "Finder.h"
-#include "Optimum.h"
+import optimum;
 #include <cmath>       // For std::abs()
 
 std::optional<double> Finder::findNearest(const std::vector<double>& values) const

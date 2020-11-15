@@ -1,8 +1,8 @@
 // Exercise 20-14: the hard nut
-#include <iostream>
-#include <algorithm>
-#include <ranges>
-#include <iterator>
+import <iostream>;
+import <algorithm>;
+import <ranges>;
+import <iterator>;
 #include <cmath>
 
 using namespace std::ranges::views;

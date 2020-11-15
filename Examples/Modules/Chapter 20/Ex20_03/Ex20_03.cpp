@@ -1,6 +1,6 @@
 // Working with sets
-#include <iostream>
-#include <set>            // For the std::set<> container template
+import <iostream>;
+import <set>            // For the std::set<>; container template
 
 void printSet(const std::set<int>& my_set);  // Print the contents of a set to std::cout
 

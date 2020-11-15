@@ -1,7 +1,7 @@
 // Catching any exception
-#include <iostream>
-#include <typeinfo>         // For use of typeid()
-#include "Troubles.h"
+import <iostream>;
+import <typeinfo>;         // For use of typeid()
+import troubles;
 
 int main()
 {

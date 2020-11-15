@@ -28,8 +28,8 @@
    Hence: always use some form of RAII to manage a resource!
 */
 
-#include <iostream>
-#include <vector>
+import <iostream>;
+import <vector>;
 
 #include "DB.h"
 #include "DBException.h"

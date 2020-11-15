@@ -1,10 +1,10 @@
 // Exercise 19-2. 
 // Sorting in various ways using higher-order functions, functors, and lambda expressions.
 
-#include <iostream>
-#include <format>
-#include <functional>
-#include <cctype>         // For std::tolower()
+import <iostream>;
+import <format>;
+import <functional>;
+#include <cctype>;         // For std::tolower()
 #include <cmath>          // For std::abs()
 #include "Sort.h"
 

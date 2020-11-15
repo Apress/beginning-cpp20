@@ -2,7 +2,7 @@
 // so we ensure the derived classes allow public access to the who() function. 
 // The solution shows two alternatives, the second one being the preferred option.
 
-#include "Animals.h"
+import animals;
 
 int main()
 {

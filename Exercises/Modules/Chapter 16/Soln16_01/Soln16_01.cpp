@@ -1,9 +1,9 @@
 // Throwing and catching CurveBalls
 #include "CurveBall.h"
-#include <iostream>
+import <iostream>;
 
-#include <random>     // For random number generation
-#include <functional> // For std::bind()
+import <random>;     // For random number generation
+import <functional>; // For std::bind()
 
 void throwCurveBallSometimes();           // Suggested solution
 void throwCurveBallSometimesBernouilli(); // Alternate solution

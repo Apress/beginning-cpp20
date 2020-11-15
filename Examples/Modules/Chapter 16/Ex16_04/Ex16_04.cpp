@@ -1,7 +1,7 @@
 // Catching exceptions with a base class handler
-#include <iostream>
-#include <typeinfo>			// for the type_info type returned by the typeid operator
-#include "Troubles.h"
+import <iostream>;
+import <typeinfo>;			// for the type_info type returned by the typeid operator
+import troubles;
 
 int main()
 {

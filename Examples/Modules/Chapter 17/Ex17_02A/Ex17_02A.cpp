@@ -1,11 +1,11 @@
 // Using a class template with a non-type parameter
 // In this variant the code readability of the array subscript operator template
 // was improved (see Array<> source code).
-#include "Box.h"
-#include "Array.h"
-#include <iostream>
-#include <format>
-#include <typeinfo>         // For use of typeid()
+import box;
+import array;
+import <iostream>;
+import <format>;
+import <typeinfo>;         // For use of typeid()
 
 int main()
 {

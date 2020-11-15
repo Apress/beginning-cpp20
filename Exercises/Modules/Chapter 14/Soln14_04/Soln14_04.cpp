@@ -1,7 +1,7 @@
 // Exercise 14-4 Working with Employee and Executive objects
 
-#include <iostream>
-#include <vector>
+import <iostream>;
+import <vector>;
 #include "Person.h"
 
 int main()

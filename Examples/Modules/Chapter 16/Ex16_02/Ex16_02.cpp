@@ -1,6 +1,6 @@
 // Throw an exception object
-#include <iostream>
-#include "Troubles.h"
+import <iostream>;
+import troubles;
 
 void trySomething(int i);
 

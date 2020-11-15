@@ -1,6 +1,6 @@
 // Using a derived class copy constructor
-#include <iostream>
-#include "Carton.h"
+import <iostream>;
+import carton;
 
 int main()
 {

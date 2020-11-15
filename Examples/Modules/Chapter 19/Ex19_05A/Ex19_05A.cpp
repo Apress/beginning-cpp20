@@ -1,10 +1,10 @@
 // If possible, using the standard functors instead of lambda expressions 
 // often leads to more compact and elegant code.
-#include <iostream>
-#include <string>
-#include <string_view>
-#include <functional>
-#include "Optimum.h"
+import <iostream>;
+import <string>;
+import <string_view>;
+import <functional>;
+import optimum;
 
 int main()
 {

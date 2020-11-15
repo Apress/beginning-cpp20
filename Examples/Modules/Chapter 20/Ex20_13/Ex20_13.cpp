@@ -1,8 +1,8 @@
 // Extracting all odd numbers.
-#include <iostream>
-#include <set>
-#include <vector>
-#include <algorithm>
+import <iostream>;
+import <set>;
+import <vector>;
+import <algorithm>;
 
 std::set<int> fillSet_1toN(size_t N);        // Fill a set with 1, 2, ..., N
 void printVector(const std::vector<int>& v); // Print the contents of a vector to std::cout

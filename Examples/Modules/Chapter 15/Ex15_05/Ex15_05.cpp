@@ -1,8 +1,8 @@
 // Using a reference parameter to call virtual function
-#include <iostream>
-#include "Box.h"            // For the Box class
+import <iostream>;
+import box;            // For the Box class
 #include "ToughPack.h"      // For the ToughPack class
-#include "Carton.h"         // For the Carton class
+import carton;         // For the Carton class
 
 // Global function to display the volume of a box
 void showVolume(const Box& box)

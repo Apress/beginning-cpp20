@@ -1,7 +1,7 @@
 // Rethrowing exceptions
-#include <iostream>
-#include <typeinfo>
-#include "Troubles.h"
+import <iostream>;
+import <typeinfo>;
+import troubles;
 
 int main()
 {
