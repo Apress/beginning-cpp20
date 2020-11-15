@@ -1,0 +1,28 @@
+cmake_minimum_required (VERSION 3.10)
+project (Exercises)
+
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+file( GLOB chapter_dirs *)
+foreach( chapter_dir ${chapter_dirs} )
+	if( IS_DIRECTORY ${chapter_dir} AND chapter_dir  )
+	    get_filename_component( folder ${chapter_dir} NAME )
+		if( folder MATCHES "^Chapter.*" )
+			file( GLOB children ${chapter_dir}/* )
+			foreach( child ${children} )
+				get_filename_component( project_name ${child} NAME_WE )
+				
+				if( IS_DIRECTORY ${child} )
+					file( GLOB grand_children ${child}/* )
+					add_executable( ${project_name} ${grand_children} )
+				else()
+					add_executable( ${project_name} ${child} )
+				endif()
+				
+				set_property(TARGET ${project_name} PROPERTY FOLDER ${folder}) 
+				set_property(TARGET ${project_name} PROPERTY CXX_STANDARD 17)
+				set_property(TARGET ${project_name} PROPERTY CXX_STANDARD_REQUIRED ON)
+			endforeach()
+		endif()
+	endif()
+endforeach()
