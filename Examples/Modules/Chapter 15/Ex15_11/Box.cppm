@@ -1,7 +1,6 @@
-export module box;
-#define BOX_H
+export module boxes:box;
 
-#include "Vessel.h"
+import vessel;
 
 export class Box : public Vessel
 {
@@ -13,4 +12,3 @@ public:
 protected:   // Should be private in production-quality code (add getters to access)
   double m_length, m_width, m_height;
 };
-

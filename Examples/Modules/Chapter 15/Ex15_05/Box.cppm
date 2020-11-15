@@ -1,5 +1,5 @@
-export module box;
-#define BOX_H
+export module boxes:box;
+
 import <iostream>;
 
 export class Box
@@ -18,4 +18,3 @@ public:
 protected:      // Should be private in production-quality code (add getters to access)
   double m_length, m_width, m_height;
 };
-

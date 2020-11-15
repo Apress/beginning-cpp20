@@ -1,6 +1,5 @@
 // Behavior of inherited functions in a derived class
-import box;                                // For the Box class
-#include "ToughPack.h"                          // For the ToughPack class
+import boxes;
 
 int main()
 {

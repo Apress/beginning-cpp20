@@ -1,8 +1,6 @@
 // Default parameter values in virtual functions
 import <iostream>;
-import box;                                 // For the Box class
-#include "ToughPack.h"                           // For the ToughPack class
-import carton;                              // For the Carton class
+import boxes;
 
 int main()
 {

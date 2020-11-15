@@ -2,9 +2,7 @@
 import <iostream>;
 import <memory>;                                // For smart pointers
 import <vector>;                                // For vector
-import box;                                 // For the Box class
-#include "ToughPack.h"                           // For the ToughPack class
-import carton;                              // For the Carton class
+import boxes;
 
 int main()
 {

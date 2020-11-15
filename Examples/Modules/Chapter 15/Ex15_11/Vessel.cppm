@@ -1,6 +1,5 @@
-// Vessel.h  Abstract class defining a vessel
-#ifndef VESSEL_H
-#define VESSEL_H
+// Vessel.cppm  Abstract class defining a vessel
+export module vessel;
 
 export class Vessel
 {

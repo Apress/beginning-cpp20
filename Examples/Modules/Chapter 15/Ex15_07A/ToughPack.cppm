@@ -1,7 +1,6 @@
-#ifndef TOUGHPACK_H
-#define TOUGHPACK_H
+export module boxes:tough_pack;
 
-import box;
+import :box;
 
 export class ToughPack : public Box
 {
