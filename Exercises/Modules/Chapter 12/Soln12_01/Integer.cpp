@@ -1,5 +1,5 @@
 #include "Integer.h"
-#include <iostream>
+import <iostream>;
 
 Integer::Integer(int value) : m_value{value}
 {

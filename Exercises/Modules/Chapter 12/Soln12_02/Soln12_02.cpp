@@ -1,5 +1,5 @@
 // Using a function with a reference parameter in the Integer class
-#include <iostream>
+import <iostream>;
 #include "Integer.h"
 
 /*****************************************************************\

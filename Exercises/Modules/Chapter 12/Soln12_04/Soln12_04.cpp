@@ -1,5 +1,5 @@
 // Using a friend function
-#include <iostream>
+import <iostream>;
 #include "Integer.h"
 
 int main()

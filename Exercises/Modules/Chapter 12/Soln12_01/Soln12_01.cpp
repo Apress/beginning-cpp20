@@ -1,6 +1,6 @@
 // Implementing an Integer class
 #include "Integer.h"
-#include <iostream>
+import <iostream>;
 
 int main() 
 {

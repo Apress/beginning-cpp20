@@ -1,5 +1,5 @@
 #include "Integer.h"
-#include <iostream>
+import <iostream>;
 
 // Constructor
 Integer::Integer(int value)
