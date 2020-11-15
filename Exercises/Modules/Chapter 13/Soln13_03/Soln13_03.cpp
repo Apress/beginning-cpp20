@@ -1,7 +1,7 @@
 // Exercise 13-3
 // Implementing the missing /, *=, +=, and /= operators for the Box class
-#include <iostream>
-#include "Box.h"
+import <iostream>;
+import box;
 
 int main()
 {

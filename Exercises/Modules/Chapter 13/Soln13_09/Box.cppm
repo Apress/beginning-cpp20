@@ -1,9 +1,8 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-#include <ostream>
-#include <format>
-#include <algorithm>    // For the std::min()/max() function templates
+import <ostream>;
+import <format>;
+import <algorithm>;    // For the std::min()/max() function templates
 
 class Box
 {
@@ -42,4 +41,3 @@ private:
   double m_height {1.0};
 };
 
-#endif

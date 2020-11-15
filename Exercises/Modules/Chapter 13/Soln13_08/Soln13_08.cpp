@@ -3,12 +3,12 @@
 // Ours is a very limited one that generates numbers between 0 and 100.
 // Seeding and using it requires some type conversions,
 // but other than that our PRNG functor acts as a drop-in replacement to the original one!
-#include <iostream>
-#include <format>
-#include <vector>
-#include <random>       // For random number generation
-#include <functional>   // For std::bind()
-#include "Box.h"
+import <iostream>;
+import <format>;
+import <vector>;
+import <random>;       // For random number generation
+import <functional>;   // For std::bind()
+import box;
 #include "PRNG.h"
 
 int main()

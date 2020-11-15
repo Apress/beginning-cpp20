@@ -9,8 +9,8 @@
 // As illustrated at the bottom of main(), however, 
 // simply assigning a Box to a variable of type bool indeed no longer works
 // without an explicit type conversion (in most cases this is the desired behavior).
-#include <iostream>
-#include "Box.h"
+import <iostream>;
+import box;
 
 void testBox(const Box& box)
 {

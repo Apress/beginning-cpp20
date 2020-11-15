@@ -1,9 +1,8 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
-#include <compare>  // For std::partial_ordering (see Chapter 4)
-#include <ostream>  // For std::ostream
-#include <format>
+import <compare>;  // For std::partial_ordering (see Chapter 4)
+import <ostream>;  // For std::ostream
+import <format>;
 
 class Box
 {
@@ -30,10 +29,8 @@ public:
 
   bool operator==(const Box& otherBox) const = default;
 
-  bool operator==(double otherVolume) const
-  {
-    return volume() == otherVolume;
-  }
+  // Explicit type conversion operator (converts a Box to a Boolean; true if it has volume)
+  explicit operator bool() const  { return volume() != 0; }  
 
 private:
   double m_length{ 1.0 };
@@ -48,4 +45,3 @@ inline std::ostream& operator<<(std::ostream& stream, const Box& box)
   return stream;
 }
 
-#endif
