@@ -3,7 +3,7 @@ export module box;
 import <iostream>;
 import <format>;
 
-class Box
+export class Box
 {
 public:
   Box() = default;

@@ -1,6 +1,6 @@
 export module integer;
 
-class Integer
+export class Integer
 {
 public:
   Integer(int value = 0);                  // Contructor with given value
@@ -20,5 +20,3 @@ private:
   int m_value;
   static inline unsigned int s_count {};
 };
-
-#endif

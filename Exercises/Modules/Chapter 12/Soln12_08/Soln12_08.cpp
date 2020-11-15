@@ -1,6 +1,7 @@
 // Remove Boxes from a Truckload without searching a second time
-#include "RandomBoxes.h"
-#include "Truckload.h"
+import box.random;
+import truckload;
+import <iostream>;
 
 /********************************************************************************\
   The key to the solution is that the Iterator object already contains

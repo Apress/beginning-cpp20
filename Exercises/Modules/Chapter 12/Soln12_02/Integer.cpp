@@ -1,4 +1,4 @@
-#include "Integer.h"
+module integer;
 import <iostream>;
 
 // Constructor

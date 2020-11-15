@@ -1,6 +1,6 @@
 export module integer;
 
-class Integer
+export class Integer
 {
 public:
   Integer(int value = 0);
@@ -19,5 +19,3 @@ private:
 
 // A non-friend function that implements the same function
 int nonFriendCompare(const Integer& obj1, const Integer& obj2);
-
-#endif

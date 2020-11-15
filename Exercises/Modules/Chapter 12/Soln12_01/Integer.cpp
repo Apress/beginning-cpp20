@@ -1,4 +1,4 @@
-#include "Integer.h"
+module integer;
 import <iostream>;
 
 Integer::Integer(int value) : m_value{value}

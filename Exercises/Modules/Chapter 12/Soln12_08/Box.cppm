@@ -3,7 +3,7 @@ export module box;
 import <iostream>;
 import <format>;
 
-class Box
+export class Box
 {
 public:
   Box() = default;
@@ -32,4 +32,3 @@ private:
   double m_width {1.0};
   double m_height {1.0};
 };
-

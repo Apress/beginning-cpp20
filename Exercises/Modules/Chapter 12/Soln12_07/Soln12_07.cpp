@@ -1,6 +1,7 @@
 // Create a doubly-linked list of Packages
-#include "RandomBoxes.h"
-#include "Truckload.h"
+import box.random;
+import truckload;
+import <iostream>;
 
 /*
    To show reverse iteration, we've modified findSmallestBox() to iterate in reverse order
