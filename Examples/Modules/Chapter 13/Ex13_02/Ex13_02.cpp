@@ -2,7 +2,7 @@
 import <iostream>;
 import <vector>;
 import <format>;
-#include "Box.h"
+import box;
 
 // Display box dimensions
 void show(const Box& box)

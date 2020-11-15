@@ -1,4 +1,4 @@
-#include "Box.h"
+module box;
 
 import <format>;
 #include <cmath>    // For the min() and max() function templates

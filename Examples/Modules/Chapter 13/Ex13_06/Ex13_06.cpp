@@ -4,7 +4,7 @@ import <format>;
 import <vector>;
 import <random>;       // For random number generation
 import <functional>;   // For std::bind()
-#include "Box.h"
+import box;
 
 // See Chapter 12 for an explanation of this function
 auto createUniformPseudoRandomNumberGenerator(double max)

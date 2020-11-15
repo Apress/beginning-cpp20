@@ -1,6 +1,6 @@
 // Overloading pre- and postfix inrement and decrement operators
 import <iostream>;
-#include "Box.h"
+import box;
 
 int main()
 {

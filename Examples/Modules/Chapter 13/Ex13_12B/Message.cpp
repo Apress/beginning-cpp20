@@ -1,4 +1,4 @@
-#include "Message.h"
+module message;
 
 import <utility>;    // For std::swap()
 

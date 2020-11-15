@@ -1,9 +1,8 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 
-class Box
+export class Box
 {
 public:
   // Constructors
@@ -39,4 +38,3 @@ private:
   double m_height{ 1.0 };
 };
 
-#endif

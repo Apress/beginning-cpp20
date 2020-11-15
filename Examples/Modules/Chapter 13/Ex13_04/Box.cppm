@@ -1,11 +1,10 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 import <ostream>;  // For std::ostream
 import <format>;
 
-class Box
+export class Box
 {
 public:
   // Constructors
@@ -36,11 +35,9 @@ private:
   double m_height{ 1.0 };
 };
 
-inline std::ostream& operator<<(std::ostream& stream, const Box& box)
+export std::ostream& operator<<(std::ostream& stream, const Box& box)
 {
   stream << std::format("Box({:.1f}, {:.1f}, {:.1f})",
                              box.getLength(), box.getWidth(), box.getHeight());
   return stream;
 }
-
-#endif

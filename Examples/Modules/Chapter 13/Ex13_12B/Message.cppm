@@ -1,9 +1,8 @@
-#ifndef MESSAGE_H
-#define MESSAGE_H
+module;
+#include <cstring>  // For std::strlen() and std::strcpy()
+export module message;
 
-#include <cstring>; // For std::strlen() and std::strcpy()
-
-class Message
+export class Message
 {
 public:
   explicit Message(const char* text = "")
@@ -24,9 +23,7 @@ private:
   char* m_text;
 };
 
-inline void swap(Message& one, Message& other) noexcept
+export void swap(Message& one, Message& other) noexcept
 {
   return one.swap(other);
 }
-
-#endif

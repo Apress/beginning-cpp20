@@ -3,7 +3,7 @@ import <iostream>;
 import <memory>;
 import <random>;       // For random number generation
 import <functional>;   // For std::bind()
-#include "Truckload.h"
+import truckload;
 
 /*
   Caution: in the text, we suggest to add 

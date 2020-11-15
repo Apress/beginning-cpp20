@@ -1,9 +1,8 @@
-#ifndef MESSAGE_H
-#define MESSAGE_H
+module;
+#include <cstring>  // For std::strlen() and std::strcpy()
+export module message;
 
-#include <cstring>; // For std::strlen() and std::strcpy()
-
-class Message
+export class Message
 {
 public:
   explicit Message(const char* text = "")
@@ -21,5 +20,3 @@ public:
 private:
   char* m_text;
 };
-
-#endif

@@ -3,7 +3,7 @@ import <iostream>;
 import <format>;
 import <string_view>;
 import <vector>;
-#include "Box.h"
+import box;
 
 int main()
 {

@@ -1,10 +1,9 @@
-#ifndef BOX_H
-#define BOX_H
+export module box;
 
 import <ostream>;
 import <format>;
 
-class Box
+export class Box
 {
 public:
   Box() = default;
@@ -34,4 +33,3 @@ private:
   double m_height {1.0};
 };
 
-#endif
