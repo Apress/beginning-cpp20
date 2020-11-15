@@ -27,4 +27,3 @@ int main()
   std::cout << "box2 is " << box2 << std::endl;
   testBox(box2);  
 }
-

@@ -1,7 +1,7 @@
 // Exercise 13-7
 // Rational operators
 import <iostream>;
-#include "Rational.h"
+import rational;
 
 int main()
 {

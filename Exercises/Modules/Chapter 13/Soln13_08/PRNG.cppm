@@ -1,7 +1,6 @@
-#ifndef PRNG_H
-#define PRNG_H
+export module PRNG;
 
-class PseudoRandomNumberGenerator
+export class PseudoRandomNumberGenerator
 {
 public:
   PseudoRandomNumberGenerator(int n = 0)
@@ -20,5 +19,3 @@ public:
 private:
   int m_n;
 };
-
-#endif

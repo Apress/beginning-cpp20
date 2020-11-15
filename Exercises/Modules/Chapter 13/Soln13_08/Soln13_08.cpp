@@ -9,7 +9,7 @@ import <vector>;
 import <random>;       // For random number generation
 import <functional>;   // For std::bind()
 import box;
-#include "PRNG.h"
+import PRNG;
 
 int main()
 {

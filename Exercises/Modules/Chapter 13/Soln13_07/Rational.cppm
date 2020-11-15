@@ -1,10 +1,7 @@
-// Rational.h
-
-#ifndef RATIONAL_H
-#define RATIONAL_H
+export module rational;
 import <iostream>;
 
-class Rational
+export class Rational
 {
 public:
   // Constructor
@@ -111,16 +108,14 @@ private:
 };
 
 // Stream output operator
-inline std::ostream& operator<<(std::ostream& stream, const Rational& r)
+export std::ostream& operator<<(std::ostream& stream, const Rational& r)
 {
 	return stream << r.getNumerator() << '/' << r.getDenominator();
 }
 
 // Binary arithmetic operators: non-member functions to allow for implicit conversions
 // This allows expressions such as 2 * (myRationale + 1)
-inline Rational operator+(const Rational& one, const Rational& other) { auto copy{ one }; return copy += other; }
-inline Rational operator-(const Rational& one, const Rational& other) { auto copy{ one }; return copy -= other; }
-inline Rational operator*(const Rational& one, const Rational& other) { auto copy{ one }; return copy *= other; }
-inline Rational operator/(const Rational& one, const Rational& other) { auto copy{ one }; return copy /= other; }
-
-#endif
+export Rational operator+(const Rational& one, const Rational& other) { auto copy{ one }; return copy += other; }
+export Rational operator-(const Rational& one, const Rational& other) { auto copy{ one }; return copy -= other; }
+export Rational operator*(const Rational& one, const Rational& other) { auto copy{ one }; return copy *= other; }
+export Rational operator/(const Rational& one, const Rational& other) { auto copy{ one }; return copy /= other; }
