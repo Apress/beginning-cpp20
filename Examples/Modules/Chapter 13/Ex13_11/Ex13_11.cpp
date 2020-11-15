@@ -1,8 +1,8 @@
 // Modifying the result of an overloaded subscript operator
-#include <iostream>
-#include <memory>
-#include <random>       // For random number generation
-#include <functional>   // For std::bind()
+import <iostream>;
+import <memory>;
+import <random>;       // For random number generation
+import <functional>;   // For std::bind()
 #include "Truckload.h"
 
 /*

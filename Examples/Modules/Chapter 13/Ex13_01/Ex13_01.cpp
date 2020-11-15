@@ -1,6 +1,6 @@
 // Implementing a less-than operator
-#include <iostream>
-#include <vector>
+import <iostream>;
+import <vector>;
 #include "Box.h"
 
 int main()

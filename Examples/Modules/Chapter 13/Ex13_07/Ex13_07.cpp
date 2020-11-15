@@ -1,5 +1,5 @@
 // Implicit conversions reduce the number of operator functions
-#include <iostream>
+import <iostream>;
 #include "Integer.h"
 
 int main() 
