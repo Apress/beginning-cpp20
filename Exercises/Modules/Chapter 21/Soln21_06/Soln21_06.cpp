@@ -1,6 +1,6 @@
 // Exercise 21-6  Simplifying move_assign_if_noexcept using concepts (see Array.h)
-#include "Array.h"
-#include <string>
+import array;
+import <string>;
 
 // Construct an Array<> of a given size, filled with some arbitrary string data
 Array<std::string> buildStringArray(const size_t size)

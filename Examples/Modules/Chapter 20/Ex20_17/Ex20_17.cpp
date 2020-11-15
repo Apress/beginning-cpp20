@@ -1,6 +1,6 @@
 // Range factories and range adaptors
-#include <iostream>
-#include <ranges>   // For views, range factories, and range adaptors
+import <iostream>;
+import <ranges>;   // For views, range factories, and range adaptors
 
 using namespace std::ranges::views;
 

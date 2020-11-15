@@ -1,7 +1,7 @@
 // Disambiguating dependant base class names
 // (this code does not compile without changes)
 
-#include <iostream>
+import <iostream>;
 
 template <typename T>
 class Base

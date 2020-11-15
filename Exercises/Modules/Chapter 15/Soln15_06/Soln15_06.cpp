@@ -1,7 +1,7 @@
 // Exercise 15-6 Exercising Shape classes
 #include "Shapes.h"
-#include <iostream>
-#include <vector>
+import <iostream>;
+import <vector>;
 
 double calculateSumAreas(const std::vector<Shape*>& shapes);
 double calculateSumPerimeters(const std::vector<Shape*>& shapes);

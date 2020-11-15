@@ -4,10 +4,10 @@
  * and rethrowing (catch-by-reference + "throw;" !)
  */
 
-#include <iostream>
-#include <random>     // For random number generation
-#include <functional> // For std::bind()
-#include <format>
+import <iostream>;
+import <random>;     // For random number generation
+import <functional>; // For std::bind()
+import <format>;
 #include "CurveBall.h"
 #include "DomainExceptions.h"
 

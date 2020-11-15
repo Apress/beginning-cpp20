@@ -2,9 +2,9 @@
 // We do so by creating a linked list of std::unique_ptr<> elements: 
 // a perfect example of an element type that cannot be copied!
 #include "LinkedList.h"
-#include <memory>     // for std::unique_ptr<>
-#include <iostream>
-#include <string_view>
+import <memory>     // for std::unique_ptr<>;
+import <iostream>;
+import <string_view>;
 
 void printList(std::string_view message, const LinkedList<std::unique_ptr<int>>& list)
 {

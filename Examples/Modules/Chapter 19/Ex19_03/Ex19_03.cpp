@@ -1,6 +1,6 @@
 // Exercising the use of a functor as callback functions
-#include <iostream>
-#include "Optimum.h"
+import <iostream>;
+import optimum;
 #include "Less.h"
 
 template <typename T>

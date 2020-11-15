@@ -2,7 +2,7 @@
 // Person class implementation
 
 #include "Person.h"
-#include <iostream>
+import <iostream>;
 
 Person::Person(size_t age, std::string_view name, Gender gender) 
   : m_age {age}, m_name {name}, m_gender {gender}

@@ -1,9 +1,9 @@
 // Exercise 20-5 Create a generic average() algorithm using std::accumulate()
-#include <iostream>
-#include <numeric>
-#include <utility>     // for std::pair<> (only required for Solution 2 below)
-#include <optional>
-#include <vector>
+import <iostream>;
+import <numeric>;
+import <utility>     // for std::pair<>; (only required for Solution 2 below)
+import <optional>;
+import <vector>;
 
 // Solution 1: simply use accumulate to sum, and determine the count using std::distance() 
 // (the latter is more general than using iterator arithmetic, end - begin, 

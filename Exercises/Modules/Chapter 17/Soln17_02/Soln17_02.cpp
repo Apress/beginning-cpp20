@@ -1,8 +1,8 @@
 // Exercise 16-2
 // Create a basic Pair template
 #include "Pair.h"
-#include <iostream>
-#include <string>
+import <iostream>;
+import <string>;
 
 int main()
 {

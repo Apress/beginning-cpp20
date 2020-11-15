@@ -1,7 +1,7 @@
 // Working with stacks and queues
-#include <iostream>
-#include <stack>
-#include <queue>
+import <iostream>;
+import <stack>;
+import <queue>;
 
 int main()
 {

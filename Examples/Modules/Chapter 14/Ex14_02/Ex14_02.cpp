@@ -1,6 +1,6 @@
 // Calling base class constructors in a derived class constructor
-#include <iostream>
-#include "Carton.h"       // For the Carton class
+import <iostream>;
+import carton;       // For the Carton class
 
 int main()
 {

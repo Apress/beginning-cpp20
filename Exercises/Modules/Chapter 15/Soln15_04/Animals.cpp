@@ -11,7 +11,7 @@
     - Sheep::shear() could simply set m_wool_weight to 0
  */
 
-#include "Animals.h"
+module animals;
 
 // Constructor
 Animal::Animal(std::string_view name, unsigned weight) 

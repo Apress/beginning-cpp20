@@ -1,7 +1,7 @@
 // Exercise 20-11: exercising range factories and range adaptors
-#include <iostream>
-#include <algorithm>
-#include <ranges>
+import <iostream>;
+import <algorithm>;
+import <ranges>;
 #include <cmath>
 
 using namespace std::ranges::views;

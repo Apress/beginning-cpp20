@@ -4,11 +4,11 @@
 // and output the resulting index/value pairs.
 
 #include "SparseArray.h"
-#include <iostream>
+import <iostream>;
 
-#include <random>     // For random number generation
-#include <functional> // For std::bind()
-#include <memory>     // For std::make_shared<>() and std::shared_ptr<>
+import <random>;     // For random number generation
+import <functional>; // For std::bind()
+import <memory>     // For std::make_shared<>() and std::shared_ptr<>;
 
 // See Chapter 12 for an explanation of this principle.
 // The main difference here is that we need a std::uniform_int_distribution 

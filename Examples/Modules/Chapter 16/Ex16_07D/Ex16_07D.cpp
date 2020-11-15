@@ -2,10 +2,10 @@
 // Note: this example is given but not named in the text.
 // Instead of a custom RAII class DoubleArrayRAII, it uses std::vector<>.
 // Unlike the former, the latter can of course be returned from computeValues() as well.
-#include <iostream>
-#include <vector>
+import <iostream>;
+import <vector>;
 #include <cmath>                    // For std::sqrt()
-#include "Troubles.h"
+import troubles;
 
 double computeValue(size_t x);      // A function to compute a single value
 std::vector<double> computeValues(size_t howMany); // A function to compute an array of values

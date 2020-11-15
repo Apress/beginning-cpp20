@@ -4,8 +4,8 @@
   with some additional commented lines to show that the RAII objects cannot be copied.
 */
 
-#include <iostream>
-#include <vector>
+import <iostream>;
+import <vector>;
 
 #include "DB.h"
 #include "DBException.h"

@@ -1,6 +1,6 @@
 // Exercise 13-1 Exercising the Animal classes
 // The solution shows two options, with the second one being the preferred option.
-#include "Animals.h"
+import animals;
 
 int main()
 {

@@ -1,9 +1,9 @@
 // Using a class template with a non-type parameter
-#include "Box.h"
-#include "Array.h"
-#include <iostream>
-#include <format>
-#include <typeinfo>         // For use of typeid()
+import box;
+import array;
+import <iostream>;
+import <format>;
+import <typeinfo>;         // For use of typeid()
 
 int main()
 {

@@ -10,11 +10,11 @@
 	Just use a pointer to the std::isupper() function as the callback!
 */
 
-#include <iostream>
-#include <format>
-#include <functional>
-#include <cctype>         // For std::isupper()
-#include <string>
+import <iostream>;
+import <format>;
+import <functional>;
+#include <cctype>;         // For std::isupper()
+import <string>;
 #include "Collect.h"
 
 // Output vector elements

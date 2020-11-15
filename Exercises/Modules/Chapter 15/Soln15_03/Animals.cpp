@@ -1,6 +1,6 @@
 // Implementations of the Animal class and classes derived from Animal
 
-#include "Animals.h"
+module animals;
 
 // Constructor
 Animal::Animal(std::string_view name, unsigned weight) 

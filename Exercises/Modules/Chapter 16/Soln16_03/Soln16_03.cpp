@@ -1,7 +1,7 @@
 // Using exceptions to signal index-out-of-bounds errors.
-#include <iostream>
-#include <memory>
-#include "Truckload.h"
+import <iostream>;
+import <memory>;
+import truckload;
 #include "RandomBoxes.h"
 
 int main()

@@ -1,7 +1,7 @@
 // Exercise 18-1 Define move operators for the Truckload class
-#include <iostream>
-#include <memory>
-#include "Truckload.h"
+import <iostream>;
+import <memory>;
+import truckload;
 #include "RandomBoxes.h"
 
 /*

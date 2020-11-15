@@ -1,7 +1,7 @@
 // Exercise 20-1 Rework the Truckload class using std::vector<>
-#include <iostream>
-#include <memory>
-#include "Truckload.h"
+import <iostream>;
+import <memory>;
+import truckload;
 #include "RandomBoxes.h"
 
 /*

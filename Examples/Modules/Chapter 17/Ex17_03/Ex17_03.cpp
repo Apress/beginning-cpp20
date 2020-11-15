@@ -1,8 +1,8 @@
 // Illustrating Class Template Argument Deduction (CTAD) 
 // by adding an initializer list constructor to our Array<> template.
-#include "Box.h"
-#include "Array.h"
-#include <iostream>
+import box;
+import array;
+import <iostream>;
 
 int main()
 {

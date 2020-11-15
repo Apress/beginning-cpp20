@@ -1,12 +1,12 @@
 // Exercise 20-13: more fun with algorithms and ranges
-#include <iostream>
-#include <format>
-#include <map>
-#include <string>
-#include <string_view>
-#include <vector>
-#include <algorithm>
-#include <ranges>
+import <iostream>;
+import <format>;
+import <map>;
+import <string>;
+import <string_view>;
+import <vector>;
+import <algorithm>;
+import <ranges>;
 
 using namespace std::ranges::views;
 

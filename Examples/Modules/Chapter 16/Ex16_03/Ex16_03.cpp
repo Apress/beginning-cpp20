@@ -1,6 +1,6 @@
 // Throwing and catching objects in a hierarchy
-#include <iostream>
-#include "Troubles.h"
+import <iostream>;
+import troubles;
 
 int main()
 {

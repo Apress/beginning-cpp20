@@ -1,11 +1,11 @@
 // Exercise 19-3. Comparing sorting algorithms
 
-#include <iostream>
-#include <format>
+import <iostream>;
+import <format>;
 #include <cmath>         // For std::log2()
-#include <random>        // For random number generation
-#include <functional>    // For std::bind() and 
-#include <algorithm>     // For std::ranges::sort() (bonus algorithm)
+import <random>;        // For random number generation
+import <functional>;    // For std::bind() and 
+import <algorithm>;     // For std::ranges::sort() (bonus algorithm)
 #include "Sort.h"
 
 /*

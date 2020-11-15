@@ -1,8 +1,8 @@
 // Exercise 14-3 - Animals.cpp
 // Implementations of the Animal class and classes derived from Animal
 
-#include <iostream>
-#include "Animals.h"
+import <iostream>;
+module animals;
 
 // Constructor
 Animal::Animal(std::string_view name, int weight) 

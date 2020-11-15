@@ -1,7 +1,7 @@
 // Exercising the use of function pointers as callback functions
-#include <iostream>
-#include <string>
-#include "Optimum.h"
+import <iostream>;
+import <string>;
+import optimum;
 
 // Comparison function prototypes:
 bool less(const int&, const int&);

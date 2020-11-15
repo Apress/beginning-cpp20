@@ -2,10 +2,10 @@
 #include "CurveBall.h"
 #include "TooManyExceptions.h"
 
-#include <iostream>
+import <iostream>;
 
-#include <random>     // For random number generation
-#include <functional> // For std::bind()
+import <random>;     // For random number generation
+import <functional>; // For std::bind()
 
 void throwCurveBallSometimes();
 

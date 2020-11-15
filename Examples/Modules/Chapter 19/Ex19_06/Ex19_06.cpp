@@ -1,7 +1,7 @@
 // Using a default capture-by-value clause to access a local variable 
 // from within the body of a lambda expression.
-#include <iostream>
-#include "Optimum.h"
+import <iostream>;
+import optimum;
 
 int main()
 {

@@ -1,6 +1,6 @@
 // Using std::move() to force the move assignment of a named variable
-#include "Array.h"
-#include <string>
+import array;
+import <string>;
 
 // Construct an Array<> of a given size, filled with some arbitrary string data
 Array<std::string> buildStringArray(const size_t size)

@@ -1,10 +1,10 @@
 // Exercise 19-1. 
 // A lambda expression returning the number of vector elements that begin with a given letter.
 
-#include <iostream>
-#include <format>
-#include <string>
-#include <vector>
+import <iostream>;
+import <format>;
+import <string>;
+import <vector>;
 
 int main()
 {

@@ -1,6 +1,6 @@
 // Iterating over the elements of a list<>
-#include <iostream>
-#include <list>
+import <iostream>;
+import <list>;
 
 int main()
 {

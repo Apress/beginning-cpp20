@@ -1,7 +1,7 @@
 // Altering elements through a mutable iterator
-#include <iostream>
-#include <vector>
-#include "Box.h"      // From Ex11_04
+import <iostream>;
+import <vector>;
+import box;      // From Ex11_04
 
 int main()
 {

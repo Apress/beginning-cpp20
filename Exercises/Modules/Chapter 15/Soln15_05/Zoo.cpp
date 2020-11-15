@@ -1,7 +1,7 @@
 // Implementations of the Zoo class that stores pointers to Animals
-#include "Zoo.h"
-#include "Animals.h"
-#include <iostream>
+module zoo;
+import animals;
+import <iostream>;
 
 // Constructor from a vector of animals
 Zoo::Zoo(const std::vector<AnimalPtr>& animals) 

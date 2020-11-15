@@ -1,6 +1,6 @@
 // Defining and using a move assignment operator
-#include "Array.h"
-#include <string>
+import array;
+import <string>;
 
 // Construct an Array<> of a given size, filled with some arbitrary string data
 Array<std::string> buildStringArray(const size_t size)

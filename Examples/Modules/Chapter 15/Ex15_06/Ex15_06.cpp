@@ -1,10 +1,10 @@
 // Polymorphic vectors of smart pointers
-#include <iostream>
-#include <memory>                                // For smart pointers
-#include <vector>                                // For vector
-#include "Box.h"                                 // For the Box class
+import <iostream>;
+import <memory>;                                // For smart pointers
+import <vector>;                                // For vector
+import box;                                 // For the Box class
 #include "ToughPack.h"                           // For the ToughPack class
-#include "Carton.h"                              // For the Carton class
+import carton;                              // For the Carton class
 
 int main()
 {

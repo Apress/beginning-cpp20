@@ -1,7 +1,7 @@
 // Copying objects into a vector
-#include "Array.h"
-#include <string>
-#include <vector>
+import array;
+import <string>;
+import <vector>;
 
 // Construct an Array<> of a given size, filled with some arbitrary string data
 Array<std::string> buildStringArray(const size_t size)

@@ -1,10 +1,10 @@
 // Working with maps
-#include <iostream>
-#include <format>
-#include <map>
-#include <string>
-#include <string_view>
-#include <vector>
+import <iostream>;
+import <format>;
+import <map>;
+import <string>;
+import <string_view>;
+import <vector>;
 
 // Type aliases
 using Words = std::vector<std::string_view>;

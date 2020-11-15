@@ -1,9 +1,9 @@
 // Exercise 21-3 
-#include <iostream>
-#include <concepts>
-#include <span>
-#include <array>
-#include <string>
+import <iostream>;
+import <concepts>;
+import <span>;
+import <array>;
+import <string>;
 
 /* Not requested, but just for fun, here is a concept that prescribes 
    a complete set of operations one would require to take an average */

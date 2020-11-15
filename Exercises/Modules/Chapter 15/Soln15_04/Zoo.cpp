@@ -1,7 +1,7 @@
 // Implementations of the Zoo class that stores pointers to Animals
-#include "Zoo.h"
-#include "Animals.h"
-#include <iostream>
+module zoo;
+import animals;
+import <iostream>;
 
 // Constructor from a vector of animals
 Zoo::Zoo(const std::vector<AnimalPtr>& animals) 
@@ -41,7 +41,7 @@ std::vector<Sheep*> Zoo::herd() const
 /*
 // Collect all Sheep in the Zoo using the typeid() operator and a static cast
 // (for the sake of the exercise only)
-#include <typeinfo>       // required when using typeid()
+import <typeinfo>;       // required when using typeid()
 
 std::vector<Sheep*> Zoo::herd() const
 {

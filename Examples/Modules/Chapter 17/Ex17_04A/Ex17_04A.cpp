@@ -1,8 +1,8 @@
 // Using a stack defined by nested class templates
 // (with improvement suggested in the "A Better Stack" section: see Stack<> source)
 #include "Stack.h"
-#include <iostream>
-#include <string>
+import <iostream>;
+import <string>;
 
 int main()
 {

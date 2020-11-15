@@ -1,7 +1,7 @@
 // Create a << operator template for Pairs
 #include "Pair.h"
-#include <iostream>
-#include <string>
+import <iostream>;
+import <string>;
 
 int main()
 {

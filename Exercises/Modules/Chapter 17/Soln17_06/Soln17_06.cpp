@@ -1,11 +1,11 @@
 // Exercising the SparseArray class template in combination with the LinkedList class template
 #include "SparseArray.h"
 #include "LinkedList.h"
-#include <string>
-#include <string_view>
-#include <iostream>
-#include <cctype>
-#include <utility>
+import <string>;
+import <string_view>;
+import <iostream>;
+#include <cctype>;
+import <utility>;
 
 int main()
 {
