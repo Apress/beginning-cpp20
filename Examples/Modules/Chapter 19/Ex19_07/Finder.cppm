@@ -1,6 +1,5 @@
-// Finder.h - A small class to illustrate the use of lambda expression in member functions
-#ifndef FINDER_H
-#define FINDER_H
+// Finder.cppm - A small class to illustrate the use of lambda expression in member functions
+export module finder;
 
 import <vector>;
 import <optional>;
@@ -15,4 +14,3 @@ public:
 private:
   double m_number_to_search_for {};
 };
-

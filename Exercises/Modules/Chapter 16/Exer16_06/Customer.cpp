@@ -1,6 +1,5 @@
 // A simple C++ customer class
-
-#include "Customer.h"
+module customer;
 
 Customer::Customer(
       std::string_view surname,

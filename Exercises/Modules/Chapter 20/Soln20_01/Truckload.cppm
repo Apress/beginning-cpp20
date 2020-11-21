@@ -1,5 +1,4 @@
-#ifndef TRUCKLOAD_H
-#define TRUCKLOAD_H
+export module truckload;
 
 import box;
 
@@ -7,7 +6,7 @@ import <memory>;
 import <vector>;
 import <ostream>;
 
-using SharedBox = std::shared_ptr<Box>;
+export using SharedBox = std::shared_ptr<Box>;
 
 export class Truckload
 {
@@ -33,7 +32,7 @@ private:
 };
 
 // Out-of-class definition of the nested Iterator class 
-// (class itself is part of the public interface, so belongs in the header)
+// (class itself is part of the public interface, so belongs in a module interface file)
 // Note that this is effectively a const iterator...
 export class Truckload::Iterator
 {
@@ -53,5 +52,5 @@ private:
 export std::ostream& operator<<(std::ostream& stream, const Truckload& load);
 
 // Optional yet conventional non-member function (forwards to member function)
-void swap(Truckload& one, Truckload& other) noexcept;
+export void swap(Truckload& one, Truckload& other) noexcept;
 

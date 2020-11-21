@@ -2,7 +2,7 @@
 import <iostream>;
 import <memory>;
 import truckload;
-#include "RandomBoxes.h"
+import box.random;
 
 /*
   In this solution we preserved the interface of the nested Iterator class.

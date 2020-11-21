@@ -1,4 +1,6 @@
-// RAII classes for handles returned by DB.h C interface functions
+module;
+#include "DB.h"
+export module db.raii;
 
 /*
   In this solution we have the RAII classes accept the resource handle in their constructor.
@@ -9,11 +11,6 @@
   (otherwise multiple objects would be releasing the same resource, 
    which is typically not allowed). To accomplish this, you delete both copy members.
 */
-
-#ifndef DB_RAII_H
-#define DB_RAII_H
-
-#include "DB.h"
 
 /**
  * RAII object that ensures that a given database connection is closed
@@ -76,4 +73,3 @@ public:
 private:
   DB_QUERY_RESULT* m_result;
 };
-

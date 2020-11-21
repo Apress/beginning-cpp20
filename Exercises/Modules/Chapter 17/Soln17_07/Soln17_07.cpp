@@ -1,6 +1,6 @@
 // Implementing a custom std::formatter<> specialization to format Box objects
 import box;
-#include "BoxFormatter.h"
+import box.formatter;
 import <iostream>;
 
 int main()

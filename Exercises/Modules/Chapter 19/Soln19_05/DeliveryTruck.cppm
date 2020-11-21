@@ -1,10 +1,8 @@
-#ifndef DELIVERY_TRUCK_H
-#define DELIVERY_TRUCK_H
-
+export module delivery_truck;
 import truckload;
 
-import <functional>      // For std::function<>;
-import <vector>          // For std::vector<>;
+import <functional>;      // For std::function<>
+import <vector>;          // For std::vector<>
 
 export class DeliveryTruck
 {
@@ -22,5 +20,3 @@ private:
   
   std::vector<Callback> m_callbacks;
 };
-
-

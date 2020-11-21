@@ -1,7 +1,7 @@
 // A mocked database
 
 #include "DB.h"
-#include <cstring>;    // For std::strcmp()
+#include <cstring>    // For std::strcmp()
 import <memory>;
 import <vector>;
 

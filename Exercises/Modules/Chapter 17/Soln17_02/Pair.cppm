@@ -1,10 +1,8 @@
-#ifndef PAIR_H
-#define PAIR_H
-
+export module pair;
 import <compare>;
 
-template <typename First, typename Second>
-export class Pair
+export template <typename First, typename Second>
+class Pair
 {
 public:
   // Public members + no m_ prefix analogous to std::pair<> (see <utility> module)
@@ -30,4 +28,3 @@ template <typename First, typename Second>
 Pair<First, Second>::Pair(const First& f, const Second& s)
   : first{f}, second{s}
 {}
-

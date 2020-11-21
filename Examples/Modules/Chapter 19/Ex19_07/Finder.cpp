@@ -1,7 +1,9 @@
 // Exercising capturing the this pointer
-#include "Finder.h"
-import optimum;
+module;
 #include <cmath>       // For std::abs()
+module finder;
+
+import optimum;
 
 std::optional<double> Finder::findNearest(const std::vector<double>& values) const
 {

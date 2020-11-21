@@ -1,5 +1,4 @@
 export module box;
-#define BOX_H
 
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 

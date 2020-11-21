@@ -1,6 +1,5 @@
-// Less.h - A basic class of functor objects
-#ifndef LESS_H
-#define LESS_H
+// Less.cppm - A basic class of functor objects
+export module less;
 
 export class Less
 {

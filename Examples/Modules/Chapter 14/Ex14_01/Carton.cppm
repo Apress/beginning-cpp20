@@ -1,4 +1,4 @@
-// Carton.h - defines the Carton class with the Box class as base
+// Carton.cppm - defines the Carton class with the Box class as base
 export module carton;
 
 import <string>;

@@ -1,6 +1,6 @@
 // Violating constraints of uninstantiated class members
 import array;
-import <memory>  // For std::unique_ptr<>;
+import <memory>;  // For std::unique_ptr<>
 
 // Assert that Array<std::unique_ptr<int>> is a valid type
 static_assert(requires { typename Array<std::unique_ptr<int>>; });

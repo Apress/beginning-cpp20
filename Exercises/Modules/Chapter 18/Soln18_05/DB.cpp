@@ -1,9 +1,9 @@
 // A mocked database
 
 #include "DB.h"
-#include <cstring>;    // For std::strcmp()
-import <memory>;
-import <vector>;
+#include <cstring>    // For std::strcmp()
+#include <memory>
+#include <vector>
 
 namespace
 {
@@ -72,7 +72,7 @@ QueryResult* Database::query(const char* query)
   auto result{ std::make_unique<QueryResult>() };
   result->data = std::vector<std::vector<const char*>>{
     { "Sherlock", "Holmes", "Baker Street", "221", "London" },
-    { "Donald", "Trump", "Pennsylvania Avenue", "1600", "Washington DC" },
+    { "Joe", "Biden", "Pennsylvania Avenue", "1600", "Washington DC" },
     { "Donald", "Duck", "Webfoot Walk", "1313", "Duckville" },
     { "Sirius", "Black", "Grimmauld Place", "12", "London" },
     { "Nemo", "Clownfish", "Wallaby Way", "42", "Sydney" },

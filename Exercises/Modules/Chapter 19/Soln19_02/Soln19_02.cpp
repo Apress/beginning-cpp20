@@ -4,9 +4,11 @@
 import <iostream>;
 import <format>;
 import <functional>;
-#include <cctype>;         // For std::tolower()
+
+import sort;
+
+#include <cctype>         // For std::tolower()
 #include <cmath>          // For std::abs()
-#include "Sort.h"
 
 // Output vector elements
 template<typename T>

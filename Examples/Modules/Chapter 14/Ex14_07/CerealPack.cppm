@@ -1,4 +1,4 @@
-// Cerealpack.h - Class defining a carton of cereal
+// Cerealpack.cppm - Class defining a carton of cereal
 export module cereal;
 import <iostream>;
 import carton;

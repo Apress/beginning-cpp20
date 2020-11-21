@@ -1,4 +1,4 @@
-// Exercise 13-1 Exercising the Animal classes
+// Exercise 14-1 Exercising the Animal classes
 // The solution shows two options, with the second one being the preferred option.
 import animals;
 

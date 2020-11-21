@@ -1,7 +1,6 @@
 export module box;
-#define BOX_H
 import <algorithm>;                        // For std::min() function template
-#include "DimensionError.h"
+import dimension_error;
 
 export class Box
 {
@@ -18,4 +17,3 @@ private:
   double m_width{ 1.0 };
   double m_height{ 1.0 };
 };
-

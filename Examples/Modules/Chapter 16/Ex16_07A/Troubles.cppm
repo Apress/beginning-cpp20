@@ -1,4 +1,4 @@
-// MyTroubles.h Exception classes
+// Troubles.cppm Exception classes
 export module troubles;
 import <string>;
 import <string_view>;

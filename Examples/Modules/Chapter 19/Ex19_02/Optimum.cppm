@@ -1,10 +1,9 @@
-// Optimum.h - a function template to determine the optimum element in a given vector
+// Optimum.cppm - a function template to determine the optimum element in a given vector
 export module optimum;
 
-#include <cstddef>;	// For std::size_t	(required here by some compilers)
 import <vector>;
 
-template <typename T>
+export template <typename T>
 const T* findOptimum(const std::vector<T>& values, bool (*compare)(const T&, const T&))
 {
   if (values.empty()) return nullptr;
@@ -17,4 +16,3 @@ const T* findOptimum(const std::vector<T>& values, bool (*compare)(const T&, con
   }
   return optimum;
 }
-

@@ -1,16 +1,13 @@
-// Definition of CurveBall exception class
+// Definition of Curveball exception class
 
-#ifndef CURVEBALL_H
-#define CURVEBALL_H
+export module curveball;
 import <exception>;
 
-export class CurveBall : public std::exception
+export class Curveball : public std::exception
 {
 public:
   const char* what() const noexcept override
   {
-    return "CurveBall exception";
+    return "Curveball exception";
   }
 };
-
- //CURVEBALL_H

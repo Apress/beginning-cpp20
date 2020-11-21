@@ -19,4 +19,3 @@ int main()
   std::list numbers{ 4, 1, 3, 2 };
   std::sort(begin(numbers), end(numbers));
 }
-

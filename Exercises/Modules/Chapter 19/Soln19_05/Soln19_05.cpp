@@ -4,8 +4,9 @@
 // (in this case: when a Box is delivered).
 
 import <iostream>;
-#include "DeliveryTruck.h"
-#include "RandomBoxes.h"
+import truckload;
+import delivery_truck;
+import box.random;
 
 void logDelivary(SharedBox box)
 {

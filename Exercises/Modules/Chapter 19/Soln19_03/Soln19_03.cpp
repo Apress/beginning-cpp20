@@ -2,11 +2,13 @@
 
 import <iostream>;
 import <format>;
-#include <cmath>         // For std::log2()
 import <random>;        // For random number generation
 import <functional>;    // For std::bind() and 
 import <algorithm>;     // For std::ranges::sort() (bonus algorithm)
-#include "Sort.h"
+
+import sort;
+
+#include <cmath>        // For std::log2()
 
 /*
   If you look carefully, you will notice that our implementation of quicksort

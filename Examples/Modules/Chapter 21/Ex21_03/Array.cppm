@@ -5,7 +5,7 @@ import <string>;                           // For std::to_string()
 import <utility>;                          // For std::as_const()
 import <concepts>;
 
-template <typename T> requires std::default_initializable<T> && std::destructible<T>
+export template <typename T> requires std::default_initializable<T> && std::destructible<T>
 class Array
 {
 public:
@@ -112,7 +112,7 @@ void Array<T>::swap(Array& other) noexcept
 }
 
 // Swap non-member function template (optional)
-template <typename T> requires std::default_initializable<T> && std::destructible<T>
+export template <typename T> requires std::default_initializable<T> && std::destructible<T>
 void swap(Array<T>& one, Array<T>& other) noexcept
 {
   one.swap(other);     // Forward to public member function

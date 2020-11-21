@@ -1,5 +1,5 @@
 // Create a << operator template for Pairs
-#include "Pair.h"
+import pair;
 import <iostream>;
 import <string>;
 

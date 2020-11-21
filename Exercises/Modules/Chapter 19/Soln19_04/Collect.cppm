@@ -1,9 +1,8 @@
-#ifndef COLLECT_H
-#define COLLECT_H
+export module collect;
 
 import <vector>;
 
-template <typename T, typename Predicate>
+export template <typename T, typename Predicate>
 std::vector<T> collect(const std::vector<T>& values, Predicate predicate)
 {
   std::vector<T> result;
@@ -14,5 +13,3 @@ std::vector<T> collect(const std::vector<T>& values, Predicate predicate)
   
   return result;
 }
-
- // COLLECT_H

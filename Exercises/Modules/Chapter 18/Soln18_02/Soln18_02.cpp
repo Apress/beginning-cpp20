@@ -1,8 +1,8 @@
 // Exercise 18-2 Exercising the LinkedList's move capabilities
 // We do so by creating a linked list of std::unique_ptr<> elements: 
 // a perfect example of an element type that cannot be copied!
-#include "LinkedList.h"
-import <memory>     // for std::unique_ptr<>;
+import linked_list;
+import <memory>;     // for std::unique_ptr<>
 import <iostream>;
 import <string_view>;
 

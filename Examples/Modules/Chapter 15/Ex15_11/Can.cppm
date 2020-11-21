@@ -1,4 +1,4 @@
-// Can.h Class defining a cylindrical can of a given height and diameter
+// Can.cppm Class defining a cylindrical can of a given height and diameter
 export module can;
 
 import vessel;

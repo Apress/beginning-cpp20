@@ -1,10 +1,9 @@
-#ifndef RANDOM_BOXES_H
-#define RANDOM_BOXES_H
+export module box.random;
 
 import box;
 import <random>;        // For random number generation
 import <functional>;    // For std::bind()
-import <memory>        // For std::make_shared<>() and std::shared_ptr<>;
+import <memory>;        // For std::make_shared<>() and std::shared_ptr<>
 
 // Creates a pseudorandom number generator (PRNG) for random doubles between 0 and max
 auto createUniformPseudoRandomNumberGenerator(double max)

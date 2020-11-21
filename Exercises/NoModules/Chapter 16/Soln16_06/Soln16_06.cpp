@@ -4,7 +4,7 @@
    
    Leaks in the original code:
    - The database connection was not disconnected if an exception occurred indirectly 
-     in the main try-catch block. For the DataBaseException thrown in the block of db_query()
+     in the main try-catch block. For the DatabaseException thrown in the block of db_query()
      the connection was correctly disconnected. Possible other exceptions, though, include:
       a) verifyCustomerFields() discovers a problem. This verification step 
          may've been added later by someone trying to make the program more robuust, 
@@ -48,7 +48,7 @@ int main()
     DBQueryResultRAII result{ db_query(connection, "SELECT * FROM CUSTOMER_TABEL") };
     if (!result)
     {
-      throw DataBaseException{"Query failed"};
+      throw DatabaseException{"Query failed"};
     }
   
     std::vector customers{ readCustomers(result) };
@@ -102,11 +102,11 @@ void verifyCustomerFields(DB_QUERY_RESULT* result)
   const int numFields{ db_num_fields(result) };
   if (numFields < 0)
   {
-    throw DataBaseException{"db_num_fields() failed"};
+    throw DatabaseException{"db_num_fields() failed"};
   }
   if (numFields != 5)
   {
-    throw DataBaseException{"Unexpected number of fields: " + std::to_string(numFields)};
+    throw DatabaseException{"Unexpected number of fields: " + std::to_string(numFields)};
   }
 }
 

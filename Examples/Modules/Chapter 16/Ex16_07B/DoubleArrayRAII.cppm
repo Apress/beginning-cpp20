@@ -1,7 +1,5 @@
 // A custom RAII class to manage a dynamic double[] array resource
-#ifndef DOUBLE_ARRAY_RAII_H
-#define DOUBLE_ARRAY_RAII_H
-
+export module raii;
 import <iostream>;
 
 export class DoubleArrayRAII final
@@ -38,4 +36,3 @@ public:
 private:
   double* m_resource;
 };
-

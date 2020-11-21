@@ -1,11 +1,10 @@
-#ifndef PAIR_H
-#define PAIR_H
+export module pair;
 
 import <compare>;
 import <iostream>;
 
-template <typename First, typename Second>
-export class Pair
+export template <typename First, typename Second>
+class Pair
 {
 public:
   // Public members + no m_ prefix analogous to std::pair<> (see <utility> module)
@@ -28,9 +27,8 @@ Pair<First, Second>::Pair(const First& f, const Second& s)
   : first{f}, second{s}
 {}
 
-template <typename First, typename Second>
-export std::ostream& operator<<(std::ostream& out, const Pair<First, Second>& pair)
+export template <typename First, typename Second>
+std::ostream& operator<<(std::ostream& out, const Pair<First, Second>& pair)
 {
   return out << '(' << pair.first << ", " << pair.second << ')';
 }
-

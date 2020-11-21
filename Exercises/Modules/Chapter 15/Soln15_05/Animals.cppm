@@ -1,4 +1,4 @@
-// Exercise 14-2 Animals.h 
+// Exercise 14-2 Animals.cppm 
 // Animal classes
 export module animals;
 

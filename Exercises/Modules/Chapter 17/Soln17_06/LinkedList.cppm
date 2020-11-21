@@ -1,5 +1,4 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+export module linked_list;
 
 /*
 This LinkedList template follows some (not all) conventions of Standard Library containers:
@@ -10,11 +9,10 @@ The latter has the implication that if you mis-use the container,
 your program will likely crash...
 */
 
-#include <cstddef>;        // for the size_t typedef
 import <utility>;        // for std::swap()
 
-template<typename T>
-export class LinkedList
+export template<typename T>
+class LinkedList
 {
 public:
 	LinkedList() = default;                      // Default constructor (all pointers are initialised to nullptr)
@@ -66,7 +64,7 @@ private:
 // Convention dictates swap is present as non-member function.
 // For class types it is often easiest (and recommended) 
 // to implement it using a member swap function.
-template<typename T>
+export template<typename T>
 void swap(LinkedList<T>& one, LinkedList<T>& other)
 {
 	one.swap(other);
@@ -242,7 +240,7 @@ void LinkedList<T>::swap(LinkedList& other) noexcept
 
 // Definition of the nested Iterator class
 template<typename T>
-export class LinkedList<T>::Iterator
+class LinkedList<T>::Iterator
 {
 public:
 	explicit Iterator(Node* node) 
@@ -274,5 +272,3 @@ typename LinkedList<T>::Iterator LinkedList<T>::back_iterator() const
 {
   return Iterator{ m_tail };
 }
-
- //LINKEDLIST_H

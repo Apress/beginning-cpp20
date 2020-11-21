@@ -1,7 +1,5 @@
 // Definitions of various domain exception classes
-#ifndef DOMAINEXCEPTIONS_H
-#define DOMAINEXCEPTIONS_H
-
+export module domain_exceptions;
 import <stdexcept>;
 import <string>;
 
@@ -36,5 +34,3 @@ public:
     : std::domain_error{"An odd number was entered: " + std::to_string(number)}
   {}
 };
-
- //DOMAINEXCEPTIONS_H

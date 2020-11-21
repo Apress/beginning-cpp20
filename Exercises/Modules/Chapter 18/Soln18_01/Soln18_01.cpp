@@ -2,7 +2,7 @@
 import <iostream>;
 import <memory>;
 import truckload;
-#include "RandomBoxes.h"
+import box.random;
 
 /*
   Things to watch out for:

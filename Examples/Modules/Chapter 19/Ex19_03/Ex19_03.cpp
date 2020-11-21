@@ -1,7 +1,8 @@
 // Exercising the use of a functor as callback functions
 import <iostream>;
+import <vector>;
 import optimum;
-#include "Less.h"
+import less;
 
 template <typename T>
 bool greater(const T& one, const T& other) { return one > other; }
