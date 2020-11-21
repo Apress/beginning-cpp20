@@ -1,5 +1,4 @@
 export module box;
-#define BOX_H
 
 import <ostream>;
 import <format>;
@@ -26,4 +25,3 @@ private:
   double m_width {1.0};
   double m_height {1.0};
 };
-

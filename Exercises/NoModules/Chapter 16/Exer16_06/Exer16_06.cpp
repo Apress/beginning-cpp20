@@ -23,7 +23,7 @@ int main()
     if (!result)
     {
       db_disconnect(connection);
-      throw DataBaseException{"Query failed"};
+      throw DatabaseException{"Query failed"};
     }
   
     std::vector customers{ readCustomers(result) };
@@ -82,11 +82,11 @@ void verifyCustomerFields(DB_QUERY_RESULT* result)
   const int numFields{ db_num_fields(result) };
   if (numFields < 0)
   {
-    throw DataBaseException{"db_num_fields() failed"};
+    throw DatabaseException{"db_num_fields() failed"};
   }
   if (numFields != 5)
   {
-    throw DataBaseException{"Unexpected number of fields: " + std::to_string(numFields)};
+    throw DatabaseException{"Unexpected number of fields: " + std::to_string(numFields)};
   }
 }
 

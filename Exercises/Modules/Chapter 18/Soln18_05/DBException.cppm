@@ -1,11 +1,10 @@
 // A simple C++ exception type
 
-#ifndef DB_EXCEPTION_H
-#define DB_EXCEPTION_H
+export module db.exception;
 
 import <stdexcept>;
 
-export class DataBaseException : public std::runtime_error
+export class DatabaseException : public std::runtime_error
 {
 public:
   using std::runtime_error::runtime_error;  // Inherit constructor

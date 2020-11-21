@@ -1,5 +1,4 @@
 export module box;
-#define BOX_H
 
 export class Box
 {
@@ -11,4 +10,3 @@ public:
 private:
   double m_length, m_width, m_height;
 };
-

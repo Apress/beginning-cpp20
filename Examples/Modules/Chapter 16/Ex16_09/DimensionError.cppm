@@ -1,5 +1,4 @@
-#ifndef DIMENSION_ERROR_H
-#define DIMENSION_ERROR_H
+export module dimension_error;
 
 import <stdexcept>;        // For derived exception classes such as std::out_of_range
 import <string>;           // For std::to_string() and the std::string type
@@ -16,4 +15,3 @@ public:
 private:
   double m_value;
 };
-

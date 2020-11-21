@@ -16,11 +16,6 @@ void verifyCustomerFields(DB_QUERY_RESULT* result);           // Sanity check on
 std::vector<Customer> readCustomers(DB_QUERY_RESULT* result); // Convert the DB result to a series of C++ objects
 void print(std::ostream& stream, const Customer& customer);   // Print a given customer to a given output stream
 
-std::ostream& getOutputStream()
-{
-  return std::cout;
-}
-
 int main()
 {
   DBConnectionRAII connection{ db_connect() };
@@ -35,7 +30,7 @@ int main()
     DBQueryResultRAII result{ db_query(connection, "SELECT * FROM CUSTOMER_TABEL") };
     if (!result)
     {
-      throw DataBaseException{"Query failed"};
+      throw DatabaseException{"Query failed"};
     }
   
   /*
@@ -96,11 +91,11 @@ void verifyCustomerFields(DB_QUERY_RESULT* result)
   int numFields{ db_num_fields(result) };
   if (numFields < 0)
   {
-    throw DataBaseException{"db_num_fields() failed"};
+    throw DatabaseException{"db_num_fields() failed"};
   }
   if (numFields != 5)
   {
-    throw DataBaseException{"Unexpected number of fields: " + std::to_string(numFields)};
+    throw DatabaseException{"Unexpected number of fields: " + std::to_string(numFields)};
   }
 }
 

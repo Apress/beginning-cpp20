@@ -8,8 +8,9 @@ import <iostream>;
 import <random>;     // For random number generation
 import <functional>; // For std::bind()
 import <format>;
-#include "CurveBall.h"
-#include "DomainExceptions.h"
+import <string>;
+import curveball;
+import domain_exceptions;
 
 void askEvenNumber();           // Ask the user to provide an even number
 
@@ -19,14 +20,14 @@ int main()
   {
     askEvenNumber();
   }
-  catch (const CurveBall& /*caught*/)
+  catch (const Curveball& /*caught*/)
   {
     std::cerr << "...hit it out of the park!" << std::endl;
   }
 }
 
 /* Helper functions for askEvenNumber() */
-void throwCurveBallSometimes(); // Throw a CurveBall exception 25% of the time
+void throwCurveballSometimes(); // Throw a Curveball exception 25% of the time
 int readEvenNumber();           // Reads an even number from std::cin and verifies the input 
                                 // (throws upon failure)
 
@@ -99,7 +100,7 @@ int readEvenNumber()
     throw NotANumber{line};
   }
   
-  throwCurveBallSometimes();
+  throwCurveballSometimes();
   
   if (number < 0)
     throw NegativeNumber{number};
@@ -118,10 +119,10 @@ auto createUniformPseudoRandomBooleanGenerator(double probabilityOfTrue)
   return std::bind(distribution, generator);           //... and in the darkness bind them!
 }
 
-// Throw a CurveBall exception 25% of the time
-void throwCurveBallSometimes()
+// Throw a Curveball exception 25% of the time
+void throwCurveballSometimes()
 {
   static auto random{ createUniformPseudoRandomBooleanGenerator(0.25) };
   if (random())
-    throw CurveBall{};
+    throw Curveball{};
 }

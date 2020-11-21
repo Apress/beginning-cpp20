@@ -1,4 +1,4 @@
-// Box.h - defines Box class
+// Box.cppm - defines Box class
 export module box;
 
 import <iostream>;     // For standard streams

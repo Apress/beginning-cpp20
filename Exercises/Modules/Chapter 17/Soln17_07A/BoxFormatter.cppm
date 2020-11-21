@@ -1,13 +1,12 @@
-#ifndef BOX_FORMATTER_H
-#define BOX_FORMATTER_H
+export module box.formatter;
 
 import box;
 import <format>;
 import <string>;
 
 // Adding specific specializations to the std namespace is allowed
-template <>
-export class std::formatter<Box>
+export template <>
+class std::formatter<Box>
 {
 public:
   auto parse(auto& context)
@@ -60,4 +59,3 @@ public:
 private:
   std::string m_format;
 };
-

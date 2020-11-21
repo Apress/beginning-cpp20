@@ -1,12 +1,12 @@
-// Throwing and catching CurveBalls
-#include "CurveBall.h"
+// Throwing and catching Curveballs
+#include "Curveball.h"
 #include <iostream>
 
 #include <random>     // For random number generation
 #include <functional> // For std::bind()
 
-void throwCurveBallSometimes();           // Suggested solution
-void throwCurveBallSometimesBernouilli(); // Alternate solution
+void throwCurveballSometimes();           // Suggested solution
+void throwCurveballSometimesBernouilli(); // Alternate solution
 
 int main() 
 {
@@ -17,16 +17,16 @@ int main()
   {
     try
     {
-      throwCurveBallSometimes();
-      // throwCurveBallSometimesBernouilli();
+      throwCurveballSometimes();
+      // throwCurveballSometimesBernouilli();
     }
-    catch (const CurveBall&)
+    catch (const Curveball&)
     {
       exceptionCount++;
     }
   }
   
-  std::cout << "CurveBall exception thrown " << exceptionCount << " times out of " << number << ".\n";
+  std::cout << "Curveball exception thrown " << exceptionCount << " times out of " << number << ".\n";
 }
 
 // See Chapter 12 for an explanation of this function principle.
@@ -38,12 +38,12 @@ auto createUniformPseudoRandomNumberGenerator(double min, double max)
   return std::bind(distribution, generator);             //... and in the darkness bind them!
 }
 
-// Throw a CurveBall exception 25% of the time
-void throwCurveBallSometimes()
+// Throw a Curveball exception 25% of the time
+void throwCurveballSometimes()
 {
   static auto random{ createUniformPseudoRandomNumberGenerator(0, 100) };
   if (random() < 25)
-    throw CurveBall{};
+    throw Curveball{};
 }
 
 /*
@@ -61,10 +61,10 @@ auto createUniformPseudoRandomBooleanGenerator(double probabilityOfTrue)
   return std::bind(distribution, generator);           //... and in the darkness bind them!
 }
 
-// Throw a CurveBall exception 25% of the time
-void throwCurveBallSometimesBernouilli()
+// Throw a Curveball exception 25% of the time
+void throwCurveballSometimesBernouilli()
 {
   static auto random{ createUniformPseudoRandomBooleanGenerator(0.25) };
   if (random())
-    throw CurveBall{};
+    throw Curveball{};
 }

@@ -11,10 +11,9 @@
   Moving RAII objects, on the other hand, is usually possible.
 */
 
-#ifndef DB_RAII_H
-#define DB_RAII_H
-
+module;
 #include "DB.h"
+export module db.raii;
 
 /**
  * RAII object that ensures that a given database connection is closed
@@ -105,4 +104,3 @@ public:
 private:
   DB_QUERY_RESULT* m_result;
 };
-

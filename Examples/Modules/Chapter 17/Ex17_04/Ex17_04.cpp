@@ -1,5 +1,5 @@
 // Using a stack defined by nested class templates
-#include "Stack.h"
+import stack;
 import <iostream>;
 import <string>;
 

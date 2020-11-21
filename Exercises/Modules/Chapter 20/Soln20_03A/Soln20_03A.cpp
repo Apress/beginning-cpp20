@@ -15,8 +15,9 @@ import <vector>;
 import <map>;
 import <string>;
 import <iostream>;
-#include <cctype>;
 import <utility>;
+
+#include <cctype>
 
 int main()
 {

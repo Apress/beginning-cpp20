@@ -1,10 +1,9 @@
-// Stack.h Templates to define stacks
-#ifndef STACK_H
-#define STACK_H
+// Stack.cppm Templates to define stacks
+export module stack;
 import <stdexcept>;
 
-template <typename T>
-export class Stack
+export template <typename T>
+class Stack
 {
 public:
   Stack() = default;                  // Default constructor
@@ -105,9 +104,8 @@ void Stack<T>::swap(Stack& other) noexcept
 }
 
 // Conventional noexcept swap non-member function
-template <typename T>
+export template <typename T>
 void swap(Stack<T>& one, Stack<T>& other) noexcept
 {
   one.swap(other);     // Forward to public member function
 }
-

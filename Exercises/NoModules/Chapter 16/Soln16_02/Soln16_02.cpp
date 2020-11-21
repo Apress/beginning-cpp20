@@ -1,5 +1,5 @@
-// Throwing and catching CurveBalls and throwing TooManyExceptions
-#include "CurveBall.h"
+// Throwing and catching Curveballs and throwing TooManyExceptions
+#include "Curveball.h"
 #include "TooManyExceptions.h"
 
 #include <iostream>
@@ -7,7 +7,7 @@
 #include <random>     // For random number generation
 #include <functional> // For std::bind()
 
-void throwCurveBallSometimes();
+void throwCurveballSometimes();
 
 // This program will terminate abnormally when the TooManyExceptions exception is thrown.
 int main()
@@ -20,9 +20,9 @@ int main()
   {
     try
     {
-      throwCurveBallSometimes();
+      throwCurveballSometimes();
     }
-    catch(CurveBall& e)
+    catch(Curveball& e)
     {
       std::cout << e.what() << std::endl;
     
@@ -41,10 +41,10 @@ auto createUniformPseudoRandomBooleanGenerator(double probabilityOfTrue)
   return std::bind(distribution, generator);           //... and in the darkness bind them!
 }
 
-// Throw a CurveBall exception 25% of the time
-void throwCurveBallSometimes()
+// Throw a Curveball exception 25% of the time
+void throwCurveballSometimes()
 {
   static auto random{ createUniformPseudoRandomBooleanGenerator(0.25) };
   if (random())
-    throw CurveBall{};
+    throw Curveball{};
 }

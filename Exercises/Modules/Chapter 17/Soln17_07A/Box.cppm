@@ -1,5 +1,4 @@
 export module box;
-#define BOX_H
 
 export class Box
 {
@@ -22,4 +21,3 @@ private:
   double m_width {1.0};
   double m_height {1.0};
 };
-

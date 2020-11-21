@@ -11,10 +11,11 @@
   Moving RAII objects, on the other hand, is usually possible.
 */
 
-#ifndef DB_RAII_H
-#define DB_RAII_H
-
+module;
 #include "DB.h"
+export module db.raii;
+
+import <utility>;    // For std::exchange<>()
 
 /**
  * RAII object that ensures that a given database connection is closed

@@ -6,10 +6,9 @@
   For instance: you could call db_connect() from within the DBConnectionRAII() contructor.
 */
 
-#ifndef DB_RAII_H
-#define DB_RAII_H
-
+module;
 #include "DB.h"
+export module db.raii;
 
 /**
  * RAII object that ensures that a given database connection is closed

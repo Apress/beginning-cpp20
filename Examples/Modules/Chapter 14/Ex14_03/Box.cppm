@@ -1,6 +1,5 @@
-// Box.h - defines Box class (with additional copy constuctor)
+// Box.cppm - defines Box class (with additional copy constuctor)
 export module box;
-#define BOX_H
 
 import <iostream>;     // For standard streams
 import <format>;       // For string formatting

@@ -1,6 +1,5 @@
-// Box.h - defines Box class
+// Box.cppm - defines Box class
 export module box;
-#define BOX_H
 
 export class Box
 {

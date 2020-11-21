@@ -1,15 +1,15 @@
-// Definition of CurveBall exception class
+// Definition of Curveball exception class
 
 #ifndef CURVEBALL_H
 #define CURVEBALL_H
 #include <exception>
 
-class CurveBall : public std::exception
+class Curveball : public std::exception
 {
 public:
   const char* what() const noexcept override
   {
-    return "CurveBall exception";
+    return "Curveball exception";
   }
 };
 

@@ -1,9 +1,8 @@
 // A class of function objects that compare two values based on how close they are 
 // to some third value that was provided to the functor at construction time.
-#ifndef NEARER_H
-#define NEARER_H
-
+module;
 #include <cmath>   // For std::abs()
+export module nearer;
 
 export class Nearer
 {

@@ -8,7 +8,7 @@ import <stdexcept>;                        // For standard exception types
 import <string>;                           // For std::to_string()
 import <utility>;                          // For std::as_const()
 
-template <typename T>
+export template <typename T>
 class Array
 {
 public:
@@ -79,7 +79,7 @@ void Array<T>::swap(Array& other) noexcept
 }
 
 // Swap non-member function template (optional)
-template <typename T>
+export template <typename T>
 void swap(Array<T>& one, Array<T>& other) noexcept
 {
   one.swap(other);     // Forward to public member function

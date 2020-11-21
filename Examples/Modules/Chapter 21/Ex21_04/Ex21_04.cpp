@@ -1,6 +1,6 @@
 // Constraint based specialization
-import <concepts>  // For the std::equality_comparable<>; concept
-import <iterator>  // The iterator concepts and the iter_difference_t<>;() trait
+import <concepts>;  // For the std::equality_comparable<> concept
+import <iterator>;  // The iterator concepts and the iter_difference_t<>() trait
 import <vector>;
 import <list>;
 import <iostream>;

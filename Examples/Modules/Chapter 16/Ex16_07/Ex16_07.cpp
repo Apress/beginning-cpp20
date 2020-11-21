@@ -1,7 +1,8 @@
 // Exceptions may result in resource leaks!
 import <iostream>;
-#include <cmath>                    // For std::sqrt()
 import troubles;
+
+#include <cmath>                    // For std::sqrt()
 
 double computeValue(size_t x);         // A function to compute a single value
 double* computeValues(size_t howMany); // A function to compute an array of values
@@ -35,4 +36,3 @@ double computeValue(size_t x)
   else
     throw Trouble{ "The trouble with trouble is, it starts out as fun!" };
 }
-

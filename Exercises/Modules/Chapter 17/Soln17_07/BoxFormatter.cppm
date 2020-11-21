@@ -1,12 +1,10 @@
-#ifndef BOX_FORMATTER_H
-#define BOX_FORMATTER_H
-
+export module box.formatter;
 import box;
 import <format>;
 
 // Adding specific specializations to the std namespace is allowed
-template <>
-export class std::formatter<Box> : public std::formatter<double>
+export template <>
+class std::formatter<Box> : public std::formatter<double>
 {
 public:
   

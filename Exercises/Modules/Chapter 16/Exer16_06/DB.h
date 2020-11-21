@@ -30,7 +30,7 @@ int db_num_fields(DB_QUERY_RESULT* result);
 /*! Fetch a single row from the result.
  * \param[in] result A handle returned by db_query
  * \return An array of strings. Each field is represented as a string (zero-terminated char array). 
- * 	Let row be the result, then the first field is accessed using result[0]. 
+ *    Let row be the result, then the first field is accessed using result[0]. 
  */
 DB_ROW db_fetch_row(DB_QUERY_RESULT* result);
 
@@ -44,3 +44,4 @@ void db_free_result(DB_QUERY_RESULT* result);
  */
 void db_disconnect(DB_CONNECTION* connection);
 
+#endif

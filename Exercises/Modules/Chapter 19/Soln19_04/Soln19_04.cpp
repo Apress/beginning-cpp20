@@ -13,9 +13,11 @@
 import <iostream>;
 import <format>;
 import <functional>;
-#include <cctype>;         // For std::isupper()
 import <string>;
-#include "Collect.h"
+
+import collect;
+
+#include <cctype>;         // For std::isupper()
 
 // Output vector elements
 template<typename T>

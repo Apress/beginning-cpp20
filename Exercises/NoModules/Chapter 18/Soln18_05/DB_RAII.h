@@ -15,6 +15,7 @@
 #define DB_RAII_H
 
 #include "DB.h"
+#include <utility>    // For std::exchange<>()
 
 /**
  * RAII object that ensures that a given database connection is closed

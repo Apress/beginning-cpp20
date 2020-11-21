@@ -3,6 +3,7 @@
 // The caller decides whether the element is copied or moved.
 import array;
 import <string>;
+import <iostream>;
 
 // Construct an Array<> of a given size, filled with some arbitrary string data
 Array<std::string> buildStringArray(const size_t size)

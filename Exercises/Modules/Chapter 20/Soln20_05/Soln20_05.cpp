@@ -1,7 +1,7 @@
 // Exercise 20-5 Create a generic average() algorithm using std::accumulate()
 import <iostream>;
 import <numeric>;
-import <utility>     // for std::pair<>; (only required for Solution 2 below)
+import <utility>;     // for std::pair<> (only required for Solution 2 below)
 import <optional>;
 import <vector>;
 

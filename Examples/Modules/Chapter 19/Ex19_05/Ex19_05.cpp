@@ -2,6 +2,7 @@
 import <iostream>;
 import <string>;
 import <string_view>;
+import <vector>;
 import optimum;
 
 int main()

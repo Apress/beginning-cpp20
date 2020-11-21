@@ -1,7 +1,6 @@
 // A simple C++ customer class
 
-#ifndef CUSTOMER_H
-#define CUSTOMER_H
+export module customer;
 
 import <string>;
 import <string_view>;
@@ -26,4 +25,3 @@ private:
   int m_streetNumber;
   std::string m_city;
 };
-

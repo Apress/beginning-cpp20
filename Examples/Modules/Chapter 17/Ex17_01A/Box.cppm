@@ -1,5 +1,4 @@
 export module box;
-#define BOX_H
 
 export class Box
 {

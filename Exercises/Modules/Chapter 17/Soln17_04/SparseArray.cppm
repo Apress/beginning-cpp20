@@ -1,17 +1,16 @@
 // SparseArray class template definition
 // Note the use of the find() helper function and the const-and-back-again idiom to minimize code duplication
 
-#ifndef SPARSEARRAY_H
-#define SPARSEARRAY_H
+export module sparse_array;
 
-#include "Pair.h"
+import pair;
 import <vector>;
 import <string>;       // For std::to_string()
 import <utility>;      // For std::as_const()
 import <stdexcept>;
 
-template<typename T>
-export class SparseArray
+export template<typename T>
+class SparseArray
 {
 public:
   T& operator[](size_t index);              // Subscript operator (creates default-constructed value if no value exists for the given index)
@@ -82,5 +81,3 @@ T* SparseArray<T>::find(size_t index)
 {
   return const_cast<T*>(std::as_const(*this).find(index));
 }
-
- //SPARSEARRAY_H

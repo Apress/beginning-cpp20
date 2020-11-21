@@ -1,7 +1,7 @@
 // Using an exception class
 import <iostream>;
-import box;                  // For the Box class
-#include "DimensionError.h"       // For the dimension_error class
+import box;               // For the Box class
+import dimension_error;   // For the dimension_error class
 
 int main()
 {

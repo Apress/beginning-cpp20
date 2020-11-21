@@ -4,7 +4,7 @@ import <stdexcept>;                        // For standard exception types
 import <string>;                           // For to_string()
 import <utility>;                          // For std::as_const()
 
-template <typename T, int startIndex>
+export template <typename T, int startIndex>
 class Array
 {
 public:
@@ -83,7 +83,7 @@ void Array<T, startIndex>::swap(Array& other) noexcept
 }
 
 // Swap non-member function template (can only swap arrays with identical startIndex)
-template <typename T, int startIndex>
+export template <typename T, int startIndex>
 void swap(Array<T, startIndex>& one, Array<T, startIndex>& other) noexcept
 {
   one.swap(other);     // Forward to public member function

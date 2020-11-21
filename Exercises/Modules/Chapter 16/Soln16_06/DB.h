@@ -44,3 +44,4 @@ void db_free_result(DB_QUERY_RESULT* result);
  */
 void db_disconnect(DB_CONNECTION* connection);
 
+#endif

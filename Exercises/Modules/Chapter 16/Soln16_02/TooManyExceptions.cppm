@@ -4,9 +4,7 @@
 // Notice how the constructor is explicit (implicit conversions
 // from size_t to TooManyExceptions are not desired).
 
-#ifndef TOOMANYEXCEPTIONS_H
-#define TOOMANYEXCEPTIONS_H
-
+export module too_many;
 import <exception>;
 import <string>;     // For std::string / std::to_string()
 
@@ -32,5 +30,3 @@ private:
   size_t m_how_many;
   std::string m_message;
 };
-
- //TOOMANYEXCEPTIONS_H

@@ -1,5 +1,4 @@
 export module box;
-#define BOX_H
 
 import <compare>;  // For std::partial_ordering (see Chapter 4)
 
@@ -33,4 +32,3 @@ private:
   double m_width{ 1.0 };
   double m_height{ 1.0 };
 };
-

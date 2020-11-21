@@ -1,9 +1,8 @@
-// Stack.h Templates to define stacks 
+// Stack.cppm Templates to define stacks 
 // (using std::unique_ptr<> instead of raw pointer)
-#ifndef STACK_H
-#define STACK_H
+export module stack;
 import <stdexcept>;
-import <memory>       // For std::unique_ptr<>;
+import <memory>;       // For std::unique_ptr<>
 
 /*
     The required changes are minimal, 
@@ -15,8 +14,8 @@ import <memory>       // For std::unique_ptr<>;
         so you need to construct all Nodes with the Node(const T&) constructor
  */
 
-template <typename T>
-export class Stack
+export template <typename T>
+class Stack
 {
 public:
   Stack() = default;                  // Default constructor
@@ -106,9 +105,8 @@ void Stack<T>::swap(Stack& other) noexcept
 }
 
 // Conventional noexcept swap non-member function
-template <typename T>
+export template <typename T>
 void swap(Stack<T>& one, Stack<T>& other) noexcept
 {
   one.swap(other);     // Forward to public member function
 }
-

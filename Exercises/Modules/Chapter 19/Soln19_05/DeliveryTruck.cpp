@@ -1,4 +1,4 @@
-#include "DeliveryTruck.h"
+module delivery_truck;
 
 DeliveryTruck::DeliveryTruck(Truckload aTruckload)
   : m_truckload{ std::move(aTruckload) }   // Do not copy!
