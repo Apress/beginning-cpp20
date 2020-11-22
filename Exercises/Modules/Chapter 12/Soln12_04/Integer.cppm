@@ -18,4 +18,4 @@ private:
 };
 
 // A non-friend function that implements the same function
-int nonFriendCompare(const Integer& obj1, const Integer& obj2);
+export int nonFriendCompare(const Integer& obj1, const Integer& obj2);

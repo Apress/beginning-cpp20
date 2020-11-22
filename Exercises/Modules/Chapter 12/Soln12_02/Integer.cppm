@@ -1,5 +1,5 @@
 /***************************************************************\
- This header shows two distinct ways of allowing an Integer
+ This file shows two distinct ways of allowing an Integer
  to be constructed without an argument:
   1) The first is to add a default constructor. 
 	   To make sure m_value is zero, 
@@ -33,7 +33,7 @@ private:
 
 // Option 2: use zero a default parameter value
 /*
-class Integer
+export class Integer
 {
 public:
   Integer(int value = 0);                  // Contructor with given value
