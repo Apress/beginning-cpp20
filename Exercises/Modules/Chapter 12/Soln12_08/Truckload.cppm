@@ -39,7 +39,7 @@ private:
 };
 
 // Out-of-class definition of the nested Iterator class 
-// (class itself is part of the public interface, so belongs in the header)
+// (class itself is part of the public interface, so belongs in the module interface)
 class Truckload::Iterator
 {
 public:
