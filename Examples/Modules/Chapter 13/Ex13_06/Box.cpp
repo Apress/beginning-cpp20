@@ -1,7 +1,8 @@
+module;
+#include <cmath>    // For the min() and max() function templates
 module box;
 
 import <format>;
-#include <cmath>    // For the min() and max() function templates
 
 double Box::volume() const
 {
