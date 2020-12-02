@@ -4,6 +4,7 @@ import <iostream>;
 import <string>;
 import <string_view>;
 import <functional>;
+import <vector>;
 import optimum;
 
 int main()
