@@ -30,7 +30,7 @@ protected:                   // Protected to facilitate further examples
 };
 
 // Stream output for Box objects
-inline std::ostream& operator<<(std::ostream& stream, const Box& box)
+export std::ostream& operator<<(std::ostream& stream, const Box& box)
 {
   return stream << std::format("Box({:.1f}, {:.1f}, {:.1f})",
               box.getLength(), box.getWidth(), box.getHeight());
