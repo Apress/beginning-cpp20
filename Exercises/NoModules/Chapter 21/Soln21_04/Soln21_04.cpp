@@ -6,6 +6,7 @@
 #include <vector>
 #include <list>
 #include <forward_list>
+#include <span>
 #include <ranges>
 #include <iterator>
 

@@ -6,6 +6,7 @@ import <string>;
 import <vector>;
 import <list>;
 import <forward_list>;
+import <span>;
 import <ranges>;
 import <iterator>;
 
