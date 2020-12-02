@@ -2,6 +2,8 @@
 module zoo;
 import animals;
 import <iostream>;
+import <string>;        // For operator<<
+import <string_view>;   // For operator<<
 
 // Constructor from a vector of animals
 Zoo::Zoo(const std::vector<AnimalPtr>& animals) 
