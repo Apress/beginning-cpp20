@@ -1,6 +1,7 @@
 // Rethrowing exceptions
 import <iostream>;
 import <typeinfo>;
+import <string_view>;   // for operator<<
 import troubles;
 
 int main()
