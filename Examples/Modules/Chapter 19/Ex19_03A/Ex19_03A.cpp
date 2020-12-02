@@ -1,6 +1,7 @@
 // Exercising the use of standard functors
 import <iostream>;
 import <functional>;
+import <vector>;
 import optimum;
 
 int main()
