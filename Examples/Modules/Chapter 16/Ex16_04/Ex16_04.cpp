@@ -1,6 +1,7 @@
 // Catching exceptions with a base class handler
 import <iostream>;
 import <typeinfo>;			// for the type_info type returned by the typeid operator
+import <string_view>;       // for operator<<
 import troubles;
 
 int main()
