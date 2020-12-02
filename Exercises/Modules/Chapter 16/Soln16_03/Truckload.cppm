@@ -38,7 +38,7 @@ private:
 
 // Out-of-class definition of the nested Iterator class 
 // (class itself is part of the public interface, so belongs in a module interface file)
-export class Truckload::Iterator
+class Truckload::Iterator
 {
 public:
   SharedBox getFirstBox();  // Get the first Box
