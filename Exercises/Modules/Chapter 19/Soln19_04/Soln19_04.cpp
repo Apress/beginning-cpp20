@@ -14,6 +14,7 @@ import <iostream>;
 import <format>;
 import <functional>;
 import <string>;
+import <vector>;
 
 import collect;
 
