@@ -3,7 +3,7 @@ export module sort;
 import <utility>;    // for std::swap()
 import <vector>;
 
-// The primary, exported sort() template with two parameters calls 
+// The primary, exported sort() template with two function parameters calls 
 // this internal sort() template with four parameters
 template<typename T, typename Compare>
 void sort(std::vector<T>& data, Compare compare, size_t start, size_t end);
