@@ -1,0 +1,16 @@
+// Compatibility include for compilers that do not support the <format> module yet
+// (falls back to the reference implementation from https://fmt.dev)
+// See Appendix A for the preprocessing directives and macros we use here.
+#ifdef __cpp_lib_format
+	#error Remove Workarounds/format from your include directories (use Standard Library header instead)
+#else
+	#define FMT_HEADER_ONLY
+	#include "fmt/include/fmt/format.h"
+
+	// Technically you are not allowed to add to the std namespace, 
+	// but necessity knows no law...
+	namespace std 
+	{ 
+		using namespace fmt;
+	}
+#endif
