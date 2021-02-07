@@ -15,11 +15,11 @@ and for which you therefore need a workaround to compile and run the example / e
 ## Modules
 
 Most source code, most notably that in the second half of the book, uses C++20's modules.
-Unfortunately, support for this feature may still be lacking in your compiler / build system.
+Unfortunately, [support](https://en.cppreference.com/w/cpp/compiler_support) for this feature may still be lacking in your compiler / build system.
 For the smaller examples it is just a matter of replacing the `import` declarations with `#include` directives 
-(see [Appendix A](../Appendix.pdf), but for examples comprising multiple files, working around this is more work.
+(see [Appendix A](../Appendix.pdf)), but for examples comprising multiple files working around these limitations can be more work.
 For all examples and exercises that are not explicitly about modules,
-we therefore made an equivalent version that is available that does not use modules yet.
+we therefore made an equivalent version available that does not use modules.
 You can find these in the `NoModules` directories of this source repository.
 
 <a name="format"/>
