@@ -1,0 +1,27 @@
+// Compatibility include for compilers that do not support the <ranges> module yet
+// (falls back to the reference implementation from https://github.com/ericniebler/range-v3)
+// See Appendix A for the preprocessing directives and macros we use here.
+#ifdef __cpp_lib_ranges
+	#error Remove/rename this compatibility header (use Standard Library header instead)
+#else
+	#include "range-v3/include/range/v3/all.hpp"
+
+	// Technically you are not allowed to add to the std namespace, 
+	// but necessity knows no law...
+	namespace std::ranges
+	{ 
+		using namespace ::ranges::cpp20;
+
+		using ::ranges::empty;
+		using ::ranges::begin;
+		using ::ranges::end;
+		using ::ranges::size;
+
+		template <class Val, class CharT, class Traits>
+		auto istream_view(basic_istream<CharT, Traits>& s) { return basic_istream_view<Val>(s); }
+	}
+	namespace std::views
+	{
+		using namespace ::ranges::cpp20::views;
+	}
+#endif

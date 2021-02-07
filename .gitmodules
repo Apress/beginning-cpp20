@@ -1,3 +1,6 @@
 [submodule "Workarounds/fmt"]
 	path = Workarounds/fmt
 	url = https://github.com/fmtlib/fmt.git
+[submodule "Workarounds/range-v3"]
+	path = Workarounds/range-v3
+	url = https://github.com/ericniebler/range-v3
