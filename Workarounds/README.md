@@ -5,6 +5,7 @@
 [Abbreviated Function Template Syntax](#abbreviated)  
 
 <a name="format"/>
+
 ## std::format()
 As of today, no compiler [supports](https://en.cppreference.com/w/cpp/compiler_support) the C++20 `<format>` module yet. 
 This module provides safe, elegant, and efficient text formatting, primeraly in the form of the `std::format()` function,
@@ -43,6 +44,7 @@ Steps:
     and all `std::format()` statements will work as expected.
 
 <a name="abbreviated"/>
+
 ## Abbreviated Function Template Syntax
 
 If your compiler does not [support](https://en.cppreference.com/w/cpp/compiler_support) 
