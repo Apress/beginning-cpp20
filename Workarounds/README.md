@@ -5,10 +5,10 @@ not a single compiler [supported](https://en.cppreference.com/w/cpp/compiler_sup
 Features that were used in the book, 
 and for which you therefore need a workaround to compile and run the example / exercise code include
 
-[Modules](#modules)
-[std::format()](#format)  
-[Abbreviated Function Template Syntax](#abbreviated)  
-[Ranges](#ranges)  
+- [Modules](#modules)
+- [std::format()](#format)  
+- [Abbreviated Function Template Syntax](#abbreviated)  
+- [Ranges](#ranges)  
 
 <a name="modules"/>
 
