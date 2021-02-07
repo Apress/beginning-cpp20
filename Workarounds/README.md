@@ -1,5 +1,10 @@
 # Workarounds
 
+##### Table of Contents  
+[std::format()](#format)  
+[Abbreviated Function Template Syntax](#abbreviated)  
+
+<a name="format"/>
 ## std::format()
 As of today, no compiler [supports](https://en.cppreference.com/w/cpp/compiler_support) the C++20 `<format>` module yet. 
 This module provides safe, elegant, and efficient text formatting, primeraly in the form of the `std::format()` function,
@@ -7,6 +12,10 @@ and is heavily used throughout the C++20 edition of the book.
 
 As a workaround, we recommend the [`{fmt}`](https://fmt.dev/) library, 
 a free and open source implementation of a superset of the now standardised `<format>` module.
+
+Note: the workaround detailed below works for `#include <format>` directives; 
+we have not had much luck getting this to work with C++20's `import` declarations.
+Until further notice, we therefore recommend you mostly use the `NoModules` versions of the source code.
 
 Steps:
 1. Download the `fmt` source code 
@@ -32,5 +41,25 @@ Steps:
  3. If all went well, `#include <format>` will then use the [`format`](format) header in this directory,
     which injects `{fmt}`'s functionality into the `std` namespace (technically not allowed, we know...), 
     and all `std::format()` statements will work as expected.
-      
-     
+
+<a name="abbreviated"/>
+## Abbreviated Function Template Syntax
+
+If your compiler does not [support](https://en.cppreference.com/w/cpp/compiler_support) 
+C++20's abbreviated function template syntax yet, the solution is somewhat obvious: 
+use the non-abbreviated syntax. That is, instead of
+
+    namespace math
+    {
+       auto square(const auto& x) { return x * x; }
+    }
+    
+you use
+
+    namespace math
+    {
+       template <typename T>
+       auto square(const T& x) { return x * x; }
+    }
+    
+(`auto` return type deduction should work with any recent compiler.)
