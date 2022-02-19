@@ -6,7 +6,6 @@
 
 int main() 
 {
-  const std::string delimiters {" ,;:.\"!?'\n"};
   std::string word1, word2;
 
   std::cout << "Enter the first word or phrase: ";
