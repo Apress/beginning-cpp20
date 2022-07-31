@@ -3,6 +3,7 @@ import <iostream>;
 import <format>;
 import <memory>;
 import <string>;
+import <vector>;
 using Words = std::vector<std::shared_ptr<std::string>>;
 
 void swap(Words& words, size_t first, size_t second);
