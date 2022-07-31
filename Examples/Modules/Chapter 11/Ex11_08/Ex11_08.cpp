@@ -4,7 +4,9 @@ import <iostream>;
 import squaring;
 
 /* Make names from the math namespace available locally */
-auto hypot(const auto& x, const auto& y)
+// Note: text uses hypot(), but this causes ambiguities with hypot() 
+// function of <cmath> with Visual Studio
+auto hypotenuse(const auto& x, const auto& y)
 {
   using namespace math;
   // Or:
@@ -18,5 +20,5 @@ int main()
   std::cout << "math::sqrt2 has the value " << math::sqrt2 << std::endl;
   std::cout << "This should be 0: " << (math::sqrt2 - std::numbers::sqrt2) << std::endl;
   std::cout << "This should be 2: " << math::square(math::sqrt2) << std::endl;
-  std::cout << "This should be 5: " << hypot(3, 4) << std::endl;
+  std::cout << "This should be 5: " << hypotenuse(3, 4) << std::endl;
 }
