@@ -11,6 +11,7 @@ export class Carton : public Box
   using Box::Box;  // Inherit Box class constructors 
 
 public:
+  Carton() = default;   // Required by Visual C++
   Carton(double length, double width, double height, std::string_view mat)
      : Box{length, width, height}, m_material{mat}
      { std::cout << "Carton(double,double,double,string_view) called.\n"; }
