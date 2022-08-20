@@ -18,4 +18,3 @@ public:
 private:
   double m_diameter, m_height;
 };
-

@@ -1,5 +1,5 @@
 // Polymorphic vectors of smart pointers
-import <iostream>;
+#include <print>
 import <memory>;                                // For smart pointers
 import <vector>;                                // For vector
 import boxes;
@@ -13,9 +13,9 @@ int main()
   boxes.push_back(Carton{20.0, 30.0, 40.0, "plastic"});
 
   for (const auto& box : boxes)
-    box.showVolume();
+    box.printVolume();
 
-  std::cout << std::endl;
+  std::println("");
 
   // Next, we create a proper polymorphic vector<>:
   std::vector<std::unique_ptr<Box>> polymorphicBoxes;
@@ -24,5 +24,5 @@ int main()
   polymorphicBoxes.push_back(std::make_unique<Carton>(20.0, 30.0, 40.0, "plastic"));
 
   for (const auto& box : polymorphicBoxes)
-    box->showVolume();
+    box->printVolume();
 }

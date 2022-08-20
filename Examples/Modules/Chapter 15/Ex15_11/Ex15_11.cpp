@@ -1,5 +1,5 @@
 // Using an interface class and indirect base classes
-import <iostream>;
+#include <print>
 import <vector>;                     // For the vector container
 import boxes;
 import vessel;
@@ -15,5 +15,5 @@ int main()
   std::vector<const Vessel*> vessels {&box, &can, &carton, &hardcase};
 
   for (const auto* vessel : vessels)
-    std::cout << "Volume is " << vessel->volume() << std::endl;
+    std::println("Volume is {:.6}", vessel->volume());
 }

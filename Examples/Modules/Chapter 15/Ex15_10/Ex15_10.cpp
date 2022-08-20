@@ -1,17 +1,17 @@
 // Using an abstract class
-import <iostream>;
+#include <print>
 import boxes;
 
 int main()
 {
-  // Box box{20.0, 30.0, 40.0};                  // Uncomment for compiler error
+// Box box{20.0, 30.0, 40.0};                  // Uncomment for compiler error
 
-  ToughPack hardcase {20.0, 30.0, 40.0};         // A derived box - same size
-  Carton carton {20.0, 30.0, 40.0, "plastic"};   // A different derived box
+  ToughPack hardcase {20.0, 30.0, 40.0};       // A derived box - same size
+  Carton carton {20.0, 30.0, 40.0, "plastic"}; // A different derived box
+ 
+  Box* base {&hardcase};                       // Base pointer - derived address
+  std::println("hardcase volume is {}", base->volume());
 
-  Box*pBox {&hardcase};                          // Base pointer - derived address
-  std::cout << "hardcase volume is " << pBox->volume() << std::endl;
-
-  pBox = &carton;                                // New derived address
-  std::cout << "carton volume is " << pBox->volume() << std::endl;
+  base = &carton;                             // New derived address
+  std::println("carton volume is {}", base->volume());
 }

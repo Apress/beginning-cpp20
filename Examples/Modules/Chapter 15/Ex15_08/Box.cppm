@@ -1,6 +1,6 @@
 export module boxes:box;
 
-import <iostream>;
+#include <print>
 
 export class Box
 {
@@ -8,20 +8,19 @@ public:
   Box(double length, double width, double height)
     : m_length {length}, m_width {width}, m_height {height}
   {
-    std::cout << "Box constructor called for a Box of volume " << volume() << std::endl;
+    std::println("Box constructor called for a Box of volume {}", volume());
   }
   virtual ~Box()
   {
-    std::cout << "Box destructor called for a Box of volume " << volume() << std::endl;
+    std::println("Box destructor called for a Box of volume {}", volume());
   }
 
   // Function to calculate volume of a Box
   virtual double volume() const { return m_length * m_width * m_height; }
 
-  void showVolume() const
+  void printVolume() const
   {
-    std::cout << "The volume from inside Box::showVolume() is "
-              << volume() << std::endl;
+    std::println("The volume from inside Box::printVolume() is {}", volume());
   }
 
 private:

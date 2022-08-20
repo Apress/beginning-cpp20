@@ -1,5 +1,5 @@
 // Access specifiers and virtual functions
-import <iostream>;
+#include <print>
 import boxes;
 
 int main()
@@ -8,23 +8,24 @@ int main()
   ToughPack hardcase {20.0, 30.0, 40.0};         // A derived box - same size
   Carton carton {20.0, 30.0, 40.0, "Plastic"};   // A different derived box
 
-  box.showVolume();          // Volume of Box
-  hardcase.showVolume();     // Volume of ToughPack
-  carton.showVolume();       // Volume of Carton
+  box.printVolume();          // Volume of Box
+  hardcase.printVolume();     // Volume of ToughPack
+  carton.printVolume();       // Volume of Carton
+  std::println("");
 
 // Uncomment the following statement for an error
-// std::cout << "\nhardcase volume is " << hardcase.volume() << std::endl;
+// std::println("hardcase volume is {}\n", hardcase.volume());
 
   // Now using a base pointer...
   Box* base {&box};          // Points to type Box
-  std::cout << "\nbox volume through base pointer is " << base->volume() << std::endl;
-  base->showVolume();
+  std::println("box volume through base pointer is {}", base->volume());
+  base->printVolume();
 
   base = &hardcase;          // Points to type ToughPack
-  std::cout << "hardcase volume through base pointer is " << base->volume() << std::endl;
-  base->showVolume();
+  std::println("hardcase volume through base pointer is {}", base->volume());
+  base->printVolume();
 
   base = &carton;                // Points to type Carton
-  std::cout << "carton volume through base pointer is " << base->volume() << std::endl;
-  base->showVolume();
+  std::println("carton volume through base pointer is {}", base->volume());
+  base->printVolume();
 }

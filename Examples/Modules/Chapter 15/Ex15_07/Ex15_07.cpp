@@ -1,5 +1,6 @@
-// Polymorphic vectors of smart pointers
-import <iostream>;
+// Deleting derived classes through a base-class pointer 
+// (non-virtual base class destructor version: undefined behavior)
+#include <print>
 import <memory>;                                // For smart pointers
 import <vector>;                                // For vector
 import boxes;
@@ -13,9 +14,9 @@ int main()
   boxes.push_back(Carton{20.0, 30.0, 40.0, "plastic"});
 
   for (const auto& p : boxes)
-    p.showVolume();
+    p.printVolume();
 
-  std::cout << std::endl;
+  std::println("");
   
   // Next, we create a proper polymorphic vector<>:
   std::vector<std::unique_ptr<Box>> polymorphicBoxes;
@@ -24,5 +25,5 @@ int main()
   polymorphicBoxes.push_back(std::make_unique<Carton>(20.0, 30.0, 40.0, "plastic"));
 
   for (const auto& p : polymorphicBoxes)
-    p->showVolume();
+    p->printVolume();
 }
