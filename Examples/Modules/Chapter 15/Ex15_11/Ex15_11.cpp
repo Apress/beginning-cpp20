@@ -1,19 +1,17 @@
-// Using an interface class and indirect base classes
+// Using an abstract class
 #include <print>
-import <vector>;                     // For the vector container
 import boxes;
-import vessel;
-import can;
 
 int main()
 {
-  Box box {40, 30, 20};
-  Can can {10, 3};
-  Carton carton {40, 30, 20, "Plastic"};
-  ToughPack hardcase {40, 30, 20};
+// Box box{20.0, 30.0, 40.0};                  // Uncomment for compiler error
 
-  std::vector<const Vessel*> vessels {&box, &can, &carton, &hardcase};
+  ToughPack hardcase {20.0, 30.0, 40.0};       // A derived box - same size
+  Carton carton {20.0, 30.0, 40.0, "plastic"}; // A different derived box
+ 
+  Box* base {&hardcase};                       // Base pointer - derived address
+  std::println("hardcase volume is {}", base->volume());
 
-  for (const auto* vessel : vessels)
-    std::println("Volume is {:.6}", vessel->volume());
+  base = &carton;                             // New derived address
+  std::println("carton volume is {}", base->volume());
 }

@@ -12,8 +12,6 @@ public:
     : Box{l, w, h}, m_material{mat}
   {}
 
-  ~Carton() override { std::println("Carton destructor called"); }
-
   // Function to calculate the volume of a Carton object
   double volume() const override
   {

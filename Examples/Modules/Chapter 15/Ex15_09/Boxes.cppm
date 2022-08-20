@@ -2,4 +2,4 @@
 export module boxes;
 
 export import :box;           // Export all partitions
-export import :carton;
+export import :tough_pack;

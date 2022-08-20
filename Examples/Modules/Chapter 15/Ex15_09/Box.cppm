@@ -5,21 +5,25 @@ export module boxes:box;
 export class Box
 {
 public:
-  Box() : Box{ 1.0, 1.0, 1.0 } {}
-  Box(double l, double w, double h) : m_length {l}, m_width {w}, m_height {h} {}
-  virtual ~Box() = default;
+  Box(double length, double width, double height)
+    : m_length {length}, m_width {width}, m_height {height}
+  {
+    std::println("Box constructor called for a Box of volume {}", volume());
+  }
+  virtual ~Box()
+  {
+    std::println("Box destructor called for a Box of volume {}", volume());
+  }
 
-  // Function to print the usable volume of a Box object
-  void printVolume() const
-  { std::println("Box usable volume is {}", volume()); }
-
-  // Function to calculate the volume of a Box object
+  // Function to calculate volume of a Box
   virtual double volume() const { return m_length * m_width * m_height; }
 
-  double getLength() const { return m_length; }
-  double getWidth() const { return m_width; }
-  double getHeight() const { return m_height; }
+  void printVolume() const
+  {
+    std::println("The volume from inside Box::printVolume() is {}", volume());
+  }
 
 private:
   double m_length, m_width, m_height;
 };
+
