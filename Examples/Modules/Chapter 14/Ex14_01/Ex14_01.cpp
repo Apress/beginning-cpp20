@@ -1,7 +1,7 @@
 // Defining and using a derived class
-import <iostream>;
-import box;                 // For the Box class
-import carton;              // For the Carton class
+#include <print>
+import box;
+import carton;
 
 int main()
 {
@@ -10,16 +10,16 @@ int main()
   Carton carton;
   Carton chocolateCarton {"Solid bleached board"};  // Good old SBB
   // Check them out - sizes first of all
-  std::cout << "box occupies " << sizeof box << " bytes" << std::endl;
-  std::cout << "carton occupies " << sizeof carton << " bytes" << std::endl;
-  std::cout << "candyCarton occupies " << sizeof chocolateCarton << " bytes" << std::endl;
+  std::println("box occupies {} bytes", sizeof box);
+  std::println("carton occupies {} bytes", sizeof carton);
+  std::println("candyCarton occupies {} bytes", sizeof chocolateCarton);
 
   // Now volumes...
-  std::cout << "box volume is " << box.volume() << std::endl;
-  std::cout << "carton volume is " << carton.volume() << std::endl;
-  std::cout << "chocolateCarton volume is " << chocolateCarton.volume() << std::endl;
+  std::println("box volume is {}", box.volume());
+  std::println("carton volume is {}", carton.volume());
+  std::println("chocolateCarton volume is {}", chocolateCarton.volume());
 
-  std::cout << "chocolateCarton length is " << chocolateCarton.getLength() << std::endl;
+  std::println("chocolateCarton length is {}", chocolateCarton.getLength());
 
   // Uncomment any of the following for an error...
   // box.m_length = 10.0;

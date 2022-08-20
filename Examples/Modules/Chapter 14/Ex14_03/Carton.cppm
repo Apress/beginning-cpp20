@@ -3,31 +3,31 @@ export module carton;
 
 import <string>;
 import <string_view>;
-import <iostream>;
+#include <print>
 import box;
 
 export class Carton : public Box
 {
 public:
-  Carton() { std::cout << "Carton() called.\n"; }
+  Carton() { std::println("Carton() called."); }
 
   explicit Carton(std::string_view material) : m_material{material}
-  { std::cout << "Carton(string_view) called.\n"; }
+  { std::println("Carton(string_view) called."); }
 
   Carton(double side, std::string_view material) : Box{side}, m_material{material}
-  { std::cout << "Carton(double,string_view) called.\n"; }
+  { std::println("Carton(double,string_view) called."); }
 
   Carton(double l, double w, double h, std::string_view material)
     : Box{l, w, h}, m_material{material}
-    { std::cout << "Carton(double,double,double,string_view) called.\n"; }  
+    { std::println("Carton(double, double, double, string_view) called.)"); }  
 
   // Copy constructor (wrong)
   Carton(const Carton& carton) : m_material {carton.m_material}
-  { std::cout << "Carton copy constructor" << std::endl; }
+  { std::println("Carton copy constructor"); }
 /*
   // Copy constructor (correct)
   Carton(const Carton& carton) : Box{ carton }, m_material{ carton.m_material }
-  { std::cout << "Carton copy constructor" << std::endl; }
+  { std::println("Carton copy constructor"); }
 */
 private:
   std::string m_material {"Cardboard"};

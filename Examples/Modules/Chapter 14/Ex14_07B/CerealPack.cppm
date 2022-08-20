@@ -1,6 +1,6 @@
 // Cerealpack.cppm - Class defining a carton of cereal
 export module cereal;
-import <iostream>;
+#include <print>
 import carton;
 import food;
 
@@ -10,13 +10,13 @@ public:
   CerealPack(double length, double width, double height, std::string_view cerealType)
     : Carton {length, width, height, "Chipboard"}, FoodContainer {cerealType}
   {
-    std::cout << "CerealPack constructor" << std::endl;
+    std::println("CerealPack constructor");
     FoodContainer::volume = 0.9 * Carton::volume();   // Set food container's volume
   }
 
   ~CerealPack()
   {
-    std::cout << "CerealPack destructor" << std::endl;
+    std::println("CerealPack destructor");
   }
 
   using Carton::volume;

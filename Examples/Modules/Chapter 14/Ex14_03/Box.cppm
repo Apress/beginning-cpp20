@@ -1,24 +1,23 @@
 // Box.cppm - defines Box class (with additional copy constuctor)
 export module box;
 
-import <iostream>;     // For standard streams
-import <format>;       // For string formatting
+#include <print>
 
 export class Box
 {
 public:
   // Constructors
   Box(double l, double w, double h) : m_length{l}, m_width{w}, m_height{h}
-  { std::cout << "Box(double, double, double) called.\n"; }
+  { std::println("Box(double, double, double) called."); }
 
   explicit Box(double side) : Box{side, side, side} 
-  { std::cout << "Box(double) called.\n"; }
+  { std::println("Box(double) called."); }
 
-  Box() { std::cout << "Box() called.\n"; }   // Default constructor
+  Box() { std::println("Box() called."); }   // Default constructor
 
   // Copy constructor
   Box(const Box& b) : m_length{ b.m_length }, m_width{ b.m_width }, m_height{ b.m_height }
-  { std::cout << "Box copy constructor" << std::endl; }
+  { std::println("Box copy constructor"); }
 
   double volume() const { return m_length * m_width * m_height; }
 
@@ -32,11 +31,3 @@ protected:                   // Protected to facilitate further examples
   double m_width {1.0};
   double m_height {1.0};
 };
-
-// Stream output for Box objects
-export std::ostream& operator<<(std::ostream& stream, const Box& box)
-{
-  return stream << std::format("Box({:.1f}, {:.1f}, {:.1f})",
-              box.getLength(), box.getWidth(), box.getHeight());
-}
-
