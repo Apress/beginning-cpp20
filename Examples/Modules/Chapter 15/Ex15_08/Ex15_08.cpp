@@ -1,5 +1,5 @@
 // Calling the base class version of a virtual function (see ToughPack::volume())
-#include <print>
+import <print>;
 import <memory>;                                // For smart pointers
 import <vector>;                                // For vector
 import boxes;

@@ -1,5 +1,5 @@
 // Access specifiers and virtual functions
-#include <print>
+import <print>;
 import boxes;
 
 int main()

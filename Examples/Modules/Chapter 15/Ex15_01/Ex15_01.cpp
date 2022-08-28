@@ -1,7 +1,7 @@
 // Behavior of inherited functions in a derived class
 import boxes;
 
-#include <print>
+import <print>;
 
 int main()
 {

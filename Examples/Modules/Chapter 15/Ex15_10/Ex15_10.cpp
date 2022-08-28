@@ -1,5 +1,5 @@
 // Using the typeid() operator
-#include <print>
+import <print>;
 import <typeinfo>;         // For the std::type_info class
 import boxes;
 

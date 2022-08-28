@@ -1,5 +1,5 @@
 // Using virtual functions
-#include <print>
+import <print>;
 import boxes;
 
 int main()

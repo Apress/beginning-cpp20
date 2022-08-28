@@ -1,6 +1,6 @@
 export module boxes:box;
 
-#include <print>
+import <print>;
 
 export class Box
 {

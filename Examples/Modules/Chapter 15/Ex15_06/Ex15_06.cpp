@@ -1,5 +1,5 @@
 // Polymorphic vectors of smart pointers
-#include <print>
+import <print>;
 import <memory>;                                // For smart pointers
 import <vector>;                                // For vector
 import boxes;
