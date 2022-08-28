@@ -4,8 +4,8 @@
 // (see Chapter 2 if you forgot some of the formatting options), 
 // as well as two's complement binary encoding and bitwise ~.
 
+import <print>;
 import <iostream>;
-import <format>;
 
 // See Appendix A (available online) for static_assert().
 // You should adjust the field widths of the table if ints have a different size.
@@ -14,7 +14,7 @@ static_assert(sizeof(int) == 4, "This program assumes 32 bit ints");
 int main()
 {
   int value {};
-  std::cout << "Enter any integer: ";
+  std::print("Enter any integer: ");
   std::cin >> value;
   
   const auto inverted{ static_cast<unsigned>(~value) };

@@ -3,8 +3,7 @@
 // Biggest complication is that you cannot apply any binary or other arithmetic operations
 // on values of a scoped enumaration type. For this, you have to first cast them to an integer.
 
-import <iostream>;
-import <format>;
+import <print>;
 
 int main()
 {
@@ -19,21 +18,22 @@ int main()
     White  = 0xFFFFFFu
   };
 
-  const auto format_string 
-       { "The components of {:^6} are: red: {:3}, green: {:3}, blue: {:3}\n" };
+  // constexpr is required for passing to std::println()
+  constexpr auto format_string
+       { "The components of {:^6} are: red: {:3}, green: {:3}, blue: {:3}" };
   
   const Color yellow{ Color::Yellow };
   const Color purple{ Color::Purple };
   const Color green { Color::Green };
 
-  std::cout << std::format(format_string,
+  std::println(format_string,
     "yellow",
     (static_cast<unsigned>(yellow) & static_cast<unsigned>(Color::Red)) >> 16,
     (static_cast<unsigned>(yellow) & static_cast<unsigned>(Color::Green)) >> 8,
     (static_cast<unsigned>(yellow) & static_cast<unsigned>(Color::Blue))
   );
 
-  std::cout << std::format(format_string,
+  std::println(format_string,
     "purple",
     (static_cast<unsigned>(purple) & static_cast<unsigned>(Color::Red)) >> 16,
     (static_cast<unsigned>(purple) & static_cast<unsigned>(Color::Green)) >> 8,

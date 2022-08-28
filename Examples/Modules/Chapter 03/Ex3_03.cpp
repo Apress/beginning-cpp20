@@ -1,6 +1,5 @@
 // Operations with enumerations
-import <iostream>;
-import <format>;
+import <print>;
 
 int main()
 {
@@ -11,7 +10,7 @@ int main()
   enum class Punctuation : char { Comma = ',', Exclamation = '!', Question = '?' };
   Punctuation ch{ Punctuation::Comma };
 
-  std::cout << std::format("yesterday's value is {}{} but poets_day's is {}{}\n",
+  std::println("yesterday's value is {}{} but poets_day's is {}{}",
     static_cast<int>(yesterday), static_cast<char>(ch),
     static_cast<int>(poets_day), static_cast<char>(Punctuation::Exclamation));
 
@@ -19,10 +18,10 @@ int main()
   ch = Punctuation::Question;   // ... enumerator values
   tomorrow = poets_day;         // Copy enumerator value
 
-  std::cout << std::format("Is today's value({}) the same as poets_day({}){}\n",
+  std::println("Is today's value({}) the same as poets_day({}){}",
     static_cast<int>(today), static_cast<int>(poets_day), static_cast<char>(ch));
 
-  //   ch = tomorrow;             /* Uncomment any of these for an error */
-  //   tomorrow = Friday;
-  //   today = 6;
+//  ch = tomorrow;              /* Uncomment any of these for an error */
+//  tomorrow = Friday;
+//  today = 6;
 }

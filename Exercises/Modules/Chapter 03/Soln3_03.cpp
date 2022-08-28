@@ -13,12 +13,12 @@ Finally, doing a bitwise AND on 11010 and 111 leaves 10 (in binary)
 or 2 (in decimal) as the result.
 *********************************************************************************/
 
-import <iostream>;
+import <print>;
 
 int main()
 {
   /* Note: try to figure out the solution to this exercise without actually running it */
   auto k{ 430u };
   auto j{ (k >> 4) & ~(~0u << 3) };
-  std::cout << j << std::endl;
+  std::println("{}", j);
 }
