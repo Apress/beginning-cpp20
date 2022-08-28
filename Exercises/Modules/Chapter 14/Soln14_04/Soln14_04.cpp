@@ -1,6 +1,6 @@
 // Exercise 14-4 Working with Employee and Executive objects
 
-import <iostream>;
+import <print>;
 import <vector>;
 import person;
 
@@ -18,7 +18,7 @@ int main()
   for (const auto& employee : employees)
     employee.who();
 
-  std::cout << std::endl;
+  std::println("");
 
   // Note: explicitly specifying the type in front of every {...} 
   // in a vector's initializer list, like we did for Employees, 

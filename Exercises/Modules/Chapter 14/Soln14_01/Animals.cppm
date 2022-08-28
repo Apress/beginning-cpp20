@@ -8,7 +8,7 @@ export module animals;
 
 import <string>;
 import <string_view>;
-import <iostream>;
+import <print>;
 
 export class Animal
 {
@@ -19,7 +19,7 @@ public:
   
   void who() const                  // Display name and weight
   {
-    std::cout << "My name is " << m_name << " and I weigh " << m_weight << "lbs." << std::endl;
+    std::println("My name is {} and I weigh {} lbs.", m_name, m_weight);
   }
 
 private:

@@ -1,7 +1,7 @@
 // Person class implementation
 
 module person;
-import <iostream>;
+import <print>;
 
 Person::Person(size_t age, std::string_view name, Gender gender) 
   : m_age {age}, m_name {name}, m_gender {gender}
@@ -16,7 +16,7 @@ Person::Person(size_t age, std::string_view name, Gender gender)
 // Display details of Person object
 void Person::who() const 
 {
-  std::cout << "\nThis is " << m_name << " who is " << m_age << " years old." << std::endl;
+  std::println("\nThis is {} who is {} years old.", m_name, m_age);
 }
 
 void Person::haveBirthday()
@@ -41,11 +41,11 @@ std::string_view Person::getGenderString() const
 // Display details of Employee object
 void Employee::who() const
 {
-  std::cout << getName() << " is " << getGenderString() << " employee aged " << getAge() << "." << std::endl;
+  std::println("{} is {} employee aged {}.", getName(), getGenderString(), getAge());
 }
 
 // Display details of Executive object (execs are particularly sensitive about their age...)
 void Executive::who() const
 {
-  std::cout << getName() << " is " << getGenderString() << " executive." << std::endl;
+  std::println("{} is {} executive.", getName(), getGenderString());
 }
