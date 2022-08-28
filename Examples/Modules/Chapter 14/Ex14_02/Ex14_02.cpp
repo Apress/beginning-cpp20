@@ -1,5 +1,5 @@
 // Calling base class constructors in a derived class constructor
-#include <print>
+import <print>;
 import carton;       // For the Carton class
 
 int main()

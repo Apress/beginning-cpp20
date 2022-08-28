@@ -1,7 +1,7 @@
 // Box.cppm - defines Box class
 export module box;
 
-#include <print>
+import <print>;
 
 export class Box
 {

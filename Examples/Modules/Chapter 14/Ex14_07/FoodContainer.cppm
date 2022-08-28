@@ -1,6 +1,6 @@
 export module food;
 
-#include <print>
+import <print>;
 import <string>;
 import <string_view>;
 

@@ -1,5 +1,5 @@
 // Defining and using a derived class
-#include <print>
+import <print>;
 import box;
 import carton;
 

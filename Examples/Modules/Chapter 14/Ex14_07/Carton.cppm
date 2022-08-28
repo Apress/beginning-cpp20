@@ -3,7 +3,7 @@ export module carton;
 
 import <string>;
 import <string_view>;
-#include <print>
+import <print>;
 import box;
 
 export class Carton : public Box

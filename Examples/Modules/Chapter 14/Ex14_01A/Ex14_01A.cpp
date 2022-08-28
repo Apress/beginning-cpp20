@@ -1,5 +1,5 @@
 // Changing the access specification of inherited members using using
-#include <print>
+import <print>;
 import box;                 // For the Box class
 import carton;              // For the Carton class
 

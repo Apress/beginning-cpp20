@@ -1,7 +1,7 @@
 // Ex14_07 - doesn't compile!
 // Using multiple inheritance can lead to ambiguity if members with 
 // the same name are inherited from different base classes.
-#include <print>
+import <print>;
 import cereal;             // For the CerealPack class
 
 int main()
