@@ -1,9 +1,7 @@
 // Implementations of the Zoo class that stores pointers to Animals
 module zoo;
 import animals;
-import <iostream>;
-import <string>;        // For operator<<
-import <string_view>;   // For operator<<
+import <print>;
 
 // Constructor from a vector of animals
 Zoo::Zoo(const std::vector<AnimalPtr>& animals) 
@@ -21,7 +19,7 @@ void Zoo::showAnimals() const
 {
   for (const auto& animal : m_animals)
   {
-    std::cout << animal->who() << ' ' << animal->sound() << std::endl;
+    std::println("{} {}", animal->who(), animal->sound());
   }
 }
 

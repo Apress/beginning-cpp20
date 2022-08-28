@@ -10,7 +10,7 @@ Animal::Animal(std::string_view name, unsigned weight)
 // Return string describing the animal
 std::string Animal::who() const
 {
-  return "My name is " + m_name + ". My weight is " + std::to_string(m_weight) + " lbs.";
+  return "My name is " + getName() + ". My weight is " + std::to_string(getWeight()) + " lbs.";
 }
 
 // Sheep constructors

@@ -3,6 +3,7 @@ import zoo;
 import <random>;     // For random number generation
 import <functional>; // For std::bind()
 import <iostream>;
+import <print>;
 import <array>;
 import <string_view>;
 
@@ -51,7 +52,7 @@ int main()
 
   std::vector<AnimalPtr> animals;   // Stores smart pointers to animals
   size_t numAnimals {};             // Number of animals to be created
-  std::cout << "How many animals in the zoo? ";
+  std::print("How many animals in the zoo? ");
   std::cin >> numAnimals;
   
   Zoo zoo;                  // Create an empty Zoo
