@@ -20,7 +20,7 @@ int main()
   std::cin >> h_feet >> h_inches;
 
   const double w_kg {w_lbs / lbs_per_kg};
-  const double h_meters { meters_per_foot * h_feet + h_inches / inches_per_foot };
+  const double h_meters { meters_per_foot * (h_feet + h_inches / inches_per_foot) };
   const double bmi {w_kg / (h_meters * h_meters)};
   std::cout << "Your BMI is " << bmi << std::endl;
 }
