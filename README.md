@@ -10,6 +10,12 @@ To make sure you also clone the 3rd party submodules in the [Workarounds](Workar
 we recommend using the following Git command:
 
     git clone --recursive https://github.com/Apress/beginning-cpp20.git
+    
+## Compiling
+
+At the time the book was completed, 
+not a single compiler [supported](https://en.cppreference.com/w/cpp/compiler_support) all C++20 features yet. 
+We recommend you consult the [Workarounds](Workarounds) section on how to work around any compilation issues you may experience.
 
 ## Contributions
 
