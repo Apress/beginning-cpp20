@@ -25,12 +25,13 @@ You can find these in the `NoModules` directories of this source repository.
 <a name="format"/>
 
 ## std::format()
-As of today, no compiler [supports](https://en.cppreference.com/w/cpp/compiler_support) the C++20 `<format>` module yet. 
+It's not until recently that some major compilers started adding [support](https://en.cppreference.com/w/cpp/compiler_support) for the C++20 `<format>` module. 
 This module provides safe, elegant, and efficient text formatting, primeraly in the form of the `std::format()` function,
 and is heavily used throughout the C++20 edition of the book.
 
-As a workaround, we recommend the [`{fmt}`](https://fmt.dev/) library, 
-a free and open source implementation of a superset of the now standardised `<format>` module.
+If your compiler is too old to [support](https://en.cppreference.com/w/cpp/compiler_support) `<format>` natively,
+we recommend the [`{fmt}`](https://fmt.dev/) library as a workaround. 
+It is a free and open source implementation of a superset of the now standardised `<format>` module.
 
 Steps:
 1. Download the `fmt` source code 
@@ -58,9 +59,10 @@ Steps:
     and all `std::format()` statements will work as expected.
 
 Note: this workaround works for `#include <format>` directives (see [Appendix A](../Appendix.pdf)); 
-but we have not had much luck getting this to work with C++20's `import` declarations.
-Until further notice, we therefore recommend you mostly use the `NoModules` versions of the source code.
-If you do want to experiment with modules, and `std::format()` is getting in the way of that,
+but at the time of writing we weren't having much luck getting this to work with C++20's `import` declarations.
+If you're experiencing similar problems,
+we therefore recommend you mostly use the `NoModules` versions of the source code.
+If you do want to experiment with modules and `std::format()` is getting in the way of that,
 you can, for instance, add the following to your source files
 
     namespace std
@@ -98,10 +100,10 @@ you use
 
 ## Ranges
 
-At the time of writing, 
-not all Standard Library implementations [support](https://en.cppreference.com/w/cpp/compiler_support) C++20 ranges yet 
-(and if they do, not all range algorithms are working as they should).
-As a workaround, you can try the excellent [range-v3](https://github.com/ericniebler/range-v3) library of Eric Niebler.
+Similar to `<format>`,
+it took some time for all Standard Library implementations to add [support](https://en.cppreference.com/w/cpp/compiler_support) for C++20 ranges
+(and if they had support, not all range algorithms were working as they should).
+If you experience issues, you can try the excellent [range-v3](https://github.com/ericniebler/range-v3) library of Eric Niebler instead.
 We added the [header file](ranges) we used for this to this directory.
 The steps you need to get this to work are similar to those we detailed for [`std::format()`](#format),
 except that library needs to be compiled as well,
