@@ -11,7 +11,7 @@ we recommend using the following Git command:
 
     git clone --recursive https://github.com/Apress/beginning-cpp20.git
     
-## Compiling
+## C++20 Compiler Support
 
 At the time the book was completed, 
 not a single compiler [supported](https://en.cppreference.com/w/cpp/compiler_support) all C++20 features yet. 
