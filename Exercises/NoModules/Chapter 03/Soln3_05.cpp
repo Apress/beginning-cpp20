@@ -3,6 +3,7 @@
 // Biggest complication is that you cannot apply any binary or other arithmetic operations
 // on values of a scoped enumaration type. For this, you have to first cast them to an integer.
 
+//This program has been modified a little bit
 #include <iostream>
 #include <format>
 
@@ -18,8 +19,16 @@ int main()
     Black  = 0x000000u,
     White  = 0xFFFFFFu
   };
-
-  const auto format_string 
+/*
+Additional notes here: The const auto format_string resulted to compile time error, and i've beeen trying to get my head around the problem,
+so I did some research and found out that instead of using "const auto format_string{};", I used "constexp auto format_string{};", and it worked
+quite well(what i mean is that, this program compiled and ran and gave corect output).
+Now Let me explain: 
+Using the "constexpr" keyword instead of const worked because it indicates that the variable "format_string" is required to have a value that can be evaluated at compile time.
+Using the const keyword alone doesn't guarantee that the variable will be treated as a compile-time constant.
+By using constexpr, you are making it clear to the compiler that the value of format_string will not change and can be known at compile-time, which can provide potential benefits in terms of performance and code generation.
+*/
+  constexpr auto format_string 
        { "The components of {:^6} are: red: {:3}, green: {:3}, blue: {:3}\n" };
   
   const Color yellow{ Color::Yellow };
